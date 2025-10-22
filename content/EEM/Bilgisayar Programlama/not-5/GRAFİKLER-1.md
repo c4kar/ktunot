@@ -7,11 +7,6 @@
 </iframe>
 
 ---
-# BİLGİSAYAR PROGRAMLAMA 2 – DERS NOTU 5: GRAFİKLER-1  
-**Konya Teknik Üniversitesi – Elektrik-Elektronik Mühendisliği Bölümü**  
-**Tarih:** 12/11/2020  
-
----
 
 ## İçindekiler
 - [[#Grafikler]]

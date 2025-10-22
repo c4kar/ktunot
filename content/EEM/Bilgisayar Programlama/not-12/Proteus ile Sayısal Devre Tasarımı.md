@@ -1,7 +1,3 @@
-İşte **"Bilgisayar Programlama 2 – Ders Notu 12: Proteus ile Sayısal Devre Tasarımı"** konusuna göre hazırlanmış, düzenlenmiş ve görsellerle zenginleştirilmiş bir ders özeti:
-
----
-
 # **İçindekiler**
 - [Genel Özet](#genel-özet)
 - [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)

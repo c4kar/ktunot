@@ -5,8 +5,10 @@
         allowfullscreen
         style="border:none; aspect-ratio:16/9;">
 </iframe>
+
 ---
-İçindekiler  
+
+# İçindekiler  
 - [Grafiklere Simges  el Karakterler Eklemek](#grafiklere-simges--el-karakterler-eklemek)
 - [Temel Grafik İşlemleri](#temel-grafik-i̇şlemleri)
   - [Grafikleri Kaydetmek](#grafikleri-kaydetmek)
@@ -32,7 +34,7 @@
 
 ---
 
-# Grafiklere Simges  el Karakterler Eklemek
+# Grafiklere Simgesel Karakterler Eklemek
 
 MATLAB grafiklerinde başlık, eksen etiketleri, lejant veya metin kutularında **matematiksel semboller** ve **Yunanca harfler** kullanmak mümkündür. Bunun için `\` (ters eğik çizgi) ve sembol adı kullanılır.
 

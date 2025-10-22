@@ -1,7 +1,3 @@
-İşte sizin için düzenlenmiş ve okunaklı hale getirilmiş **"Bilgisayar Programlama 2 – Ders Notu 13: Baskı Devre Yapımı"** ders notudur. Bu belge, Konya Teknik Üniversitesi Elektrik-Elektronik Mühendisliği Bölümü’ne ait ders içeriğini temel alarak oluşturulmuştur.
-
----
-
 # **İçindekiler**
 
 - [Baskı Devre (PCB) Nedir?](#baskı-devre-pcb-nedir)
