@@ -236,18 +236,3 @@ Kullanıcıdan bir harf alın. Girilen harfe göre takımı yazdırın:
 | Diğer | "Geçersiz takım harfi!" |
 
 > `switch` içinde hem büyük hem küçük harfleri ayrı `case`’lerle kontrol edin.
-
----
-
-> **Motivasyon:**  
-> *"Kodunuzun anlaşılır olması, sadece başkaları için değil, **gelecekteki sizin** için de hayati öneme sahiptir."*
-
----
-
-**Hazırlayan:** [İsimsiz Öğretim Üyesi]  
-**Düzenleyen & Geliştiren:** Yapay Zeka Destekli Eğitim Asistanı  
-**Son Güncelleme:** 15 Mart 2024
-
---- 
-
-Eğer bu notlardan **PDF**, **PowerPoint** ya da **etkileşimli Quiz** versiyonu isterseniz, memnuniyetle hazırlayabilirim!
