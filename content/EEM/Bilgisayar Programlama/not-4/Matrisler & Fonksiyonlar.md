@@ -8,13 +8,6 @@
 
 ---
 
-# **Bilgisayar Programlama 2**  
-## **Ders Notu 4: Matrisler & Fonksiyonlar (Devamı)**  
-**Konya Teknik Üniversitesi – Elektrik-Elektronik Mühendisliği Bölümü**  
-**Tarih:** 5 Kasım 2020, Konya
-
----
-
 ## **İçindekiler**
 1. [Matris İşlemleri Uygulaması](#matris-i̇şlemleri-uygulaması)  
 2. [Polinom Değer Hesaplama](#polinom-değer-hesaplama)  

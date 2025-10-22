@@ -8,9 +8,6 @@
 
 ---
 
-# İçindekiler  
-=================
-
 1. [Genel Özet](#genel-özet)  
 2. [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)  
 3. [Ana Gövde: MATLAB’e Giriş](#ana-gövde-matlab-e-giriş)  

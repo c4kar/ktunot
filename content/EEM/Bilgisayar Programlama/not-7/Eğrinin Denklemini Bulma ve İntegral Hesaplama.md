@@ -5,11 +5,6 @@
         allowfullscreen
         style="border:none; aspect-ratio:16/9;">
 </iframe>
----
-# BİLGİSAYAR PROGRAMLAMA 2  
-**Ders Notu 7: Eğrinin Denklemini Bulma ve İntegral Hesaplama**  
-Konya Teknik Üniversitesi – Elektrik-Elektronik Mühendisliği Bölümü  
-26/11/2020 – Konya
 
 ---
 

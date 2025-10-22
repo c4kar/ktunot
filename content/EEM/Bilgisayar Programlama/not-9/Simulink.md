@@ -5,8 +5,8 @@
         allowfullscreen
         style="border:none; aspect-ratio:16/9;">
 </iframe>
+
 ---
-# **İçindekiler**
 
 - [Genel Özet](#genel-özet)
 - [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)

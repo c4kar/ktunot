@@ -1,16 +1,3 @@
-İşte verdiğiniz ders notlarını temizleyip, düzenleyip, anlaşılır ve öğretici bir biçimde yeniden yapılandırılmış **"Bilgisayar Programlama 2 – Ders Notu 11: Proteus ile Analog Devre Tasarımı"** içeriğidir:
-
----
-
-# **BİLGİSAYAR PROGRAMLAMA 2**  
-## **Ders Notu 11: Proteus ile Analog Devre Tasarımı**
-
-**Konya Teknik Üniversitesi**  
-**Elektrik - Elektronik Mühendisliği Bölümü**  
-**31 Aralık 2020 — Konya**
-
----
-
 ## **İçindekiler**
 1. [Kirpici Devresi](#kirpici-devresi)  
 2. [Evirmeyen Kuvvetlendirici](#evirmeyen-kuvvetlendirici)  

@@ -5,11 +5,6 @@
         allowfullscreen
         style="border:none; aspect-ratio:16/9;">
 </iframe>
----
-# **Bilgisayar Programlama 2 – Ders Notu 3: Polinomlar ve Matrisler**  
-**Konya Teknik Üniversitesi**  
-**Elektrik-Elektronik Mühendisliği Bölümü**  
-**22 Ekim 2020 – Konya**
 
 ---
 
