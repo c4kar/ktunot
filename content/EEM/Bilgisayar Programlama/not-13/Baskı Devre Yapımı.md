@@ -133,7 +133,3 @@
 - Yavuz Erol, *Bilim ve Teknik*, Ağustos 2005  
 - Hacettepe Robot Topluluğu Sunusu, *HUNRobotX 2012*  
 - *Baskı Devre Kartının Üretilmesi* Sunusu, Öğr. Gör. Emre ÖZDEMIRCİ
-
----
-
-Eğer bu ders notunu PDF veya basılı döküman haline getirmek isterseniz, Markdown veya LaTeX formatında da düzenleyebilirim. Yardımcı olmamı ister misiniz?
