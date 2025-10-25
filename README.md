@@ -1,3 +1,22 @@
+#### **[ktünot](ktunot.net.tr)**, KTÜN not ve kaynak ağı.
+
+Bu depo **Konya Teknik Üniversitesi** *Elektrik ve Elektronik Mühendislik Fakültesinin* derslerinin notlarını, kayıtlarını, özetlerini  ve bütün ilgili kaynaklara kolay erişim sunmayı amaçlayan bir **öğrenci** oluşumudur.
+
+> Site ve depomuz henüz erken geliştirme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde kayma olabilir. Eğer karşılaşırsanız [lütfen açıklayıcı bir şekilde bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz yenilikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md). Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir. 
+
+Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notları n8n otomasyonumuza gönderdikten sonra moderatör arkadaşlarımız özetlenmiş, düzenlenmiş notu inceliyor, eğer hata varsa düzeltiyor ve daha sonra sitemizde paylaşıyoruz.  
+
+**[ktünot'un](ktunot.net.tr)** temelleri [*quartz*](https://quartz.jzhao.xyz/) üzerine kuruludur. Kelime arama, *backlinks* ve akıl haritası özellikleri bu şablonu tercih etmemize sebep oldu. 
+
+- [ ] n8n otomasyonunu paylaş
+- [ ] mermaid-diagram
+- [ ] LMS scriptini paylaş
+- [ ] Yorum bölümü
+- [ ] Örnek çalışmalar
+
+---
+*İncelemek isteyenler için aşağıya orijinal README'yi bıraktım.*
+---
 # Quartz v4
 
 > “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming

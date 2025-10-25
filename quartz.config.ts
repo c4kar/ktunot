@@ -9,7 +9,7 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "ktünot",
-    pageTitleSuffix: "| ktünot",
+    pageTitleSuffix: " | ktünot",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -23,9 +23,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Montserrat",
+        header: "Geist",
         body: "Inter",
-        code: "Inconsolata",
+        code: "Geist Mono",
       },
       colors: {
         lightMode: {
