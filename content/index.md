@@ -23,6 +23,8 @@ Kaybolduysanız, site haritasını kontrol edebilir veya dosyaları arama özell
 
 %%
 
+//TODO BU KISMI DAHA SONRA YAPACAĞIM
+
 ### 🔍 Gelişmiş Arama İpuçları
 
 Aşağıdaki parametreleri kullanarak aramanızı daha verimli hale getirebilirsiniz:
@@ -37,7 +39,7 @@ Dönem: "2023-Bahar"
 
 ## 💭 Niye ktünot'u Yaptık ?
 
-LMS sistemi üzerinden indirdiğim PDF'lerden not alma, slaytların fotoğrafını çekme, videoların en önemli yerlerini bulma işinden çok sıkılmaya başlamıştım. Hepsini tek bir yerde görmek, aramak ve tekrar istemek için bir sistem arayışına girdim ve bir _Python_ otomasyonu yazdım. _LLM_'leri kullanarak otomatik indirdiğim ders notlarının sadece önemli kısımlarını (dosya formatı farketmeksizin) çıkaran bir _prompt_ yazarak otomasyonu tamamladım. Geriye tek kalan iş benimle aynı sıkıntıyı yaşayan öğrenci arkadaşlarımla paylaşmak olmuştu.
+LMS sistemi üzerinden indirdiğimiz PDF'lerden not alma, slaytların fotoğrafını çekme, videoların en önemli yerlerini bulma işinden çok sıkılmaya başlamıştık. Hepsini tek bir yerde görmek, aramak ve tekrar istemek için bir sistem arayışına girdim ve bir _Python_ otomasyonu yazdım. _LLM_'leri kullanarak otomatik indirdiğim ders notlarının sadece önemli kısımlarını (dosya formatı farketmeksizin) çıkaran bir _prompt_ yazarak otomasyonu tamamladım. Geriye tek kalan iş benimle aynı sıkıntıyı yaşayan öğrenci arkadaşlarımla paylaşmak olmuştu.
 
 ## 🦾🤖 Yapay Zekanın Rolü
 
@@ -50,7 +52,6 @@ Notlara baktıysanız farketmişsinizdir; Orijinal dosyanın yazım sırası, ta
 - [ ] final custom stil
 - [ ] haftalık blog ?
 - [ ] notebooklm entegre
-- [ ] _easter egg_
 - [ ] geçmiş sınav soruları
 - [ ] EEM Bölümü 4 yıl tam not
 - [ ] iç içe not sistemi ve **temeller** bölümü
@@ -66,4 +67,3 @@ Platformla ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen bizimle ile
 [Üniversitemizin Web Sitesi](https://www.ktun.edu.tr/)
 
 > "Öğrenciler için öğrenciyiz!"
-
