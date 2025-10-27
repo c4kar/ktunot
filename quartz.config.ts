@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "ktünot",
     pageTitleSuffix: " | ktünot",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },

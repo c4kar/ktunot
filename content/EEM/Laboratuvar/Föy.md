@@ -17,7 +17,7 @@ Dr. Öğr. Üyesi Dilek UZER
 5. Öğrencinin deney tarihinden önce sorumlu öğretim elemanı ile irtibat kurarak, uygun mazeret göstermesi koşuluyla, başka bir grupta deney yapma isteği değerlendirilir. Mazereti uygun görülürse deney tarihi değişikliği yapılır. Öğrenci vaat ettiği tarihte gelmez ise devamsiz sayılır.
 6. Dersin devamını almış, dersi alttan alan öğrencilerin de derse katılmaları zorunludur.
 
-# IÇiNDEKILER
+# İçindekiler
 
 1. "Temel Elektrik Devrelerinin Kurulumu" ..... 1
 2. "Devre Doğrudan ve Dolaylı Ölçümler Yoluyla Akım, Voltaj, Direnç ve Güç ..... 9
@@ -31,9 +31,9 @@ Faz Farkı Ölçümleri, Ortalama ve Etkin Değerler"
 
 # Deney 1. Temel Elektrik Devrelerinin Kurulumu
 
-Deneyin Amacı: Elektrik devresinin bileşenlerini tanımak, elektrik devresi kurmak ve Analog ölçü aletleri ile direnç, akım ve gerilim ölçmek
+Deneyin Amacı: Elektrik devresinin bileşenlerini tanımak, elektrik devresi kurmak ve Analog ölçü aletleri ile direnç, akım ve gerilim ölçmek.
 
-Öğrenme Çıktıları: Elektrik devresinin bileşenlerini seçebilme, Elektrik devresini kapalı çevrimini anlama, Elektrik devresi kurabilme, Akım ve Gerilim Ölçme
+**Öğrenme Çıktıları**: Elektrik devresinin bileşenlerini seçebilme, Elektrik devresini kapalı çevrimini anlama, Elektrik devresi kurabilme, Akım ve Gerilim Ölçme...
 
 ## Teorik Bilgi: Elektrik Devresi
 
