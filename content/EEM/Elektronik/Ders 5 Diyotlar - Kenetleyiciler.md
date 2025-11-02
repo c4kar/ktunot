@@ -5,3 +5,7 @@
         allowfullscreen
         style="border:none; aspect-ratio:16/9;">
 </iframe>
+
+---
+
+[Clamper Circuits - The Organic Chemistry Tutor](https://www.youtube.com/watch?v=PRzrS6NOyAY)
