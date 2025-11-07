@@ -1,17 +1,19 @@
 # İçindekiler
 
-- [Genel Özet](#genel-özet)
-- [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)
-- [Ana Gövde: Kronolojik / Kavramsal Kayıt](#ana-gövde-kronolojik--kavramsal-kayıt)
-  - [Kuvvet Sistemlerine Giriş](#kuvvet-sistemlerine-giriş)
-  - [2 Boyutlu Kuvvet Sistemleri](#2-boyutlu-kuvvet-sistemleri)
-    - [Dikdörtgensel Bileşenler](#dikdörtgensel-bileşenler)
-    - [Moment](#moment)
-    - [Kuvvet Çifti (Couple)](#kuvvet-çifti-couple)
-    - [Bileşke (Resultant)](#bileşke-resultant)
-  - [3 Boyutlu Kuvvet Sistemlerine Kısa Bakış](#3-boyutlu-kuvvet-sistemlerine-kısa-bakış)
-- [Temel Formüller ve Hızlı Bilgiler](#temel-formüller-ve-hızlı-bilgiler)
-- [Kaynaklar](#kaynaklar)
+- [İçindekiler](#i̇çindekiler)
+  - [Genel Özet](#genel-özet)
+  - [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)
+  - [Ana Gövde: Kronolojik / Kavramsal Kayıt](#ana-gövde-kronolojik--kavramsal-kayıt)
+    - [Kuvvet Sistemlerine Giriş](#kuvvet-sistemlerine-giriş)
+    - [2 Boyutlu Kuvvet Sistemleri](#2-boyutlu-kuvvet-sistemleri)
+      - [Dikdörtgensel Bileşenler](#dikdörtgensel-bileşenler)
+      - [Moment](#moment)
+      - [Kuvvet Çifti (Couple)](#kuvvet-çifti-couple)
+      - [Bileşke (Resultant)](#bileşke-resultant)
+    - [3 Boyutlu Kuvvet Sistemlerine Kısa Bakış](#3-boyutlu-kuvvet-sistemlerine-kısa-bakış)
+  - [Temel Formüller ve Hızlı Bilgiler](#temel-formüller-ve-hızlı-bilgiler)
+  - [Kaynaklar](#kaynaklar)
+- [PDF](#pdf)
 
 ---
 
@@ -32,10 +34,10 @@ Ders, kuvvetlerin **2 boyutlu düzlemde** analizini detaylı şekilde ele alırk
 ## Temel Terimler ve Kavramlar
 
 - **Kuvvet (Force):** Bir cismin başka bir cisme uyguladığı itme veya çekme etkisi; vektörel bir büyüklüktür.
-- **Moment (Tork):** Bir kuvvetin bir nokta etrafında döndürme eğilimidir; \( M = F \cdot d \) veya \( \vec{M} = \vec{r} \times \vec{F} \).
-- **Kuvvet Çifti (Couple):** Eşit büyüklükte, zıt yönde ve paralel doğrultuda olan iki kuvvet; **serbest vektör** oluşturur ve momenti \( M = F \cdot d \) dir.
+- **Moment (Tork):** Bir kuvvetin bir nokta etrafında döndürme eğilimidir; $$ M = F \cdot d $$ veya $$ \vec{M} = \vec{r} \times \vec{F} $$
+- **Kuvvet Çifti (Couple):** Eşit büyüklükte, zıt yönde ve paralel doğrultuda olan iki kuvvet; **serbest vektör** oluşturur ve momenti $$ M = F \cdot d $$ dir.
 - **Bileşke (Resultant):** Birden fazla kuvvet ve momentin etkisini tek başına temsil eden eşdeğer kuvvet-çift sistemidir.
-- **Dikdörtgensel Bileşenler:** Bir kuvvetin x ve y (veya x, y, z) eksenlerindeki izdüşümleri; \( F_x = F \cos\theta \), \( F_y = F \sin\theta \).
+- **Dikdörtgensel Bileşenler:** Bir kuvvetin x ve y (veya x, y, z) eksenlerindeki izdüşümleri; $$ F_x = F \cos\theta $$ $$ F_y = F \sin\theta $$
 - **Varignon Teoremi:** Bir kuvvetin bir noktaya göre momenti, bileşenlerinin o noktaya göre momentlerinin toplamına eşittir.
 
 ---
@@ -59,9 +61,10 @@ Kuvvet, **vektörel** bir niceliktir. Bu nedenle, toplanması vektör kuralları
 #### Dikdörtgensel Bileşenler
 
 Herhangi bir kuvvet:
-\[
+
+$$
 \vec{F} = F_x \hat{i} + F_y \hat{j}
-\]
+$$
 olarak ifade edilir. Bileşenler:
 \[
 F_x = F \cos\theta, \quad F_y = F \sin\theta
@@ -73,25 +76,26 @@ R_x = \sum F_x, \quad R_y = \sum F_y, \quad R = \sqrt{R_x^2 + R_y^2}, \quad \the
 \]
 
 > [!example]  
-> Örnek: \( F_1 = 800\, \text{N} \), \( F_2 = 600\, \text{N} \)  
-> - Paralelkenar yöntemiyle \( R = 721\, \text{N} \), \( \alpha = 46.1^\circ \)  
+> Örnek: 
+> $$ F_1 = 800\, \text{N}, F_2 = 600\, \text{N} $$
+> - Paralelkenar yöntemiyle $$ R = 721\, \text{N} $$ $$ \alpha = 46.1^\circ $$  
 > - Cebirsel çözümle:  
->   \( R_x = 500\, \text{N},\ R_y = -520\, \text{N} \Rightarrow R = 721\, \text{N} \)
+>   $$ R_x = 500\, \text{N},\ R_y = -520\, \text{N} \Rightarrow R = 721\, \text{N} $$
 
 ---
 
 #### Moment
 
-Bir \( \vec{F} \) kuvvetinin **O** noktasına göre momenti:
+Bir $$ \vec{F} $$ kuvvetinin **O** noktasına göre momenti:
 \[
 \vec{M}_O = \vec{r} \times \vec{F}, \quad |\vec{M}_O| = F \cdot d
 \]
-Burada \( d \), O noktasından kuvvetin etki çizgisine olan **dik uzaklıktır**.
+Burada $d$ O noktasından kuvvetin etki çizgisine olan **dik uzaklıktır**.
 
 > [!infobox]  
 > **5 Farklı Yöntemle Moment Hesabı** (600 N’luk kuvvet için):  
-> 1. \( M = F \cdot d \) → \( d = 4\cos40^\circ + 2\sin40^\circ = 4.35\, \text{m} \)  
-> 2. Varignon Teoremi: \( M = 460(4) + 386(2) = 2610\, \text{N·m} \)  
+> 1. $ M = F \cdot d $ → $ d = 4\cos40^\circ + 2\sin40^\circ = 4.35\, \text{m} $  
+> 2. Varignon Teoremi: $M = 460 \times 4 + 386 \times 2 = 2610 \, \text{N} \cdot \text{m}$  
 > 3. Kuvveti yer değiştirerek (zemin seviyesine veya O’nun üzerine)  
 > Hepsi aynı sonucu verir: **2610 N·m (saat yönünde)**.
 
@@ -100,17 +104,18 @@ Burada \( d \), O noktasından kuvvetin etki çizgisine olan **dik uzaklıktır*
 #### Kuvvet Çifti (Couple)
 
 - İki eşit, zıt, paralel kuvvetten oluşur.
-- Momenti \( M = F \cdot d \) dir.
+- Momenti $ M = F \cdot d $ dir.
 - **Moment merkezinden bağımsızdır** → **serbest vektör**dür.
 
 > [!example]  
-> 80 lb’lik iki kuvvet → \( M = 80 \cdot 7 = 560\, \text{lb·ft} \)  
+> 80 lb’lik iki kuvvet → $$ M = 80 \times 7 = 560 \, \text{lb} \cdot \text{ft} $$
+>
 > Hem O hem A noktasına göre aynı!
 
 > [!example]+  
 > Yatay 80 lb’lik kuvvet, O noktasında eşdeğer sistemle ifade edilirse:  
 > - 80 lb kuvvet O’da  
-> - \( M = 80 \cdot (9 \sin 60^\circ) = 624\, \text{lb·in} \) (saat yönünün tersi)
+> $ M = 80 \cdot (9 \sin 60^\circ) = 624 \, \text{lb} \cdot \text{in} $   (saat yönünün tersi)
 
 ---
 
@@ -120,8 +125,8 @@ Herhangi bir kuvvet sistemi, bir **bileşke kuvvet (R)** ve bir **bileşke momen
 
 **Adımlar:**
 1. Tüm kuvvetler bir noktaya (genelde O) taşınır → her taşımada bir couple eklenir.
-2. Kuvvetler vektörel toplanır: \( \vec{R} = \sum \vec{F} \)
-3. Momentler cebirsel toplanır: \( M_O = \sum (F \cdot d) + \sum \text{(mevcut couple’lar)} \)
+2. Kuvvetler vektörel toplanır: $$ \vec{R} = \sum \vec{F} $$
+3. Momentler cebirsel toplanır: $$ M_O = \sum (F \cdot d) + \sum \text{(mevcut couple’lar)} $$
 4. İstenirse, bu **kuvvet-çift sistemi**, sadece **tek bir kuvvete** indirgenebilir:  
    \[
    R \cdot d = |M_O| \Rightarrow d = \frac{|M_O|}{R}
@@ -129,19 +134,19 @@ Herhangi bir kuvvet sistemi, bir **bileşke kuvvet (R)** ve bir **bileşke momen
 
 > [!example]  
 > Verilen sistem:  
-> - \( R_x = 66.9\, \text{N},\ R_y = 132.4\, \text{N} \Rightarrow R = 148.3\, \text{N},\ \theta = 63.2^\circ \)  
-> - \( M_O = -237\, \text{N·m} \) (saat yönünde)  
-> - Tek kuvvet için: \( d = \frac{237}{148.3} = 1.600\, \text{m} \)
+> - $ R_x = 66.9\, \text{N},\ R_y = 132.4\, \text{N} \Rightarrow R = 148.3\, \text{N},\ \theta = 63.2^\circ $  
+> - $ M_O = -237\,\text{N⋅m} $ (saat yönünde)  
+> - Tek kuvvet için: $$ d = \frac{237}{148.3} = 1.600\, \text{m} $$
 
 ---
 
 ### 3 Boyutlu Kuvvet Sistemlerine Kısa Bakış
 
 Konu başlıkları benzerdir:
-- \( \vec{F} = F_x \hat{i} + F_y \hat{j} + F_z \hat{k} \)
-- Moment vektörel çarpımla: \( \vec{M}_O = \vec{r} \times \vec{F} \)
+ $$ \vec{F} = F_x \hat{i} + F_y \hat{j} + F_z \hat{k} $$
+- Moment vektörel çarpımla: $$ \vec{M}_O = \vec{r} \times \vec{F} $$
 - Couple yine serbest vektördür.
-- Bileşke: \( \vec{R} = \sum \vec{F},\ \vec{M}_O = \sum (\vec{r} \times \vec{F}) \)
+ Bileşke: $$ \vec{R} = \sum \vec{F},\ \vec{M}_O = \sum (\vec{r} \times \vec{F}) $$
 
 Ancak bu ders notunda 3B sistemlere örnek verilmemiştir.
 
@@ -150,20 +155,20 @@ Ancak bu ders notunda 3B sistemlere örnek verilmemiştir.
 ## Temel Formüller ve Hızlı Bilgiler
 
 > [!success] **Vektör İşlemleri**
-- \( \vec{R} = \sum F_x \hat{i} + \sum F_y \hat{j} \)
-- \( R = \sqrt{R_x^2 + R_y^2} \)
-- \( \theta = \tan^{-1}(R_y / R_x) \)
+- $$ \vec{R} = \sum F_x \hat{i} + \sum F_y \hat{j} $$
+- $$ R = \sqrt{R_x^2 + R_y^2} $$
+- $$ \theta = \tan^{-1}(R_y / R_x) $$
 
 > [!success] **Moment**
-- \( M = F \cdot d \)
-- \( \vec{M}_O = \vec{r} \times \vec{F} \)
-- **Varignon:** \( M_O = \sum (F_x \cdot y - F_y \cdot x) \)
+- $$ M = F \cdot d $$
+- $$ \vec{M}_O = \vec{r} \times \vec{F} $$
+- **Varignon:** $$ M_O = \sum (F_x \cdot y - F_y \cdot x) $$
 
 > [!success] **Couple**
-- \( M = F \cdot d \) → **Yerden bağımsız!**
+- $$ M = F \cdot d $$ → **Yerden bağımsız!**
 
 > [!success] **Bileşke Kuvvetin Konumu**
-- \( d = \dfrac{|M_O|}{R} \)
+- $$ d = \dfrac{|M_O|}{R} $$
 - Yönü, momentin dönüş yönüne göre belirlenir.
 
 > [!note]  
