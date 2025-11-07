@@ -1,15 +1,26 @@
 # İçindekiler (Table of Contents)
 
-- [Genel Özet](#genel-özet)
-- [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)
-- [Ana Gövde: Kronolojik veya Tematik Kayıt](#ana-gövde-kronolojik-veya-tematik-kayıt)
-  - [Dengeye Giriş (Introduction to Equilibrium)](#dengeye-giriş-introduction-to-equilibrium)
-  - [Serbest Cisim Diyagramı (Free-Body Diagram – FBD)](#serbest-cisim-diyagramı-free-body-diagram--fbd)
-  - [İki Boyutta Denge (Equilibrium in Two Dimensions)](#iki-boyutta-denge-equilibrium-in-two-dimensions)
-  - [Üç Boyutta Denge (Equilibrium in Three Dimensions)](#üç-boyutta-denge-equilibrium-in-three-dimensions)
-  - [Örnek Problemler ve Çözümleri](#örnek-problemler-ve-çözümleri)
-- [Temel Formüller ve Hızlı Bilgiler](#temel-formüller-ve-hızlı-bilgiler)
-- [Kaynaklar](#kaynaklar)
+- [İçindekiler (Table of Contents)](#i̇çindekiler-table-of-contents)
+  - [Genel Özet](#genel-özet)
+  - [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)
+  - [Ana Gövde: Kronolojik veya Tematik Kayıt](#ana-gövde-kronolojik-veya-tematik-kayıt)
+    - [Dengeye Giriş (Introduction to Equilibrium)](#dengeye-giriş-introduction-to-equilibrium)
+    - [Serbest Cisim Diyagramı (Free-Body Diagram – FBD)](#serbest-cisim-diyagramı-free-body-diagram--fbd)
+      - [Destek Türlerine Göre Tepkiler (2B)](#destek-türlerine-göre-tepkiler-2b)
+    - [İki Boyutta Denge (Equilibrium in Two Dimensions)](#i̇ki-boyutta-denge-equilibrium-in-two-dimensions)
+      - [Çözüm Adımları:](#çözüm-adımları)
+      - [Örnek: Vinç Kiriş Problemi](#örnek-vinç-kiriş-problemi)
+    - [Üç Boyutta Denge (Equilibrium in Three Dimensions)](#üç-boyutta-denge-equilibrium-in-three-dimensions)
+      - [Örnek: Küresel Mafsal ile Taşınan Mil](#örnek-küresel-mafsal-ile-taşınan-mil)
+    - [Örnek Problemler ve Çözümleri](#örnek-problemler-ve-çözümleri)
+      - [Problem 3/2: Makaralı Sistem](#problem-32-makaralı-sistem)
+      - [Problem 3/3: Eğik Kiriş](#problem-33-eğik-kiriş)
+      - [Problem 3/14: Kayar Askı](#problem-314-kayar-askı)
+      - [Problem 3/31: Birleşik Makara](#problem-331-birleşik-makara)
+      - [Problem 3/57: Halat-Sistem (Turnbuckle)](#problem-357-halat-sistem-turnbuckle)
+  - [Temel Formüller ve Hızlı Bilgiler](#temel-formüller-ve-hızlı-bilgiler)
+  - [Kaynaklar](#kaynaklar)
+- [PDF](#pdf)
 
 ---
 
@@ -215,4 +226,3 @@ $A = \sqrt{654^2 + 1962^2 + 1962^2} = 2850\, \text{N}$
         allow="fullscreen"
         style="border:none;">
 </iframe>
-
