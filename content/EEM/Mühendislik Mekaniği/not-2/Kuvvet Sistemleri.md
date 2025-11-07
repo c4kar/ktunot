@@ -128,15 +128,13 @@ Herhangi bir kuvvet sistemi, bir **bileşke kuvvet (R)** ve bir **bileşke momen
 2. Kuvvetler vektörel toplanır: $$ \vec{R} = \sum \vec{F} $$
 3. Momentler cebirsel toplanır: $$ M_O = \sum (F \cdot d) + \sum \text{(mevcut couple’lar)} $$
 4. İstenirse, bu **kuvvet-çift sistemi**, sadece **tek bir kuvvete** indirgenebilir:  
-   \[
-   R \cdot d = |M_O| \Rightarrow d = \frac{|M_O|}{R}
-   \]
+   $R \cdot d = |M_O| \Rightarrow d = \frac{|M_O|}{R}$
 
 > [!example]  
 > Verilen sistem:  
 > - $ R_x = 66.9\, \text{N},\ R_y = 132.4\, \text{N} \Rightarrow R = 148.3\, \text{N},\ \theta = 63.2^\circ $  
 > - $ M_O = -237\,\text{N⋅m} $ (saat yönünde)  
-> - Tek kuvvet için: $$ d = \frac{237}{148.3} = 1.600\, \text{m} $$
+> - Tek kuvvet için: $$ d = \frac{237}{148.3} = 1.600 \, \text{m}$$
 
 ---
 

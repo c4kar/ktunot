@@ -111,12 +111,15 @@ Mekanik, fiziksel dünyayı anlamak ve mühendislik sistemlerini tasarlamak içi
 $$
 F = G \frac{m_1 m_2}{r^2}
 $$
-$G = 6.673 \times 10^{-11} \, \text{N} \cdot \text{m}^2/\text{kg}^2$
+
+$$
+G = 6.673 \times 10^{-11} \, \text{N} \cdot \text{m}^2/\text{kg}^2
+$$
 
 ### Dünya Yüzeyinde Ağırlık:
-$$
+$
 W = mg \quad \text{burada } g = \frac{G m_e}{R^2}
-$$
+$
 
 | Sistem | $g$ değeri |
 |-------|-----------|
