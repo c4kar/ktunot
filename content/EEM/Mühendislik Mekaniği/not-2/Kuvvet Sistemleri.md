@@ -66,14 +66,14 @@ $$
 \vec{F} = F_x \hat{i} + F_y \hat{j}
 $$
 olarak ifade edilir. Bileşenler:
-\[
+$$
 F_x = F \cos\theta, \quad F_y = F \sin\theta
-\]
+$$
 
 Birden fazla kuvvetin bileşkesi:
-\[
+$$
 R_x = \sum F_x, \quad R_y = \sum F_y, \quad R = \sqrt{R_x^2 + R_y^2}, \quad \theta = \tan^{-1}\left(\frac{R_y}{R_x}\right)
-\]
+$$
 
 > [!example]  
 > Örnek: 
@@ -87,9 +87,9 @@ R_x = \sum F_x, \quad R_y = \sum F_y, \quad R = \sqrt{R_x^2 + R_y^2}, \quad \the
 #### Moment
 
 Bir $$ \vec{F} $$ kuvvetinin **O** noktasına göre momenti:
-\[
+$$
 \vec{M}_O = \vec{r} \times \vec{F}, \quad |\vec{M}_O| = F \cdot d
-\]
+$$
 Burada $d$ O noktasından kuvvetin etki çizgisine olan **dik uzaklıktır**.
 
 > [!infobox]  
