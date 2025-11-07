@@ -63,8 +63,11 @@ Notlara baktıysanız farketmişsinizdir; Orijinal dosyanın yazım sırası, ta
 
 Platformla ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen bizimle iletişime geçmekten çekinmeyin(lütfen). Amacımız, hep beraber eğitim sürecimizi en verimli şekilde geçirmektir. Sizi çok seviyoruz. İyi ki varsınız 💚
 
-💚 Soru ve öneriler için mail adresim: **yc4kar[at]gmail[nokta]com** 
+💚 Soru ve öneriler için mail adresim:
+**yc4kar[at]gmail[nokta]com** 
+
 [🖤 GitHub'dan düzenleme için 🖤](https://github.com/c4kar/ktunDepo/issues/new)
+
 [♥️ Üniversitemizin Web Sitesi ♥️](https://www.ktun.edu.tr/)
 
 > "Öğrenciler için öğrenciyiz!"
