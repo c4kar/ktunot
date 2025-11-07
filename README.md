@@ -1,12 +1,12 @@
-#### **[ktünot](ktunot.net.tr)**, KTÜN not ve kaynak ağı.
+#### **[ktünot](ktunot.net.tr)**, KTÜN not ve kaynak ağı
 
-Bu depo **Konya Teknik Üniversitesi** *Elektrik ve Elektronik Mühendislik Fakültesinin* derslerinin notlarını, kayıtlarını, özetlerini  ve bütün ilgili kaynaklara kolay erişim sunmayı amaçlayan bir **öğrenci** oluşumudur.
+Bu depo **Konya Teknik Üniversitesi** _Elektrik ve Elektronik Mühendislik Fakültesinin_ derslerinin notlarını, kayıtlarını, özetlerini ve bütün ilgili kaynaklara kolay erişim sunmayı amaçlayan bir **öğrenci** oluşumudur.
 
-> Site ve depomuz henüz erken geliştirme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde kayma olabilir. Eğer karşılaşırsanız [lütfen açıklayıcı bir şekilde bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz yenilikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md). Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir. 
+> Site ve depomuz henüz erken geliştirme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde kayma olabilir. Eğer karşılaşırsanız [lütfen açıklayıcı bir şekilde bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz yenilikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md). Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir.
 
-Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notları n8n otomasyonumuza gönderdikten sonra moderatör arkadaşlarımız özetlenmiş, düzenlenmiş notu inceliyor, eğer hata varsa düzeltiyor ve daha sonra sitemizde paylaşıyoruz.  
+Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notları n8n otomasyonumuza gönderdikten sonra moderatör arkadaşlarımız özetlenmiş, düzenlenmiş notu inceliyor, eğer hata varsa düzeltiyor ve daha sonra sitemizde paylaşıyoruz.
 
-**[ktünot'un](ktunot.net.tr)** temelleri [*quartz*](https://quartz.jzhao.xyz/) üzerine kuruludur. Kelime arama, *backlinks* ve akıl haritası özellikleri bu şablonu tercih etmemize sebep oldu. 
+**[ktünot'un](ktunot.net.tr)** temelleri [_quartz_](https://quartz.jzhao.xyz/) üzerine kuruludur. Kelime arama, _backlinks_ ve akıl haritası özellikleri bu şablonu tercih etmemize sebep oldu.
 
 - [ ] n8n otomasyonunu paylaş
 - [ ] mermaid-diagram
@@ -15,8 +15,9 @@ Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notlar�
 - [ ] Örnek çalışmalar
 
 ---
-*İncelemek isteyenler için aşağıya orijinal README'yi bıraktım.*
----
+
+## _İncelemek isteyenler için aşağıya orijinal README'yi bıraktım._
+
 # Quartz v4
 
 > “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
@@ -24,7 +25,7 @@ Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notlar�
 Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
 Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+🔗 Read the documentation and get started: <https://quartz.jzhao.xyz/>
 
 [Join the Discord Community](https://discord.gg/cRFFHYye7t)
 
