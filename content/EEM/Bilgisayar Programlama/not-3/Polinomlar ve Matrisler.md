@@ -32,7 +32,7 @@
 - **MATLAB’de temsili**:  
   Polinomlar, **katsayıların azalan dereceye göre sıralandığı bir vektör** ile gösterilir:
   $$
-  \text{P = [a_n, a_{n-1}, ..., a_1, a_0]}
+  P = [a_n, a_{n-1}, \ldots, a_1, a_0]
   $$
 
   > 📌 **Not**: Eksik dereceler için `0` konulmalıdır.
