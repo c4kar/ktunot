@@ -319,9 +319,5 @@ R = paralel_direnc(10, 20, 30);  % 3 direnç
 ---
 
 ## **Kaynaklar**
-- Ders notları, KTÜ EEM Bölümü, 2020  
+- Ders notları, KTÜN EEM Bölümü, 2020  
 - MATLAB Documentation
-
---- 
-
-> ✅ Bu ders notu, sınav ve laboratuvar hazırlığı için özet niteliğindedir. Tüm örnekler MATLAB R2020a+ ile uyumludur.

@@ -1,4 +1,5 @@
 # İçindekiler
+
 - [Genel Özet](#genel-özet)
 - [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)
 - [Ana Gövde: Kronolojik veya Tematik Kayıt](#ana-gövde-kronolojik-ve-tematik-kayıt)
@@ -80,26 +81,26 @@ Bu çalışma, Dr. Öğr. Üyesi Umut Özkaya tarafından hazırlanan 6331 sayı
 6331 sayılı Yeni İş Sağlığı ve Güvenliği (İSG) Kanunu, iş kazası ve meslek hastalığı gibi olumsuz durumlar yaşanmadan *önleyici tedbirlerin* alınmasını esas alır. Temel amaç, **tazmin kültürü yerine önleme kültürünün** çalışma hayatında yerleşmesini sağlamaktır. Bu kanun, tüm çalışanların sağlık ve güvenliklerinin eğitim ve bilgilendirme yükümlülükleri ile güvence altına alınmasını düzenler.
 
 >[!note]
->Kanun koyucu, İSG kültürünün oluşumunda temel etken olan _eğitim ve bilgilendirmenin görsel medya ile de desteklenmesini_ amaçlamış, bu doğrultuda İSG'ye ilişkin öğretici ve eğitici programları zorunlu kılmıştır.
+>Kanun koyucu, İSG kültürünün oluşumunda temel etken olan _eğitim ve bilgilendirmenin görsel medya ile de desteklenmesini_ amaçlamış, bu doğrultuda İSG'ye ilişkin öğretici ve eğitici programları **zorunlu** kılmıştır.
 
 ## İSG Kanunu Neler Getiriyor?
 
 Kanunun getirdiği başlıca yenilikler şunlardır:
 
 *   **Amaç**: Sağlıklı ve güvenli işyerleri kurmak.
-*   **Kapsam**: Kamu ve özel sektör ayrımı olmaksızın tüm çalışanları İSG şemsiyesi altına almak.
+*   **Kapsam**: Kamu ve özel sektör **ayrımı olmaksızın** tüm çalışanları İSG şemsiyesi altına almak.
 *   **İSG Hizmet Sunumu**: Çalışan sayısı ve tehlike durumuna bakılmaksızın İSG hizmeti sunma zorunluluğu.
 *   **Risk Değerlendirmesi**: Her işyerinde risk değerlendirmesi yapma veya yaptırma mecburiyeti.
 *   **Ortam Ölçüm ve Analiz**: Çalışma ortamına yönelik ölçüm ve analizlerin yapılmasının zorunlu hale getirilmesi.
-*   **Tehlike Sınıfları**: İşyerlerinin az tehlikeli, tehlikeli ve çok tehlikeli olarak sınıflandırılması.
-*   **Küçük İşyerlerine Destek**: 1-9 arası çalışana sahip işyerlerine İSG hizmeti için finansal destek sağlanması.
-*   **Çalışan Temsilcisi**: Çalışanlar arasından seçim veya atama ile çalışan temsilcisi belirlenmesi.
+*   **Tehlike Sınıfları**: İşyerlerinin **az tehlikeli, tehlikeli ve çok tehlikeli olarak sınıflandırılması**.
+*   **Küçük İşyerlerine Destek**: 1-9 arası çalışana sahip işyerlerine İSG hizmeti için **finansal destek** sağlanması.
+*   **Çalışan Temsilcisi**: Çalışanlar arasından seçim veya atama ile **çalışan temsilcisi** belirlenmesi.
 *   **Çalışan Katılımı**: Çalışanların İSG konularında görüş bildirme ve katılımının sağlanması.
 *   **Destek Elemanı**: Çalışanlar arasından İSG ile ilgili önleme, koruma vb. görevler için destek elemanı atanması.
 *   **Toplu İşyerlerinde Koordinasyon**: Toplu işyerlerinde İSG yönünden koordinasyonun sağlanması.
 *   **Asıl-Alt İşveren Koordinasyonu**: Asıl ve alt işveren arasındaki İSG Kurulu ve koordinasyonunun düzenlenmesi.
 *   **İşin Durdurulması**: Hayati tehlike durumlarında işin durdurulması yetkisi.
-*   **Güvenlik Raporu**: Büyük endüstriyel tesislere güvenlik raporu hazırlama zorunluluğu.
+*   **Güvenlik Raporu**: **Büyük endüstriyel tesislere** güvenlik raporu hazırlama zorunluluğu.
 
 ## Yükümlülükler
 
@@ -116,7 +117,7 @@ Kanunun getirdiği başlıca yenilikler şunlardır:
 *   Olmuş olan olayla ilgilenir (reaktif).
 *   *Tazmin eden yaklaşım* içerir.
 *   Güvensiz koşulları ihmal eder.
-*   Sadece koruma anlayışı hakimdir.
+*   **Sadece koruma** anlayışı hakimdir.
 
 ### Yeni Yaklaşım (Risk Odaklı)
 
@@ -130,12 +131,12 @@ Kanunun getirdiği başlıca yenilikler şunlardır:
 MADDE 1- (1) Bu Kanunun amacı; işyerlerinde iş sağlığı ve güvenliğinin sağlanması ve mevcut sağlık ve güvenlik şartlarının iyileştirilmesi için işveren ve çalışanların görev, yetki, sorumluluk, hak ve yükümlülüklerini düzenlemektir.
 
 ### Kapsam ve İstisnalar
-MADDE 2- Kamu ve özel sektöre ait bütün işlere ve işyerlerine, bu işyerlerinin işverenleri ile işveren vekillerine, çırak ve stajyerleri de dahil olmak üzere tüm çalışanlarına faaliyet konularına bakılmaksızın uygulanır.
+MADDE 2- Kamu ve özel sektöre ait bütün işlere ve işyerlerine, bu işyerlerinin işverenleri ile işveren vekillerine, **çırak ve stajyerleri de dahil olmak** üzere tüm çalışanlarına faaliyet konularına bakılmaksızın uygulanır.
 
 >[!note]+ İstisnalar
 >Aşağıda belirtilen faaliyetler ve kişiler hakkında bu Kanun hükümleri uygulanmaz:
->a) Fabrika, bakım merkezi, dikimevi ve benzeri işyerindekiler hariç Türk Silahlı Kuvvetleri, genel kolluk kuvvetleri ve Milli İstihbarat Teşkilatı Müsteşarlığının faaliyetleri.
->b) Afet ve acil durum birimlerinin müdahale faaliyetleri.
+>a) Fabrika, bakım merkezi, dikimevi ve benzeri işyerindekiler hariç **Türk Silahlı Kuvvetleri, genel kolluk kuvvetleri ve Milli İstihbarat Teşkilatı** Müsteşarlığının faaliyetleri.
+>b) **Afet ve acil** durum birimlerinin müdahale faaliyetleri.
 >c) Ev hizmetleri.
 >d) Çalışan istihdam etmeksizin kendi nam ve hesabına mal ve hizmet üretimi yapanlar.
 >e) Hükümlü ve tutuklulara yönelik infaz hizmetleri sırasında, iyileştirme kapsamında yapılan işyurdu, eğitim, güvenlik ve meslek edindirme faaliyetleri.
@@ -143,19 +144,19 @@ MADDE 2- Kamu ve özel sektöre ait bütün işlere ve işyerlerine, bu işyerle
 ## Tanımlar
 MADDE 3- (1) Bu Kanunun uygulanmasında şu tanımlar geçerlidir:
 
-*   **Bakanlık**: Çalışma ve Sosyal Güvenlik Bakanlığı'nı.
+*   **Bakanlık**: **Çalışma ve Sosyal Güvenlik Bakanlığı'nı**
 *   **Çalışan**: Kendi özel kanunlarındaki statülerine bakılmaksızın kamu veya özel işyerlerinde istihdam edilen gerçek kişiyi.
 *   **Çalışan temsilcisi**: İş sağlığı ve güvenliği ile ilgili çalışmalara katılma, çalışmaları izleme, tedbir alınmasını isteme, tekliflerde bulunma ve benzeri konularda çalışanları temsil etmeye yetkili çalışanı.
 *   **Destek elemanı**: Asli görevinin yanında iş sağlığı ve güvenliği ile ilgili önleme, koruma, tahliye, yangınla mücadele, ilk yardım ve benzeri konularda özel olarak görevlendirilmiş uygun donanım ve yeterli eğitime sahip kişiyi.
 *   **Eğitim kurumu**: İş güvenliği uzmanı, işyeri hekimi ve diğer sağlık personelinin eğitimlerini vermek üzere Bakanlıkça yetkilendirilen kamu kurum ve kuruluşlarını, üniversiteleri ve Türk Ticaret Kanunu'na göre faaliyet gösteren şirketler tarafından kurulan müesseseleri.
-*   **Genç çalışan**: On beş yaşını bitirmiş ancak on sekiz yaşını doldurmamış çalışanı.
+*   **Genç çalışan**: 15 yaşını bitirmiş ancak 18 yaşını doldurmamış çalışanı.
 *   **İş güvenliği uzmanı**: İş sağlığı ve güvenliği alanında görev yapmak üzere Bakanlıkça yetkilendirilmiş, iş güvenliği uzmanlığı belgesine sahip müfettişler, mühendislik veya mimarlık eğitimi veren fakültelerin mezunları ile teknik elemanı.
-*   **İş kazası**: İşyerinde veya işin yürütümü nedeniyle meydana gelen, ölüme sebebiyet veren veya vücut bütünlüğünü ruhen ya da bedenen özre uğratan olayı.
+*   **İş kazası**: İşyerinde veya işin yürütümü nedeniyle meydana gelen, ölüme sebebiyet veren veya *vücut bütünlüğünü ruhen ya da bedenen özre uğratan olayı*.
 *   **İşveren**: Çalışan istihdam eden gerçek veya tüzel kişi yahut tüzel kişiliği olmayan kurum ve kuruluşları.
 *   **İşyeri**: Mal veya hizmet üretmek amacıyla maddi olan ve olmayan unsurlar ile çalışanın birlikte örgütlendiği organizasyonu.
 *   **İşyeri hekimi**: İş sağlığı ve güvenliği alanında görev yapmak üzere Bakanlıkça yetkilendirilmiş, işyeri hekimliği belgesine sahip hekimi.
 *   **İşyeri sağlık ve güvenlik birimi**: İşyerinde iş sağlığı ve güvenliği hizmetlerini yürütmek üzere kurulan, gerekli donanım ve personele sahip olan birimi.
-*   **Konsey**: Ulusal İş Sağlığı ve Güvenliği Konseyini.
+*   **Konsey**: *Ulusal İş Sağlığı ve Güvenliği Konseyini.*
 *   **Kurul**: İş sağlığı ve güvenliği kurulunu.
 *   **Meslek hastalığı**: Mesleki risklere maruziyet sonucu ortaya çıkan hastalığı.
 *   **Ortak sağlık ve güvenlik birimi (OSGB)**: İşyerlerine iş sağlığı ve güvenliği hizmetlerini sunmak üzere Bakanlıkça yetkilendirilen birimi.
@@ -173,10 +174,10 @@ MADDE 4- (1) İşveren, çalışanların işle ilgili sağlık ve güvenliğini 
 
 *   **a) Mesleki risklerin önlenmesi, eğitim ve bilgi verilmesi dahil her türlü tedbirin alınması, organizasyonun yapılması, gerekli araç ve gereçlerin sağlanması, sağlık ve güvenlik tedbirlerinin değişen şartlara uygun hale getirilmesi ve mevcut durumun iyileştirilmesi için çalışmalar yapar.**
     >[!failure] İdari Para Cezası
-    >Bu maddeye aykırılık durumunda, her bir yükümlülük için ayrı ayrı **iki bin Türk Lirası** idari para cezası verilir.
+    >Bu maddeye aykırılık durumunda, her bir yükümlülük için ayrı ayrı **2000₺** idari para cezası verilir.
 *   **b) İşyerinde alınan iş sağlığı ve güvenliği tedbirlerine uyulup uyulmadığını izler, denetler ve uygunsuzlukların giderilmesini sağlar.**
     >[!failure] İdari Para Cezası
-    >Bu maddeye aykırılık durumunda, her bir yükümlülük için ayrı ayrı **iki bin Türk Lirası** idari para cezası verilir.
+    >Bu maddeye aykırılık durumunda, her bir yükümlülük için ayrı ayrı **2000₺** idari para cezası verilir.
 *   c) Risk değerlendirmesi yapar veya yaptırır.
 *   ç) Çalışana görev verirken, çalışanın sağlık ve güvenlik yönünden işe uygunluğunu göz önüne alır.
 *   d) Yeterli bilgi ve talimat verilenler dışındaki çalışanların hayati ve özel tehlike bulunan yerlere girmemesi için gerekli tedbirleri alır.
@@ -204,24 +205,24 @@ MADDE 6- Kanun kapsamında olan tüm işyerlerinde **iş güvenliği uzmanı ve 
     Çalışanları arasında belirlenen niteliklere sahip personel bulunmaması halinde, bu hizmetin tamamını veya bir kısmını ortak sağlık ve güvenlik birimlerinden hizmet alarak yerine getirebilir.
     Belirlenen niteliklere ve gerekli belgeye sahip olması halinde, tehlike sınıfı ve çalışan sayısı dikkate alınarak, bu hizmetin yerine getirilmesini kendisi üstlenebilir (İşyeri Hekimi ya da uzman ise).
     >[!failure] İdari Para Cezası
-    >Belirlenen nitelikte iş güvenliği uzmanı veya işyeri hekimi görevlendirmeyen işverene görevlendirmediği her bir kişi için **beş bin Türk Lirası**, aykırılığın devam ettiği her ay için aynı miktar idari para cezası verilir.
-    >Diğer sağlık personeli görevlendirmeyen işverene **iki bin beş yüz Türk Lirası**, aykırılığın devam ettiği her ay için aynı miktar idari para cezası verilir.
+    >Belirlenen nitelikte iş güvenliği uzmanı veya işyeri hekimi görevlendirmeyen işverene görevlendirmediği her bir kişi için **5000₺**, aykırılığın devam ettiği **her ay için aynı miktar** idari para cezası verilir.
+    >Diğer sağlık personeli görevlendirmeyen işverene **2500₺**, aykırılığın devam ettiği her ay için aynı miktar idari para cezası verilir.
 
 *   **b) Görevlendirdikleri kişi veya hizmet aldığı kurum ve kuruluşların görevlerini yerine getirmeleri amacıyla araç, gereç, mekân ve zaman gibi gerekli bütün ihtiyaçlarını karşılar.**
     >[!failure] İdari Para Cezası
-    >Karşılamaması durumunda, her bir ihlal için ayrı ayrı **bin beş yüz Türk Lirası** idari para cezası verilir.
+    >Karşılamaması durumunda, her bir ihlal için ayrı ayrı **1500TL** idari para cezası verilir.
 
 *   **c) İşyerinde sağlık ve güvenlik hizmetlerini yürütenler arasında işbirliği ve koordinasyonu sağlar.**
     >[!failure] İdari Para Cezası
-    >Sağlamaması durumunda, her bir ihlal için ayrı ayrı **bin Türk Lirası** idari para cezası verilir.
+    >Sağlamaması durumunda, her bir ihlal için ayrı ayrı **1000TL** idari para cezası verilir.
 
 *   **ç) Görevlendirdikleri kişi veya hizmet aldığı kurum ve kuruluşlar tarafından iş sağlığı ve güvenliği ile ilgili mevzuata uygun olan ve yazılı olarak bildirilen tedbirleri yerine getirir.**
     >[!failure] İdari Para Cezası
-    >Tedbirleri yerine getirmemesi durumunda, her bir tedbir için ayrı ayrı **bin beş yüz Türk Lirası** idari para cezası verilir.
+    >Tedbirleri yerine getirmemesi durumunda, her bir tedbir için ayrı ayrı **1500TL** idari para cezası verilir.
 
 *   **d) Çalışanların sağlık ve güvenliğini etkilediği bilinen veya etkilemesi muhtemel konular hakkında; görevlendirdikleri kişi veya hizmet aldığı kurum ve kuruluşları, başka işyerlerinden çalışmak üzere kendi işyerine gelen çalışanları ve bunların işverenlerini bilgilendirir.**
     >[!failure] İdari Para Cezası
-    >Başka yerden gelen işçileri ve işverenlerini bilgilendirmemesi durumunda, her bir ihlal için ayrı ayrı **bin beş yüz Türk Lirası** idari para cezası verilir.
+    >Başka yerden gelen işçileri ve işverenlerini bilgilendirmemesi durumunda, her bir ihlal için ayrı ayrı **1500TL** idari para cezası verilir.
 
 ## İş Sağlığı ve Güvenliği Hizmetlerinin Desteklenmesi
 MADDE 7- (1) İş güvenliği uzmanı, işyeri hekimi ve diğer sağlık personeli çalıştırılması konusunda **küçük işyerlerine finansal destek** sağlanabilir:

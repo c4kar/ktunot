@@ -1,4 +1,5 @@
 # İçindekiler
+
 - [Genel Özet](#genel-özet)  
 - [Temel Terimler ve Kavramlar](#temel-terimler-ve-kavramlar)  
 - [Mekaniğin Tanımı ve Alt Dalları](#mekaniğin-tanımı-ve-alt-dalları)  
@@ -108,6 +109,7 @@ Mekanik, fiziksel dünyayı anlamak ve mühendislik sistemlerini tasarlamak içi
 ## Çekim Yasası ve Ağırlık
 
 ### Evrensel Çekim Yasası:
+
 $$
 F = G \frac{m_1 m_2}{r^2}
 $$

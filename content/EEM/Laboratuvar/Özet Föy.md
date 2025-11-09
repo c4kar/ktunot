@@ -456,12 +456,12 @@ AC devrelerinde akım ve gerilim zamana bağlı olarak (anlık) değişmektedir.
 >![img-20.jpeg|400](img-20.jpeg)
 >Şekil 1: Alternatif akımın sinüsoydal değişimi, ani, ortalama ve etkin değerler
 
-```
+$$ 
 V(t) = Vm * Sinθ
 I(t) = Im * Sinθ
 V_ort = (1/T) ∫₀ᵀ V(t)dt
 V_etk = √( (1/T) ∫₀ᵀ V(t)²dt ) = Vm / √2
-```
+$$
 
 *   **Ortalama değer:** Herhangi bir `u(t)` fonksiyonunun bir periyottaki ani değerlerinin ortalamasıdır. Saf sinüsoydal AC'de ortalama değer sıfırdır, çünkü pozitif ve negatif ani değerler birbirini götürür.
 *   **Etkin (Efektif) Değer (RMS):** Alternatif gerilimin en büyük değeri veya genliği, sinüs sinyalinin yukarıda tanımlanmış periyot süresi içerisinde aldığı en büyük değeri belirtir. `220 V`'luk şebeke gerilimi için tepe değeri yaklaşık `311 V`'tur. Efektif değer, anma değeri olarak kullanılır.
@@ -484,13 +484,13 @@ Pratikte bobin iç omik direnci olması nedeniyle karmaşık yük olarak kendini
 >![img-23.jpeg|400](img-23.jpeg)
 >Şekil 4: RL devresinde Akım, gerilim ve Empedans
 
-```
+$$
 V_R = I * R
 V_L = I * X_L
 V = √(V_R² + V_L²)
 V = I * Z
 Z = √(R² + X_L²)
-```
+$$
 
 ### Alternatif akımda Güç Ve Enerji
 
@@ -510,12 +510,12 @@ Dirençli (omik) devrelerde faz farkı sıfır (`φ = 0`) olduğu için akım ve
 *   **Görünür güç (S):** Her iki gücün toplamı olan devrenin gücü. Kaynak gerilimi ile toplam devre akımının etkin değerlerinin çarpımına denir.
 
 Güç Üçgeni ilişkileri:
-```
+$$
 P = V * I * Cosφ
 Q = V * I * Sinφ
 S = V * I
 S = √(P² + Q²)
-```
+$$
 
 ### Wattmetre ve Cosφmetre
 
@@ -1066,7 +1066,7 @@ Tablo 6.2: Transformatör gerilim/sarım oranı deney sonuçları
 > * `l`: Uzunluk
 > * `S`: Kesit Alanı
 >
->---
+> ---
 >
 >**AC Devre Güçleri:**
 > *Aktif*, *Reaktif* ve *Görünür* güç arasındaki ilişki ve hesaplama.
