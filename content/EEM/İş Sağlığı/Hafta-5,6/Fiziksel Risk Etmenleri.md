@@ -47,7 +47,7 @@
 
 # Genel Özet
 
-Bu belge, çalışma ve yaşam ortamlarında karşılaşılabilecek **fiziksel risk etmenlerini** detaylı bir şekilde ele almaktadır. Özellikle **gürültü, aydınlatma, titreşim, radyasyon, basınç değişimleri ve termal konfor** gibi temel faktörlerin insan sağlığı üzerindeki olası etkileri, bu etmenlerin ölçüm yöntemleri ve alınması gereken önlemler açıklanmaktadır. Belgenin amacı, bu risk etmenlerini anlayarak, *çalışma ortamlarında güvenli ve sağlıklı koşulların sağlanmasına* katkıda bulunmaktır. Sonuç olarak, okuyucuların bu fiziksel etkenler hakkında bilinçlenmesi ve gerekli tedbirleri alması hedeflenmektedir.
+Bu belge, çalışma ve yaşam ortamlarında karşılaşılabilecek **fiziksel risk etmenlerini** detaylı bir şekilde ele almaktadır. Özellikle **gfürültü, aydınlatma, titreşim, radyasyon, basınç değişimleri ve termal konfor** gibi temel faktörlerin insan sağlığı üzerindeki olası etkileri, bu etmenlerin ölçüm yöntemleri ve alınması gereken önlemler açıklanmaktadır. Belgenin amacı, bu risk etmenlerini anlayarak, *çalışma ortamlarında güvenli ve sağlıklı koşulların sağlanmasına* katkıda bulunmaktır. Sonuç olarak, okuyucuların bu fiziksel etkenler hakkında bilinçlenmesi ve gerekli tedbirleri alması hedeflenmektedir.
 
 ---
 

@@ -32,7 +32,7 @@
 - **MATLAB’de temsili**:  
   Polinomlar, **katsayıların azalan dereceye göre sıralandığı bir vektör** ile gösterilir:
   $$
-  \texttt{P = [a_n, a_{n-1}, ..., a_1, a_0]}
+  \text{P = [a_n, a_{n-1}, ..., a_1, a_0]}
   $$
 
   > 📌 **Not**: Eksik dereceler için `0` konulmalıdır.
@@ -269,13 +269,4 @@ C = A * B;
 ---
 
 > 📘 **Not**: Ders notu, MATLAB’de polinom ve matris işlemlerinin temel kullanımını kapsamaktadır. Detaylı uygulamalar için MATLAB komut satırında pratik yapılması önerilir.
-
----
-
-**Hazırlayan**: [İsimsiz – KTÜ EEM]  
 **Tarih**: 22 Ekim 2020  
-**Versiyon**: 1.0  
-
---- 
-
-İsterseniz bu notu PDF’e dönüştürmek için LaTeX veya Markdown formatında da sunabilirim.

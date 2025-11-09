@@ -1,6 +1,6 @@
 # İçindekiler
 - [İş Sağlığı ve Güvenliğinin Kavram ve Kurallarının Gelişimi ve Güvenlik Kültürü](#i̇ş-sağlığı-ve-güvenliğinin-kavram-ve-kurallarının-gelişimi-ve-güvenlik-kültürü)
-  - [1. İş Sağlığı ve Güvenliği Nedir?](#1-i̇ş-sağlığı-ve-güvenliği-nedir)
+  - [1. İş Sağlığı ve Güvenliği Nedir?](#1-iş-sağlığı-ve-güvenliği-nedir)
   - [ILO ve WHO'ya Göre İş Sağlığı ve Güvenliği](#ilo-ve-whoya-göre-i̇ş-sağlığı-ve-güvenliği)
   - [İş Sağlığı ve Güvenliği Politikası:](#i̇ş-sağlığı-ve-güvenliği-politikası)
   - [2. İş Sağlığı ve Güvenliğinin Tarihçesi](#2-i̇ş-sağlığı-ve-güvenliğinin-tarihçesi)
@@ -8,7 +8,7 @@
     - [Dr. Bernardino Ramazzini (1633-1714)](#dr-bernardino-ramazzini-1633-1714)
   - [Sanayi Devrimi ve Sonrası](#sanayi-devrimi-ve-sonrası)
   - [Dünyada İSG ile İlgili İlk Yasal Düzenlemeler](#dünyada-i̇sg-ile-i̇lgili-ilk-yasal-düzenlemeler)
-  - [3. İSG'nin Türkiye'deki Tarihsel Gelişimi](#3-i̇sgnin-türkiyedeki-tarihsel-gelişimi)
+  - [3. İSG'nin Türkiye'deki Tarihsel Gelişimi](#3-isgnin-türkiyedeki-tarihsel-gelişimi)
     - [Osmanlı Döneminde İSG](#osmanlı-döneminde-i̇sg)
     - [Cumhuriyet Döneminde İSG](#cumhuriyet-döneminde-i̇sg)
   - [Günümüzde İSG ile İlgili Yasal Düzenlemeler:](#günümüzde-i̇sg-ile-i̇lgili-yasal-düzenlemeler)
