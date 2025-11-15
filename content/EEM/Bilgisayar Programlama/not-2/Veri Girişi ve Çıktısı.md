@@ -132,7 +132,7 @@ fprintf('Ekrana Basılacak Açıklama %X \n', değer );
 
 ## disp Komutu ile Ekrana Sayısal Değer Yazdırma
 
-`disp` komutu, mesajları veya değişken içeriklerini ekrana yazdırmak için kullanılır. `fprintf`'den farklı olarak, `disp` otomatik olarak yeni bir satıra atlar ve genellikle daha az formatlama gerektiren durumlar için tercih edilir.
+`disp(display)` komutu, mesajları veya değişken içeriklerini ekrana yazdırmak için kullanılır. `fprintf`'den farklı olarak, `disp` otomatik olarak yeni bir satıra atlar ve genellikle daha az formatlama gerektiren durumlar için tercih edilir.
 
 - `disp('Üzgünüm! Sıfıra Bölüm Hatası Var.');`
 - `fprintf('Üzgünüm! Sıfıra Bölüm Hatası Var.\n');`
