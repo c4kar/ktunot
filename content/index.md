@@ -21,6 +21,7 @@ Kaybolduysanız, site haritasını kontrol edebilir veya dosyaları arama özell
 2. **Kategorilere Göz Atın:** Dersler, bölümler ve konulara göre düzenlenmiş içerikleri keşfedin.
 3. **İndirin:** Gerekli materyalleri indirerek çevrimdışı erişim sağlayın.
 
+_Sitemizde çoğunlukla taratılmış ya da düzenlenmiş ders kaynakları mevcuttur. Eğer ham materyallerden yararlanmak isterseniz [git repomuzu](https://github.com/c4kar/ktunDepo) ziyaret edebilirsiniz_
 %%
 
 //TODO BU KISMI DAHA SONRA YAPACAĞIM
@@ -64,9 +65,11 @@ Notlara baktıysanız farketmişsinizdir; Orijinal dosyanın yazım sırası, ta
 Platformla ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen bizimle iletişime geçmekten çekinmeyin(lütfen). Amacımız, hep beraber eğitim sürecimizi en verimli şekilde geçirmektir. Sizi çok seviyoruz. İyi ki varsınız 💚
 
 💚 Soru ve öneriler için mail adresim:
-**yc4kar[at]gmail[nokta]com** 
+**yc4kar[at]gmail[nokta]com**
 
-[🖤 GitHub'dan düzenleme için 🖤](https://github.com/c4kar/ktunDepo/issues/new)
+[🖤 Depo GitHub Repomuzdan düzenleme için 🖤](https://github.com/c4kar/ktunDepo/issues/new)
+
+[🖤 Ana GitHub Repomuzdan düzenleme için 🖤](https://github.com/c4kar/ktunoto/issues/new)
 
 [♥️ Üniversitemizin Web Sitesi ♥️](https://www.ktun.edu.tr/)
 

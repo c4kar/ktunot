@@ -7,7 +7,7 @@
         style="border:none;">
 </iframe>
 
-## [PDF'yi indir](https://drive.google.com/uc?export=download&id=1qDwOl7ayFbr2m1DfwhhT1mp6mr2PGpnP)
+[PDF'yi indir](https://drive.google.com/uc?export=download&id=1qDwOl7ayFbr2m1DfwhhT1mp6mr2PGpnP)
 
 ## 2018-2019 FİNAL
 
