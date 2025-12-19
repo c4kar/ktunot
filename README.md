@@ -1,10 +1,11 @@
-#### **[ktünot](ktunot.net.tr)**, KTÜN not ve kaynak ağı
+#### **[ktünot](ktunot.net.tr)**, KTÜN not ağı
 
-Bu depo **Konya Teknik Üniversitesi** _Elektrik ve Elektronik Mühendislik Fakültesinin_ derslerinin notlarını, kayıtlarını, özetlerini ve bütün ilgili kaynaklara kolay erişim sunmayı amaçlayan bir **öğrenci** oluşumudur.
+Bu depo **Konya Teknik Üniversitesi - Mühendislik Bölümleri** derslerinin notlarını, video kayıtlarını, özetlerini ve bütün ilgili kaynaklara kolay erişim sunmayı amaçlayan bir **öğrenci** oluşumudur.
 
-> Site ve depomuz henüz erken geliştirme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde kayma olabilir. Eğer karşılaşırsanız [lütfen açıklayıcı bir şekilde bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz yenilikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md). Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir.
+> Site ve depo halen geliştirilme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde hata olabilir. Eğer karşılaşırsanız [lütfen bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz özellikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md). 
+> "Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir. Daha sonrasında ortak derslere sahip diğer bölümlerinin notları eklenerek bütün üniversiteyi kapsamayı hedeflemektedir. Eğer bölümünüzün notları depoda bulunmuyorsa [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE)
 
-Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notları n8n otomasyonumuza gönderdikten sonra moderatör arkadaşlarımız özetlenmiş, düzenlenmiş notu inceliyor, eğer hata varsa düzeltiyor ve daha sonra sitemizde paylaşıyoruz.
+Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notları **n8n** otomasyon sistemine gönderdikten sonra moderatör arkadaşlarımız özetlenmiş, düzenlenmiş notu inceliyor, eğer hata varsa düzeltiyor ve daha sonra sitemizde paylaşıyoruz.
 
 **[ktünot'un](ktunot.net.tr)** temelleri [_quartz_](https://quartz.jzhao.xyz/) üzerine kuruludur. Kelime arama, _backlinks_ ve akıl haritası özellikleri bu şablonu tercih etmemize sebep oldu.
 
