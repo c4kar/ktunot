@@ -12,6 +12,7 @@ Lojik Devrelere ait **2009-2024** sınav çıkmış (vize, final, bütünleme) a
 [NotebookLM](https://notebooklm.google.com/) kullanarak çok daha verimli ders çalışabilirsiniz.
 
 Lojik Devreler çıkmışlarını NotebookLM'e nasıl yükleyebilirsiniz ?
+
 **1. Adım: Giriş Yapın**
 
 * Bu linke gidin: [https://notebooklm.google.com](https://notebooklm.google.com)
