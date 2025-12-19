@@ -5,9 +5,9 @@
         allowfullscreen
         style="border:none; aspect-ratio:16/9;">
 </iframe>
+
 ---
----
----
+
 Lojik Devrelere ait **2009-2024** sınav çıkmış (vize, final, bütünleme) arşivine [github depomuza](https://github.com/c4kar/ktunDepo) girerek notlara erişebilirsiniz.
 [NotebookLM](https://notebooklm.google.com/) kullanarak çok daha verimli ders çalışabilirsiniz.
 
