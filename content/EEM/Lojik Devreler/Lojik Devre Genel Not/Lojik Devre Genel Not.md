@@ -1748,7 +1748,7 @@ BCD kodunda verilmiş bir ifadenin sayı biçiminde gösterilmesi amacıyla kull
 
 Flip-flop'lar, 1 bitlik bilgiyi saklayabilen **bellek birimleridir**. Tek başına kullanılabileceği gibi, birçoğu bir araya getirilerek yazmaç (register), sayıcı (counter) veya daha büyük bellek birimleri oluşturulabilir.
 
-Bir flip-flop'un genellikle iki çıkışı (`Q` ve `$\bar{Q}$`), bir saat girişi ve bir veya iki veri giriş ucu bulunur. Çıkış uçları birbirlerinin tümleyenidir.
+Bir flip-flop'un genellikle iki çıkışı ($Q$ ve $\bar{Q}$), bir saat girişi ve bir veya iki veri giriş ucu bulunur. Çıkış uçları birbirlerinin tümleyenidir.
 
 **Flip-Flop Giriş Türleri:**
 
