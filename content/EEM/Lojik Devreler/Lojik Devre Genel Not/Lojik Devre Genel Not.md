@@ -168,7 +168,7 @@ $$
 a = \frac{V_{max} - V_{min}}{2^n} \quad (\text{bazı uygulamalarda } a = \frac{V_{max} - V_{min}}{2^n-1})
 $$
 
-> _Burada_ `$V_{max}$` _maksimum gerilim, `$V_{min}$` minimum gerilim ve `$n$` bit sayısıdır.\_
+> _Burada_ $V_{max}$ _maksimum gerilim, $V_{min}$ minimum gerilim ve $n$ bit sayısıdır.\_
 
 Dönüştürme hızı, dönüştürme işleminin ne kadar sürede tamamlandığını belirtir. En hızlı dönüştürücüler _Flash dönüştürücüler_ olarak bilinir.
 

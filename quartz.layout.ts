@@ -10,6 +10,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/c4kar/ktunot",
       "Okul Websitesi": "https://www.ktun.edu.tr/",
+      "Not Hesaplama": "https://halilbozoglu.github.io/website/"
     },
   }),
 }
