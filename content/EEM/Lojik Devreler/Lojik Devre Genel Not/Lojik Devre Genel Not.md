@@ -196,7 +196,7 @@ ADC'nin blok diyagramı aşağıdaki şekildedir:
 > [!caption|center] Şekil 1.5 Örnekleme ve Tutma Devresi
 
 Örnekleme elemanının çalışma ilkesi **Shannon Teoremi**'ne dayanır:
-`$\omega_s \ge 2\omega_c$` _Burada_ `$\omega_s$` _örnekleme frekansı ve_ `$\omega_c$` _işarete ait en yüksek frekanslı bileşenin frekansıdır._
+$\omega_s \ge 2\omega_c$ _Burada_ $\omega_s$ _örnekleme frekansı ve_ $\omega_c$ _işarete ait en yüksek frekanslı bileşenin frekansıdır._
 
 #### Kuantalama
 
@@ -205,15 +205,11 @@ Sürekli bir büyüklüğün belirli sayıda **eşit aralıklı basamaklara** ay
 > [!example]+ Kuantalama Örnekleri
 > **Örnek 1.1:** -3 Volt ile +5 Volt arasında değişen bir analog işaretin 1 Volt duyarlılıkla sayısal olarak ifade etmek için kaç bit kullanmak gerekir?
 >
-> ```markdown
-> a = 1 Volt olduğuna göre 1 = (5 - (-3)) / 2^n => 2^n = 8 => n = 3 bit
-> ```
+> a = 1 Volt olduğuna göre $1 = (5 - (-3)) / 2^n => 2^n = 8 => n = 3 bit$
 >
 > **Örnek 1.2:** Bir analog işaret 0-15 Volt arasında kesintisiz değerler alabilmektedir. Bu işaretin 100 mV duyarlılıkla kodlanmış sayısal işarete dönüştürülmesi için kaç bitlik bir ADC gerekir?
 >
-> ```markdown
-> a = 100 mV olduğuna göre 0.1 = (15 - 0) / 2^n => 2^n = 150 => n = 7.23 bit ≈ 8 bit
-> ```
+> a = 100 mV olduğuna göre $0.1 = (15 - 0) / 2^n => 2^n = 150 => n = 7.23 bit ≈ 8 bit$
 
 #### Kodlama-1
 
@@ -313,7 +309,7 @@ Bu dönüşüm genellikle ara bir adım olarak 10 tabanına çevirme ve oradan h
 >
 > - $(253,263)_{10} = (375,206)_{8}$
 >
-> ```markdown
+> ```latex
 > r = 3 _ (ln 10 / ln 8) = 3.32
 > 253 / 8 = 31 (kalan = 5) => 375
 > 31 / 8 = 3 (kalan = 7)
@@ -391,7 +387,7 @@ Binary sayının en solundaki bit (MSB) **işaret biti** olarak kullanılır. `1
 
 #### 2.3.4. İşaretli sayılarda tabana göre tümleme aritmetiği ile çıkarma işlemi
 
-`N` sayısının `r`'ye göre tümleyenini hesaplamak için `$r^n - N$` formülü kullanılır (n: işlemdeki en büyük sayının tamsayı sayısı).
+N sayısının r'ye göre tümleyenini hesaplamak için $r^n - N$ formülü kullanılır (n: işlemdeki en büyük sayının tamsayı sayısı).
 
 ##### 10 tabanında
 
@@ -454,12 +450,12 @@ Bilginin veya verinin sayısal olarak gösterilmesi için kullanılan yöntemdir
 
 > [!example]+ Kodlama Örneği: Eleman Sayısı ve Bit İhtiyacı
 > Altı elemanlı bir kümenin ($F = \{ \text{Ali, Veli, Sira, Masa, Ayşe, Tahta} \}$) kodlamasını inceleyelim.
-> Bu 6 elemanı kodlamak için `$n$` bite ihtiyaç duyulursa:
-> `$2^n = 6 \rightarrow n \cong 3 \text{ bit}$` olarak bulunur.
+> Bu 6 elemanı kodlamak için $n$ bite ihtiyaç duyulursa:
+> $2^n = 6 \rightarrow n \cong 3 \text{ bit}$ olarak bulunur.
 > 3 bit ile kodlama yapıldığında kullanılmayan 2 durum kalır, bu durum **artıklı kodlama** olarak adlandırılır. Bit sayısı ile oluşan bütün kodlar kullanılırsa **artıksız kodlama** söz konusudur.
 >
 > Alfabedeki harflerin her biri bir kodla ifade edilecek olsa gereken bit sayısı:
-> `$2^n = 29 \rightarrow n \cong 5 \text{ bit}$` olarak bulunur.
+> $2^n = 29 \rightarrow n \cong 5 \text{ bit}$ olarak bulunur.
 
 ### Sayısal Kodlama
 
@@ -588,7 +584,7 @@ Birbirini izleyen sayılara karşılık gelen ikili kod sözcükleri arasındaki
 
 #### 3.4.1. Gray kodu
 
-`$2^n$` elemanlı bir küme için, 2 tabanında **artıksız ve çevrimli** bir kodlama yapılırsa yansımalı bir kod olan **Gray Kodu** elde edilir. Sayma ve sütun tarama işlemlerinde kullanılır. Karnaugh diyagramının geçişlerinde önemli rol oynar.
+$2^n$ elemanlı bir küme için, 2 tabanında **artıksız ve çevrimli** bir kodlama yapılırsa yansımalı bir kod olan **Gray Kodu** elde edilir. Sayma ve sütun tarama işlemlerinde kullanılır. Karnaugh diyagramının geçişlerinde önemli rol oynar.
 
 ![img-9.jpeg](img-9.jpeg)
 
@@ -751,61 +747,61 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 `0` ve `1` ikilisinden oluşan bir `B` kümesine `+` (OR) ve `.` (AND) işlemleri uygulanmış olsun:
 
 1. Her bir değişken **0** veya **1** değerinden sadece birini alabilir.
-   - `$a \neq 0 \Rightarrow a=1$`
-   - `$a \neq 1 \Rightarrow a=0$`
-2. a) `$1+1=1$` (_VE/VEYA işlemi: İkisi de doğru ise doğru_)
-   b) `$0 \cdot 0=0$` (_VE/VEYA işlemi: İkisi de yanlış ise yanlış_)
-3. a) `$0+0=0$` (_VEYA işlemi: İkisi de yanlış ise yanlış_)
-   b) `$1 \cdot 1=1$` (_VE işlemi: İkisi de doğru ise doğru_)
-4. a) `$1+0=1$` (_VEYA işlemi: Biri doğru ise doğru_)
-   b) `$0 \cdot 1=0$` (_VE işlemi: Biri yanlış ise yanlış_)
+   - $a \neq 0 \Rightarrow a=1$
+   - $a \neq 1 \Rightarrow a=0$
+2. a) $1+1=1$ (_VE/VEYA işlemi: İkisi de doğru ise doğru_)
+   b) $0 \cdot 0=0$ (_VE/VEYA işlemi: İkisi de yanlış ise yanlış_)
+3. a) $0+0=0$ (_VEYA işlemi: İkisi de yanlış ise yanlış_)
+   b) $1 \cdot 1=1$ (_VE işlemi: İkisi de doğru ise doğru_)
+4. a) $1+0=1$ (_VEYA işlemi: Biri doğru ise doğru_)
+   b) $0 \cdot 1=0$ (_VE işlemi: Biri yanlış ise yanlış_)
 
 ### 5.2. Boole Cebri Teoremleri
 
 1. **Değişme Özelliği**
-   a) `$a+b=b+a$`
-   b) `$a \cdot b=b \cdot a$`
+   a) $a+b=b+a$
+   b) $a \cdot b=b \cdot a$
 2. **Birleşme Özelliği**
-   a) `$a+b+c=(a+b)+c=a+(b+c)$`
-   b) `$a \cdot b \cdot c=(a \cdot b) \cdot c=a \cdot (b \cdot c)$`
+   a) $a+b+c=(a+b)+c=a+(b+c)$
+   b) $a \cdot b \cdot c=(a \cdot b) \cdot c=a \cdot (b \cdot c)$
 3. **Dağılma Özelliği**
-   a) `$a+b \cdot c=(a+b) \cdot (a+c)$`
-   b) `$a \cdot (b+c)=(a \cdot b)+(a \cdot c)$`
+   a) $a+b \cdot c=(a+b) \cdot (a+c)$
+   b) $a \cdot (b+c)=(a \cdot b)+(a \cdot c)$
 4. **Değişkende Fazlalık Özelliği**
-   a) `$a+a=a$`
-   b) `$a \cdot a=a$`
+   a) $a+a=a$
+   b) $a \cdot a=a$
 5. **Yutma Özelliği**
-   a) `$a+a \cdot b=a$`
-   b) `$a \cdot (a+b)=a$`
+   a) $a+a \cdot b=a$
+   b) $a \cdot (a+b)=a$
 6. **İşlemde Fazlalık Özelliği**
-   a) `$\overline{(a)}=a$` (_Yanlış gösterim, doğrusu $\overline{\bar{a}}=a$_)
-   b) `$\overline{(\bar{a})}=a$`
+   a) $\overline{(a)}=a$ (_Yanlış gösterim, doğrusu $\overline{\bar{a}}=a$_)
+   b) $\overline{(\bar{a})}=a$
 7. **De Morgan Kuralı**
-   a) `$\overline{(a+b+c+\dots)}=\bar{a} \cdot \bar{b} \cdot \bar{c} \cdot \dots$`
-   b) `$\overline{(a \cdot b \cdot c \cdot \dots)}=\bar{a}+\bar{b}+\bar{c}+\dots$`
+   a) $\overline{(a+b+c+\dots)}=\bar{a} \cdot \bar{b} \cdot \bar{c} \cdot \dots$
+   b) $\overline{(a \cdot b \cdot c \cdot \dots)}=\bar{a}+\bar{b}+\bar{c}+\dots$
 8. **Sabit Özelliği**
-   a) `$a+\bar{a}=1$`
-   b) `$a \cdot \bar{a}=0$`
+   a) $a+\bar{a}=1$
+   b) $a \cdot \bar{a}=0$
 9. **Etkisizlik Özelliği**
-   a) `$0+a=a$`
-   b) `$1 \cdot a=a$`
+   a) $0+a=a$
+   b) $1 \cdot a=a$
 10. **Yutan Sabit Özelliği**
-    a) `$1+a=1$`
-    b) `$0 \cdot a=0$`
-11. a) `$(a+\bar{b}) \cdot b=a \cdot b$` _(Yanlış gösterim, doğrusu $a\bar{b}+b = a+b$ ya da $(a+b)(\bar{a}+b)=b$)_
-    b) `$a \cdot \bar{b}+b=a+b$`
-12. a) `$(a+b) \cdot (\bar{a}+c) \cdot (b+c)=(a+b) \cdot (\bar{a}+c)$`
-    b) `$a \cdot b+\bar{a} \cdot c+b \cdot c=a \cdot b+\bar{a} \cdot c$`
-13. a) `$(a+b) \cdot (\bar{a}+c)=a \cdot c+\bar{a} \cdot b$`
-    b) `$a \cdot b+\bar{a} \cdot c=(a+c) \cdot (\bar{a}+b)$`
+    a) $1+a=1$
+    b) $0 \cdot a=0$
+11. a) $(a+\bar{b}) \cdot b=a \cdot b$ _(Yanlış gösterim, doğrusu $a\bar{b}+b = a+b$ ya da $(a+b)(\bar{a}+b)=b$)_
+    b) $a \cdot \bar{b}+b=a+b$
+12. a) $(a+b) \cdot (\bar{a}+c) \cdot (b+c)=(a+b) \cdot (\bar{a}+c)$
+    b) $a \cdot b+\bar{a} \cdot c+b \cdot c=a \cdot b+\bar{a} \cdot c$
+13. a) $(a+b) \cdot (\bar{a}+c)=a \cdot c+\bar{a} \cdot b$
+    b) $a \cdot b+\bar{a} \cdot c=(a+c) \cdot (\bar{a}+b)$
 14. **Shannon Teoremi**
-    a) `$f(a, b, c, d, \dots)=[a+f(0, b, c, d, \dots)] \cdot [\bar{a}+f(1, b, c, d, \dots)]$`
-    b) `$f(a, b, c, d, \dots)=[a \cdot f(1, b, c, d, \dots)]+[\bar{a} \cdot f(0, b, c, d, \dots)]$
+    a) $f(a, b, c, d, \dots)=[a+f(0, b, c, d, \dots)] \cdot [\bar{a}+f(1, b, c, d, \dots)]$
+    b) $f(a, b, c, d, \dots)=[a \cdot f(1, b, c, d, \dots)]+[\bar{a} \cdot f(0, b, c, d, \dots)]$
 
 > [!example]+ Boole Cebri Uygulama Örnekleri
-> **Örnek 5.1:** `$F=A \cdot (\overline{B+C}) + \bar{A} + (\bar{B} \cdot C) \Rightarrow \bar{F}=?$`. Verilen fonksiyona De Morgan Teoremini uygulayınız.
+> **Örnek 5.1:** $F=A \cdot (\overline{B+C}) + \bar{A} + (\bar{B} \cdot C) \Rightarrow \bar{F}=?$. Verilen fonksiyona De Morgan Teoremini uygulayınız.
 >
-> ```markdown
+> ```latex
 > F = A _ (B+C)' + A' + (B' _ C)
 >
 > F' = (A _ (B+C)' + A' + (B' _ C))'
@@ -815,9 +811,9 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 > F' = (A' + B + C) _ (AB + A C') (Parantez kaldırıldı)
 > ```
 >
-> **Örnek 5.2:** `$F_1=\bar{x}yz+\bar{x}\bar{y}z`$, `$F_2=x(\bar{y}\bar{z}+yz)$`. Verilen fonksiyonların terslerini bulunuz.
+> **Örnek 5.2:** $F_1=\bar{x}yz+\bar{x}\bar{y}z$, $F_2=x(\bar{y}\bar{z}+yz)$. Verilen fonksiyonların terslerini bulunuz.
 >
-> ```markdown
+> ```latex
 > F1' = (x'yz + x'y'z)'
 > F1' = (x'yz)' _ (x'y'z)' (De Morgan)
 > F1' = (x + y' + z') _ (x + y + z') (De Morgan)
@@ -832,8 +828,8 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 
 > [!example]+ Dualite Prensibi Örnekleri
 >
-> - `$x(y+0)$` ifadesinin duvali `$x+(y \cdot 1)$` olarak bulunur.
-> - `$\bar{x} \cdot 1+(\bar{y} \cdot z)$` ifadesinin duvali `$(\bar{x}+0) \cdot (\bar{y}+z)$` olarak bulunur.
+> - $x(y+0)$ ifadesinin duvali $x+(y \cdot 1)$ olarak bulunur.
+> - $\bar{x} \cdot 1+(\bar{y} \cdot z)$ ifadesinin duvali $(\bar{x}+0) \cdot (\bar{y}+z)$ olarak bulunur.
 
 ### 5.3. Minimum ve Maksimum Terimler
 
@@ -848,7 +844,7 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 
 #### 5.3.1. Minimum terimler kanonik biçimi
 
-**Çarpımların Toplamı Kanonik Biçimi (Sum of Products - SOP)** olarak da bilinir. Doğruluk tablosunda çıkışı `1` olan her satır için bir minterm oluşturulur ve bu mintermler toplanır. Bir Boole fonksiyonu, `$\sum m_i$` şeklinde gösterilir. **Kanonik** kelimesi, lojik fonksiyonu oluşturan terimlerin ya kendilerinin ya da tümleyenlerinin çarpım terimlerin içinde mutlaka bulunması anlamına gelir.
+**Çarpımların Toplamı Kanonik Biçimi (Sum of Products - SOP)** olarak da bilinir. Doğruluk tablosunda çıkışı `1` olan her satır için bir minterm oluşturulur ve bu mintermler toplanır. Bir Boole fonksiyonu, $\sum m_i$ şeklinde gösterilir. **Kanonik** kelimesi, lojik fonksiyonu oluşturan terimlerin ya kendilerinin ya da tümleyenlerinin çarpım terimlerin içinde mutlaka bulunması anlamına gelir.
 
 > [!example]+ Minimum Terimler Kanonik Biçimi Örnekleri
 > **Örnek 5.3:** VEYA işlemine ait minimum terimler kanonik biçimini bulunuz.
@@ -860,7 +856,7 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 > |  1  |  0  |    1    |    $a \cdot \bar{b}$    |    $m_2$     |
 > |  1  |  1  |    1    |       $a \cdot b$       |    $m_3$     |
 >
-> `$F=a+b=\bar{a} \cdot b+a \cdot \bar{b}+a \cdot b=m_1+m_2+m_3=\sum(1,2,3)$`
+> $F=a+b=\bar{a} \cdot b+a \cdot \bar{b}+a \cdot b=m_1+m_2+m_3=\sum(1,2,3)$
 >
 > **Örnek 5.4:** Bir elektrik motorunun akım, gerilim ve gövde sıcaklığı kontrol edilecektir. Bu değişkenlerden herhangi ikisi istenen sınır değerleri aştığında ikaz, her üçü beraber istenen sınır değeri aşarsa devre dışı butonları devreye girecektir. İlgili devrenin kontrol ünitesini minimum terimler kanonik biçimi (çarpımların toplamı çözümü) kullanarak gerçekleştirelim.
 >
@@ -875,18 +871,18 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 > |  6  |  1  |  1  |  0  |  1  |  0   |
 > |  7  |  1  |  1  |  1  |  1  |  1   |
 >
-> `$m_3=\bar{A}VT$`
-> `$m_5=A\bar{V}T$`
-> `$m_6=AV\bar{T$`
-> `$m_7=AVT$`
+> $m_3=\bar{A}VT$
+> $m_5=A\bar{V}T$
+> $m_6=AV\bar{T$
+> $m_7=AVT$
 >
-> `$i=\bar{A}VT+A\bar{V}T+AV\bar{T}+AVT=\sum(m_3+m_5+m_6+m_7)$`
-> `$i(A,V,T)=\sum(3,5,6,7)$`
-> `$DD=AVT$`
+> $i=\bar{A}VT+A\bar{V}T+AV\bar{T}+AVT=\sum(m_3+m_5+m_6+m_7)$
+> $i(A,V,T)=\sum(3,5,6,7)$
+> $DD=AVT$
 
 #### 5.3.2. Maksimum terimler kanonik biçimi
 
-**Toplamların Çarpımı Kanonik Biçimi (Product of Sums - POS)** olarak da bilinir. Doğruluk tablosunda çıkışı `0` olan her satır için bir maksterm oluşturulur ve bu makstermler çarpılır. Bir Boole fonksiyonu, `$\Pi M_i$` şeklinde gösterilir.
+**Toplamların Çarpımı Kanonik Biçimi (Product of Sums - POS)** olarak da bilinir. Doğruluk tablosunda çıkışı `0` olan her satır için bir maksterm oluşturulur ve bu makstermler çarpılır. Bir Boole fonksiyonu, $\Pi M_i$ şeklinde gösterilir.
 
 > [!example]+ Maksimum Terimler Kanonik Biçimi Örnekleri
 > **Örnek 5.5:** VE işlemine ait maksimum terimler kanonik biçimini bulunuz.
@@ -898,7 +894,7 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 > |  1  |  0  |       0       |    $\bar{a}+b$    |    $M_2$     |
 > |  1  |  1  |       1       | $\bar{a}+\bar{b}$ |    $M_3$     |
 >
-> `$F=a \cdot b=(a+b) \cdot (a+\bar{b}) \cdot (\bar{a}+b)=M_0 \cdot M_1 \cdot M_2=\Pi(0,1,2)$`
+> $F=a \cdot b=(a+b) \cdot (a+\bar{b}) \cdot (\bar{a}+b)=M_0 \cdot M_1 \cdot M_2=\Pi(0,1,2)$
 >
 > **Örnek 5.6:** Yukarıdaki örnekte verilen motor problemini maksimum terimler kanonik biçimi (toplamların çarpımı çözümü) kullanarak gerçekleştirelim.
 >
@@ -913,22 +909,22 @@ Lojik devre tasarımı, **Boole Cebri** kuralları çerçevesinde yapılır. Boo
 > |  6  |  1  |  1  |  0  |  1  |  0   |
 > |  7  |  1  |  1  |  1  |  1  |  0   |
 >
-> `$M_0=A+V+T$`
-> `$M_1=A+V+\bar{T$`
-> `$M_2=A+\bar{V}+T$`
-> `$M_4=\bar{A}+V+T$`
+> $M_0=A+V+T$
+> $M_1=A+V+\bar{T$
+> $M_2=A+\bar{V}+T$
+> $M_4=\bar{A}+V+T$
 >
 > Problemin çözümünde iki yol izlenebilir:
 >
 > **Birinci yol:** Önce gerçekleştirilecek fonksiyonun tersi alınır.
-> `$\bar{\imath}(A,V,T)=\sum(0,1,2,4)$`
-> `$\bar{\imath}=\bar{A}\bar{V}\bar{T}+\bar{A}\bar{V}T+\bar{A}V\bar{T}+A\bar{V}\bar{T$`
-> `$\overline{(\bar{\imath})}=\overline{(\bar{A}\bar{V}\bar{T}+\bar{A}\bar{V}T+\bar{A}V\bar{T}+A\bar{V}\bar{T})}$`
-> `$i=(A+V+T) \cdot (A+V+\bar{T}) \cdot (A+\bar{V}+T) \cdot (\bar{A}+V+T)$`
+> $\bar{\imath}(A,V,T)=\sum(0,1,2,4)$
+> $\bar{\imath}=\bar{A}\bar{V}\bar{T}+\bar{A}\bar{V}T+\bar{A}V\bar{T}+A\bar{V}\bar{T$
+> $\overline{(\bar{\imath})}=\overline{(\bar{A}\bar{V}\bar{T}+\bar{A}\bar{V}T+\bar{A}V\bar{T}+A\bar{V}\bar{T})}$
+> $i=(A+V+T) \cdot (A+V+\bar{T}) \cdot (A+\bar{V}+T) \cdot (\bar{A}+V+T)$
 >
 > **İkinci yol:** Doğrudan fonksiyonun sıfır olduğu yerlere bakılır.
-> `$i=(A+V+T) \cdot (A+V+\bar{T}) \cdot (A+\bar{V}+T) \cdot (\bar{A}+V+T)$`
-> `$i=(M_0 \cdot M_1 \cdot M_2 \cdot M_4)=\prod(M_0, M_1, M_2, M_4)=\prod(0,1,2,4)$`
+> $i=(A+V+T) \cdot (A+V+\bar{T}) \cdot (A+\bar{V}+T) \cdot (\bar{A}+V+T)$
+> $i=(M_0 \cdot M_1 \cdot M_2 \cdot M_4)=\prod(M_0, M_1, M_2, M_4)=\prod(0,1,2,4)$
 
 ---
 
@@ -989,10 +985,10 @@ Karnaugh diyagramları, lojik fonksiyonları grafiksel olarak sadeleştirmek iç
 > |  6  |  1  |  1  |  0  |  1  |  0   |
 > |  7  |  1  |  1  |  1  |  1  |  1   |
 >
-> `$m_3=\bar{A}VT$`
-> `$m_5=A\bar{V}T$`
-> `$m_6=AV\bar{T$`
-> `$m_7=AVT$`
+> $m_3=\bar{A}VT$
+> $m_5=A\bar{V}T$
+> $m_6=AV\bar{T$
+> $m_7=AVT$
 >
 > ![img-19.jpeg](img-19.jpeg)
 >
@@ -1108,10 +1104,10 @@ Karnaugh diyagramları, lojik fonksiyonları grafiksel olarak sadeleştirmek iç
 > |  1  |  1  |  1   |  0  |  0  | 1   |
 >
 > Çıkışlar için sadeleştirme:
-> `$F = A \cdot \bar{B}$`
-> `$H = \bar{A}B + AB = B(\bar{A}+A) = B$`
-> `$E = AB$`
-> `$G = \text{Lojik } 0$` _(Her zaman 0)_
+> $F = A \cdot \bar{B}$
+> $H = \bar{A}B + AB = B(\bar{A}+A) = B$
+> $E = AB$
+> $G = \text{Lojik } 0$ _(Her zaman 0)_
 >
 > **Örnek 6.3:** $A=A_1A_0$ ve $B=B_1B_0$ sayıları karşılaştırılacaktır. $A>B$, $A=B$ ve $A<B$ çıkışlarını veren devreyi doğruluk tablosunu çıkartarak Karnaugh diyagramı ile gerçekleştiriniz.
 >
@@ -1134,9 +1130,9 @@ Karnaugh diyagramları, lojik fonksiyonları grafiksel olarak sadeleştirmek iç
 > |   1   |   1   |   1   |   0   |   1   |   0   |   0   |
 > |   1   |   1   |   1   |   1   |   0   |   1   |   0   |
 >
-> `$A>B \Rightarrow F_1 = A_1\overline{B_1} + A_0\overline{B_1}\overline{B_0} + A_1A_0\overline{B_0}$` _(Bu sadeleştirilmiş ifade, Karnaugh haritası çıktıktan sonra elde edilir.)_
-> `$A=B \Rightarrow F_2 = \overline{A_1}\overline{A_0}\overline{B_1}\overline{B_0} + \overline{A_1}A_0\overline{B_1}B_0 + A_1\overline{A_0}B_1\overline{B_0} + A_1A_0B_1B_0$` _(Bu ifade Karnaugh haritalarıyla sadeleştirilebilir)_
-> `$A<B \Rightarrow F_3 = \overline{A_1}B_1 + \overline{A_0}B_1B_0 + \overline{A_1}\overline{A_0}B_0$` _(Bu ifade Karnaugh haritalarıyla sadeleştirilebilir)_
+> $A>B \Rightarrow F_1 = A_1\overline{B_1} + A_0\overline{B_1}\overline{B_0} + A_1A_0\overline{B_0}$ _(Bu sadeleştirilmiş ifade, Karnaugh haritası çıktıktan sonra elde edilir.)_
+> $A=B \Rightarrow F_2 = \overline{A_1}\overline{A_0}\overline{B_1}\overline{B_0} + \overline{A_1}A_0\overline{B_1}B_0 + A_1\overline{A_0}B_1\overline{B_0} + A_1A_0B_1B_0$ _(Bu ifade Karnaugh haritalarıyla sadeleştirilebilir)_
+> $A<B \Rightarrow F_3 = \overline{A_1}B_1 + \overline{A_0}B_1B_0 + \overline{A_1}\overline{A_0}B_0$ _(Bu ifade Karnaugh haritalarıyla sadeleştirilebilir)_
 
 ---
 
@@ -1200,17 +1196,17 @@ Transistör Lojik, bipolar transistörlere dayalı bir lojik aile olup hız ve g
 ![img-41.jpeg](img-41.jpeg)
 
 > [!example]+ Lojik Kapı Gerçekleştirme Örnekleri
-> **Örnek 7.1:** `$F=A \oplus B=\bar{A}B+A\bar{B}$` fonksiyonunu a) DL ve b) TL ile gerçekleştiriniz.
+> **Örnek 7.1:** $F=A \oplus B=\bar{A}B+A\bar{B}$ fonksiyonunu a) DL ve b) TL ile gerçekleştiriniz.
 > a) DL ile:
 > ![img-42.jpeg](img-42.jpeg)
 > b) TL ile:
 > ![img-43.jpeg](img-43.jpeg)
 >
-> **Örnek 7.2:** `$F=\bar{A}BC+\bar{A}\bar{B}+AB$` fonksiyonunu a) DTL, b) TTL ve c) RTL ile gerçekleştiriniz.
+> **Örnek 7.2:** $F=\bar{A}BC+\bar{A}\bar{B}+AB$ fonksiyonunu a) DTL, b) TTL ve c) RTL ile gerçekleştiriniz.
 > b) TTL ile:
 > ![img-44.jpeg](img-44.jpeg)
 >
-> **Örnek 7.3:** `$F=\bar{A}B+A\bar{C}+ABC$` fonksiyonunu DTL ile gerçekleştiriniz.
+> **Örnek 7.3:** $F=\bar{A}B+A\bar{C}+ABC$ fonksiyonunu DTL ile gerçekleştiriniz.
 > ![img-45.jpeg](img-45.jpeg)
 
 ---
@@ -1338,14 +1334,14 @@ _Karnaugh Haritası için:_
 |           0           |  0  |  1  |  0  |  1  |
 |           1           |  1  |  0  |  1  |  0  |
 
-_Bu `$S$` (Toplam) çıkışıdır._
+_Bu $S$ (Toplam) çıkışıdır._
 
 | $C_{in} \setminus ab$ | 00  | 01  | 11  | 10  |
 | :-------------------: | :-: | :-: | :-: | :-: |
 |           0           |  0  |  0  |  1  |  0  |
 |           1           |  0  |  1  |  1  |  1  |
 
-_Bu `$C_{out}$` (Elde Çıkışı) çıkışıdır.\_
+_Bu $C_{out}$ (Elde Çıkışı) çıkışıdır.\_
 
 $S = \overline{C_{in}}\bar{a}b + \overline{C_{in}}a\bar{b} + C_{in}ab + C_{in}\bar{a}\bar{b} = C_{in} \oplus a \oplus b$
 $C_{out} = C_{in}b + C_{in}a + ab$
@@ -1445,7 +1441,7 @@ Dijital sistemler farklı kodlar kullanabilir. Eğer iki sistem farklı kodlarla
 >
 > **Örnek 9.4:** 4 bitlik tam toplayıcı kullanarak BCD sayı sistemini 3-fazlalık koduna çeviren kod çeviriciyi tasarlayınız.
 >
-> BCD sayısının `$B_3B_2B_1B_0$` olarak verildiğini varsayarsak, 3-fazlalık kodundaki değeri `$F_3F_2F_1F_0$` şeklinde olacaktır. Buradaki temel fikir, BCD sayısına 3 eklemektir.
+> BCD sayısının $B_3B_2B_1B_0$ olarak verildiğini varsayarsak, 3-fazlalık kodundaki değeri $F_3F_2F_1F_0$ şeklinde olacaktır. Buradaki temel fikir, BCD sayısına 3 eklemektir.
 >
 > ![img-63.jpeg](img-63.jpeg)
 
@@ -1458,7 +1454,7 @@ Sayısal veri iletiminde, birden fazla olası giriş yolundan birini seçerek bu
 > [!caption|center] Şekil 9.7. Multiplexer
 
 > [!example]+ MUX ile Fonksiyon Gerçekleştirme
-> **Örnek 9.5:** Doğruluk tablosu aşağıda verilen kombinasyonel devreyi `$x_3$` ve `$x_4$` seçme girişleri olacak şekilde $4 \times 1$ MUX kullanarak gerçekleştiriniz.
+> **Örnek 9.5:** Doğruluk tablosu aşağıda verilen kombinasyonel devreyi $x_3$ ve $x_4$ seçme girişleri olacak şekilde $4 \times 1$ MUX kullanarak gerçekleştiriniz.
 >
 > | $x_1$ | $x_2$ | $x_3$ | $x_4$ | $f(x_1, x_2, x_3, x_4)$ |
 > | :---: | :---: | :---: | :---: | :---------------------: |
@@ -1481,21 +1477,21 @@ Sayısal veri iletiminde, birden fazla olası giriş yolundan birini seçerek bu
 >
 > Fonksiyonu sadeleştirerek ve seçme girişleri cinsinden gruplayarak MUX girişlerine uygulayacak biçimde dönüştürülür.
 >
-> ```latex
-> f(x_1, x_2, x_3, x_4) = \overline{x_1}\overline{x_2}x_3\overline{x_4} + \overline{x_1}\overline{x_2}x_3x_4 + \overline{x_1}x_2\overline{x_3}x_4 + \overline{x_1}x_2x_3x_4 + x_1\overline{x_2}\overline{x_3}\overline{x_4} + x_1\overline{x_2}\overline{x_3}x_4 + x_1\overline{x_2}x_3\overline{x_4} + x_1\overline{x_2}x_3x_4
-> ```
+$$
+f(x_1, x_2, x_3, x_4) = \overline{x_1}\overline{x_2}x_3\overline{x_4} + \overline{x_1}\overline{x_2}x_3x_4 + \overline{x_1}x_2\overline{x_3}x_4 + \overline{x_1}x_2x_3x_4 + x_1\overline{x_2}\overline{x_3}\overline{x_4} + x_1\overline{x_2}\overline{x_3}x_4 + x_1\overline{x_2}x_3\overline{x_4} + x_1\overline{x_2}x_3x_4
+$$
 >
 > Fonksiyon, seçme girişlerinin aldığı değerlere göre gruplanır:
 >
-> ```latex
-> f(x_1, x_2, x_3, x_4) = x_3 \cdot x_4(\overline{x_1}x_2+\overline{x_1}\overline{x_2}+x_1\overline{x_2}) + x_3 \cdot \overline{x_4}(\overline{x_1}\overline{x_2}+x_1\overline{x_2}) + \overline{x_3} \cdot x_4(\overline{x_1}x_2+x_1\overline{x_2}) + \overline{x_3}\overline{x_4}(x_1\overline{x_2})
-> ```
+$$
+f(x_1, x_2, x_3, x_4) = x_3 \cdot x_4(\overline{x_1}x_2+\overline{x_1}\overline{x_2}+x_1\overline{x_2}) + x_3 \cdot \overline{x_4}(\overline{x_1}\overline{x_2}+x_1\overline{x_2}) + \overline{x_3} \cdot x_4(\overline{x_1}x_2+x_1\overline{x_2}) + \overline{x_3}\overline{x_4}(x_1\overline{x_2})
+$$
 >
 > Sadeleştirme ile:
 >
-> ```latex
-> f(x_1, x_2, x_3, x_4) = x_3x_4(\overline{x_1}+\overline{x_2}) + x_3\overline{x_4}(\overline{x_2}) + \overline{x_3}x_4(x_1 \oplus x_2) + \overline{x_3}\overline{x_4}(x_1\overline{x_2})
-> ```
+$$
+  f(x_1, x_2, x_3, x_4) = x_3x_4(\overline{x_1}+\overline{x_2}) + x_3\overline{x_4}(\overline{x_2}) + \overline{x_3}x_4(x_1 \oplus x_2) + \overline{x_3}\overline{x_4}(x_1\overline{x_2})
+$$
 >
 > | $x_3$ | $x_4$ |               $I$               |
 > | :---: | :---: | :-----------------------------: |
@@ -1525,7 +1521,7 @@ Sayısal veri iletiminde tek bir giriş işaretini, pek çok olası çıkış yo
 
 ### 9.6. Kod Çözücü (Decoder)
 
-`n` bitlik bir sözcüğün kodunu çözüp olası en çok `$2^n$` çıkış yolundan sadece birini aktif hale getiren kombinasyonel bir devredir.
+`n` bitlik bir sözcüğün kodunu çözüp olası en çok $2^n$ çıkış yolundan sadece birini aktif hale getiren kombinasyonel bir devredir.
 
 | GİRİŞLER |     |     | ÇIKIŞLAR |       |       |       |       |       |       |       |
 | :------: | :-: | :-: | :------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -1544,7 +1540,7 @@ Sayısal veri iletiminde tek bir giriş işaretini, pek çok olası çıkış yo
 > [!caption|center] Şekil 9.9. $3 \times 8$ Kod çözücü a) Normal çıkışlı b) Tümleyen çıkışlı
 
 > [!note]
-> Kod çözücülerde **enable (etkinleştirme)** girişleri bulunur. Örneğin, 74138 entegresinde `$\overline{E_1}$`, `$\overline{E_2}$` ve `$E_3$` olmak üzere 3 tane enable girişi vardır. Bu girişler sırasıyla 001 değerini aldığında entegre çıkış üretir.
+> Kod çözücülerde **enable (etkinleştirme)** girişleri bulunur. Örneğin, 74138 entegresinde $\overline{E_1}$, $\overline{E_2}$ ve $E_3$ olmak üzere 3 tane enable girişi vardır. Bu girişler sırasıyla 001 değerini aldığında entegre çıkış üretir.
 
 > [!example]+ Oylama Sistemi Tasarımı
 > **Örnek 9.7:** Bir başkan, bir başkan yardımcısı ve iki üyeden oluşan bir komisyonun alacağı kararları gösteren bir oylama sistemi yapılacaktır. Başkanın oyu 3, başkan yardımcısının oyu 2, üyelerin oyu ise 1 ağırlığındadır. EVET oylarının ağırlık katsayıları fazla ise "EVET", HAYIR oylarının ağırlık katsayıları yüksek ise "HAYIR", eşitlik halinde başkan yardımcısı ve üyelerin verdiği çoğunluk oylarına göre karar alınacaktır. Bütün üyeler oy kullanmak zorundadır. EVET oyu Lojik1'dir. Bu oylama sistemine ait lojik fonksiyonun doğruluk tablosunu çıkararak, fonksiyonu Karnaugh diyagramı ile sadeleştirerek tasarlanan devreyi çiziniz.
@@ -1761,7 +1757,7 @@ Bir flip-flop'un genellikle iki çıkışı ($Q$ ve $\bar{Q}$), bir saat girişi
 
 ### 10.1. SR Flip-Flop
 
-**S (Set)** ve **R (Reset)** olmak üzere iki girişe sahiptir. `$Q(t+1)$` değeri, `$t$` anındaki `S` ve `R` girişlerine bağlıdır. `S=1, R=1` durumu geçersizdir (çelişkili).
+**S (Set)** ve **R (Reset)** olmak üzere iki girişe sahiptir. $Q(t+1)$ değeri, $t$ anındaki S ve R girişlerine bağlıdır. S=1, R=1 durumu geçersizdir (çelişkili).
 
 $Q(t+1) = Q(t)\overline{R(t)} + S(t) \quad (R(t) \cdot S(t) = 0 \text{ durumları için})$
 
@@ -1920,7 +1916,7 @@ Flip-flop'un mevcut durumdan (`Q(t)`) bir sonraki duruma (`Q(t+1)`) geçişi iç
 
 ## 11. Sayıcılar
 
-Sayıcılar, `$n$` bitlik bilgi tutmanın yanı sıra her saat çevriminde tuttukları değeri belirli bir sırada (artan veya azalan) değiştiren ardışıl elemanlardır.
+Sayıcılar, $n$ bitlik bilgi tutmanın yanı sıra her saat çevriminde tuttukları değeri belirli bir sırada (artan veya azalan) değiştiren ardışıl elemanlardır.
 
 **Sayıcı Sınıflandırması:**
 
@@ -1940,7 +1936,7 @@ Sayıcılar, `$n$` bitlik bilgi tutmanın yanı sıra her saat çevriminde tuttu
 
 ### 11.1. Binary (İkili) İleri Sayıcı
 
-`$n$` bitlik çıkış ucu ve `$2^n$` tane değişik durum vardır. Genellikle 0'dan `$2^n-1$`'e kadar birer artımla sayar.
+$n$ bitlik çıkış ucu ve $2^n$ tane değişik durum vardır. Genellikle 0'dan $2^n-1$'e kadar birer artımla sayar.
 
 ![img-105.jpeg](img-105.jpeg)
 
@@ -1953,7 +1949,7 @@ Sayıcılar, `$n$` bitlik bilgi tutmanın yanı sıra her saat çevriminde tuttu
 > [!caption|center] Şekil 11.3. Binary geri sayıcı
 
 > [!note] Mod Sayısı
-> Mod sayısı `$= 2^{\text{FF sayısı}}$`. Örneğin, Mod 8 sayıcı için `$8 = 2^n \Rightarrow n=3$` adet FF kullanılması gerekir. Sayıcı `$2^n-1 = 8-1 = 7$`'ye kadar sayar.
+> Mod sayısı $= 2^{\text{FF sayısı}}$. Örneğin, Mod 8 sayıcı için $8 = 2^n \Rightarrow n=3$ adet FF kullanılması gerekir. Sayıcı $2^n-1 = 8-1 = 7$'ye kadar sayar.
 
 ### 11.3. Asenkron İleri-Geri Sayıcı
 
@@ -1985,10 +1981,10 @@ Shift register gibi içerisindeki değeri lojik olarak sağa veya sola öteleyer
 > |  A  |  B  |  C  |  D  |     İşlem      |
 > | :-: | :-: | :-: | :-: | :------------: |
 > |  1  |  0  |  0  |  0  |   Başlangıç    |
-> |  0  |  1  |  0  |  0  | `$\mathbf{1}$` |
-> |  0  |  0  |  1  |  0  | `$\mathbf{1}$` |
-> |  0  |  0  |  0  |  1  | `$\mathbf{1}$` |
-> |  1  |  0  |  0  |  0  | `$\mathbf{1}$` |
+> |  0  |  1  |  0  |  0  | $\mathbf{1}$ |
+> |  0  |  0  |  1  |  0  | $\mathbf{1}$ |
+> |  0  |  0  |  0  |  1  | $\mathbf{1}$ |
+> |  1  |  0  |  0  |  0  | $\mathbf{1}$ |
 
 ### 11.6. Johnson Sayıcı (Dalgalı Halka Sayıcı)
 
@@ -1999,14 +1995,14 @@ Shift register gibi içerisindeki değeri lojik olarak sağa veya sola öteleyer
 > |  A  |  B  |  C  |  D  |     İşlem      |
 > | :-: | :-: | :-: | :-: | :------------: |
 > |  0  |  0  |  0  |  0  |   Başlangıç    |
-> |  1  |  0  |  0  |  0  | `$\mathbf{1}$` |
-> |  1  |  1  |  0  |  0  | `$\mathbf{1}$` |
-> |  1  |  1  |  1  |  0  | `$\mathbf{1}$` |
-> |  1  |  1  |  1  |  1  | `$\mathbf{1}$` |
-> |  0  |  1  |  1  |  1  | `$\mathbf{1}$` |
-> |  0  |  0  |  1  |  1  | `$\mathbf{1}$` |
-> |  0  |  0  |  0  |  1  | `$\mathbf{1}$` |
-> |  0  |  0  |  0  |  0  | `$\mathbf{1}$` |
+> |  1  |  0  |  0  |  0  | $\mathbf{1}$ |
+> |  1  |  1  |  0  |  0  | $\mathbf{1}$ |
+> |  1  |  1  |  1  |  0  | $\mathbf{1}$ |
+> |  1  |  1  |  1  |  1  | $\mathbf{1}$ |
+> |  0  |  1  |  1  |  1  | $\mathbf{1}$ |
+> |  0  |  0  |  1  |  1  | $\mathbf{1}$ |
+> |  0  |  0  |  0  |  1  | $\mathbf{1}$ |
+> |  0  |  0  |  0  |  0  | $\mathbf{1}$ |
 
 ### 11.7. Sayıcıları İstenilen Bir Sayıda Durdurma
 
@@ -2178,23 +2174,23 @@ Sayıcının resetlenmesi için $R_1$ ve $R_2$ girişlerinin her ikisine birden 
 
 # Temel Formüller ve Hızlı Bilgiler
 
-- **Analog/Sayısal Dönüştürücü Duyarlılığı**: `a = (Vmax - Vmin) / 2^n`
-- **Örnekleme Teoremi (Nyquist)**: `$\omega_s \ge 2\omega_c$` (_Minimum örnekleme frekansı, sinyalin en yüksek frekansının iki katı olmalıdır._)
-- **1'e Tümleme**: Bir ikili sayının her bitini tersine çevirme (`1` -> `0`, `0` -> `1`).
-- **2'ye Tümleme**: 1'e tümleme sonucuna `1` ekleme. (_Negatif sayı gösterimi ve çıkarma için kullanılır._)
+- **Analog/Sayısal Dönüştürücü Duyarlılığı**: a = (Vmax - Vmin) / 2^n
+- **Örnekleme Teoremi (Nyquist)**: $\omega_s \ge 2\omega_c$ (_Minimum örnekleme frekansı, sinyalin en yüksek frekansının iki katı olmalıdır._)
+- **1'e Tümleme**: Bir ikili sayının her bitini tersine çevirme (1 -> 0, 0 -> 1).
+- **2'ye Tümleme**: 1'e tümleme sonucuna 1 ekleme. (_Negatif sayı gösterimi ve çıkarma için kullanılır._)
 - **De Morgan Kuralları**:
-  - `$\overline{(A+B)} = \bar{A} \cdot \bar{B}$`
-  - `$\overline{(A \cdot B)} = \bar{A} + \bar{B}$`
-- **XOR Kapısı Çıkışı**: `$A \oplus B = \overline{A}B + A\overline{B}$`
-- **XNOR Kapısı Çıkışı**: `$A \odot B = AB + \overline{A}\overline{B}$`
-- **Yarı Toplayıcı**: `Toplam = A \oplus B`, `Elde = A \cdot B`
-- **Tam Toplayıcı**: `Toplam = A \oplus B \oplus C_{in}`, `Elde = AB + BC_{in} + AC_{in}`
+  - $\overline{(A+B)} = \bar{A} \cdot \bar{B}$
+  - $\overline{(A \cdot B)} = \bar{A} + \bar{B}$
+- **XOR Kapısı Çıkışı**: $A \oplus B = \overline{A}B + A\overline{B}$
+- **XNOR Kapısı Çıkışı**: $A \odot B = AB + \overline{A}\overline{B}$
+- **Yarı Toplayıcı**: Toplam = A \oplus B, Elde = A \cdot B
+- **Tam Toplayıcı**: Toplam = A \oplus B \oplus C_{in}, Elde = AB + BC_{in} + AC_{in}
 - **Flip-Flop Durum Denklemleri**:
-  - **SR FF**: `$Q(t+1) = S + \bar{R}Q(t)$` (_SR=00_)
-  - **JK FF**: `$Q(t+1) = J\overline{Q(t)} + \bar{K}Q(t)$`
-  - **D FF**: `$Q(t+1) = D$`
-  - **T FF**: `$Q(t+1) = T\overline{Q(t)} + \bar{T}Q(t) = T \oplus Q(t)$`
-- **Sayıcı Modu**: Asenkron sayıcılar için `Mod = $2^{\text{FF sayısı}}$`.
+  - **SR FF**: $Q(t+1) = S + \bar{R}Q(t)$ (_SR=00_)
+  - **JK FF**: $Q(t+1) = J\overline{Q(t)} + \bar{K}Q(t)$
+  - **D FF**: $Q(t+1) = D$
+  - **T FF**: $Q(t+1) = T\overline{Q(t)} + \bar{T}Q(t) = T \oplus Q(t)$
+- **Sayıcı Modu**: Asenkron sayıcılar için Mod = $2^{\text{FF sayısı}}$.
 
 ---
 
