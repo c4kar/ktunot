@@ -28,9 +28,8 @@ Bu devre, giriş sinyalinin belirli bir seviyenin üzerine çıkmasını engelle
 Operasyonel yükselteç (op-amp) kullanılarak kurulan bu devre, giriş sinyalini evirmeksizin yükseltir. Kazancı direnç oranlarına bağlıdır.
 
 ### **Devre Formülü:**
-\[
-V_{\text{çıkış}} = \left(1 + \frac{R_2}{R_1}\right) \cdot V_{\text{giriş}}
-\]
+
+$V_{\text{çıkış}} = \left(1 + \frac{R_2}{R_1}\right) \cdot V_{\text{giriş}}$
 
 ### **Bileşenler:**
 - **U1**: Operasyonel yükselteç (örneğin LM741)  
@@ -85,9 +84,9 @@ Bu devre, **iki transistör ve RC zaman sabitleri** kullanılarak sürekli kare 
 - Frekans, kullanılan **R ve C** değerlerine bağlıdır
 
 ### **Frekans Formülü:**
-\[
+$$
 f \approx \frac{1.44}{(R_1 + 2R_2) \cdot C}
-\]
+$$
 (Eğer simetrik RC kullanılıyorsa: \( f \approx \frac{0.7}{R \cdot C} \))
 
 ![Kararsız Multivibratör – Şema 1](img-3.jpeg)  

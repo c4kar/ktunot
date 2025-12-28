@@ -184,7 +184,7 @@ ylabel('Basınç (kPa)');
 ```
 
 > [!infobox]  
-> ![img-0.jpeg](img-0.jpeg|400)  
+> ![img-0.jpeg](img-0.jpeg)  
 > Şekilde görüldüğü gibi farklı sayfalardan veri alınarak grafik oluşturulabilir.
 
 ---
