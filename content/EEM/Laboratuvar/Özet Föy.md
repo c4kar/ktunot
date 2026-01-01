@@ -217,7 +217,7 @@ Tablo 1.2 Bakır tel Akım Taşıma Kapasiteleri (`25°C`)
 
 ### Pratik çalışma 3: Galvanometre yapısı ve Direnç Ölçmek
 
-Elektrik devrelerine, çeşitli devre büyüklüklerinin ölçülmesi amacıyla ölçü aletleri bağlanabilir (Ampermetre, Voltmetre veya Ohmmetre). Bu ölçü aletlerinin temeli analog [[Galvanometre]]'ye dayanmaktadır.
+Elektrik devrelerine, çeşitli devre büyüklüklerinin ölçülmesi amacıyla ölçü aletleri bağlanabilir (Ampermetre, Voltmetre veya Ohmmetre). Bu ölçü aletlerinin temeli analog Galvanometre'ye dayanmaktadır.
 
 >[!infobox|center]
 >![img-8.jpeg|400](img-8.jpeg)

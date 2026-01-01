@@ -16,3 +16,8 @@
 </iframe>
 
 [PDF’yi indir](https://drive.google.com/uc?export=download&id=1UpoI6r_uUywLCxIHuV2iYWEcxqP5yx0P)
+
+--- 
+
+**Yardımcı olabileceğini düşündüğüm bazı kaynaklar:**
+-  [Transistors - NPN & PNP - Basic Introduction](https://www.youtube.com/watch?v=AcxDiesy-nI)

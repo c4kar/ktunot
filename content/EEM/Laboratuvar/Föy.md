@@ -1,3 +1,14 @@
+<iframe src="https://drive.google.com/file/d/16d3JbDcQSeNDkwj017RORICf00WcWmXb/preview"
+        width="100%"
+        height="700px"
+        allow="fullscreen"
+        style="border:none;">
+</iframe>
+
+[PDF'yi indir](https://drive.google.com/uc?export=download&id=16d3JbDcQSeNDkwj017RORICf00WcWmXb)
+
+---
+
 # KONYA TEKNIK ÜNIVERSITESI MÜHENDISLIK VE DOĞA BILIMLERI FAKÜLTESI ELEKTRIK-ELEKTRONIK MÜHENDISLIG̈I BÖLÜMÜ
 
 1202311<br>TEMEL ELEKTRIK VE ÖLCME LABORATUVARI DENEY FÖYÜ
