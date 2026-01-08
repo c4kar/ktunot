@@ -1,22 +1,3 @@
-# İÇİNDEKİLER
-
-* [[İçindekiler]]
-* [[Genel Özet]]
-* [[Temel Terimler ve Kavramlar]]
-* [[Kişisel Koruyucu Donanımın Tanımı ve Kapsamı]]
-* [[KKD'ların Genel Özellikleri ve Seçim Kriterleri]]
-* [[CE İşareti ve Standartlar]]
-* [[KKD'ların Sınıflandırılması (Kategoriler)]]
-* [[Baş Koruyucuları]]
-* [[Kulak Koruyucuları]]
-* [[Göz ve Yüz Koruyucuları]]
-* [[Solunum Sistemi Koruyucuları]]
-* [[El ve Kol Koruyucuları]]
-* [[Ayak ve Bacak Koruyucuları]]
-* [[Gövde ve Vücut Koruyucuları]]
-* [[Temel Formüller ve Hızlı Bilgiler]]
-* [[Kaynaklar]]
-
 # GENEL ÖZET
 
 Bu ders materyali, iş sağlığı ve güvenliğinin (İSG) en kritik unsurlarından biri olan **Kişisel Koruyucu Donanımları (KKD)** kapsamlı bir şekilde incelemektedir. KKD'lar, risklerin kaynağında yok edilemediği veya toplu koruma önlemlerinin yetersiz kaldığı durumlarda çalışanların sağlığını korumak için başvurulan **son koruma aşamasıdır.**
@@ -60,7 +41,7 @@ Bir KKD'nın etkin olabilmesi için belirli standartları karşılaması gerekir
 
 CE işareti, ürünün bağımsız laboratuvarlarca test edildiğini ve Avrupa standartlarına (EN) uygun olduğunu belgeler.
 
-![img-21.jpeg|400]
+![img-21.jpeg]
 
 >[!infobox]
 > CE işaretinin yanında yer alan rakamlar (örn. CE 1234), üreticinin kalite yönetim sistemini onaylayan kurumun kodunu temsil eder. Ürün üzerinde mutlaka **Türkçe kullanım kılavuzu** bulunmalıdır.
@@ -91,7 +72,7 @@ Baş koruyucuları temel olarak baretler ve saçlı deri koruyucuları olarak ay
 > - **Turuncu:** Ustabaşı ve sörveyanlar.
 > - **Kırmızı:** İtfaiye, İSG personeli.
 
-![img-26.jpeg|500]
+![img-26.jpeg]
 
 ## KULAK KORUYUCULARI
 
@@ -109,7 +90,9 @@ Gözleri uçuşan parçalardan, radyasyondan ve kimyasallardan korur.
 - **Yüz Siperleri:** Taşlama veya asit aktarımı sırasında tüm yüzü korur.
 - **Kaynak Siperleri:** Ultraviyole ve kızılötesi (infrare) radyasyonu filtreler.
 
-![img-20.jpeg|300] ![[img-83.jpeg|300]]
+![img-20.jpeg]
+
+![[img-83.jpeg]]
 
 ## SOLUNUM SİSTEMİ KORUYUCULARI
 
@@ -131,7 +114,7 @@ El kazaları en yaygın iş kazalarıdır. Koruma tipine göre eldiven seçilmel
 - **Çelik Örgü:** Kesilmelere karşı (et kesimi, metal şekillendirme).
 - **Yalıtkan Eldiven:** Elektrik işlerinde (Voltaj dayanımı üzerinde yazmalıdır).
 
-![img-100.jpeg|400]
+![img-100.jpeg]
 
 ## AYAK VE BACAK KORUYUCULARI
 
@@ -141,7 +124,9 @@ Ayak koruyucularda "burun koruması" (çelik/kompzit) temel unsurdur.
 - **Yalıtkan Ayakkabılar:** Elektrik şokundan korur.
 - **Çelik Burunlu Ayakkabı:** Ayak üzerine ağır malzeme düşme riskine karşı.
 
-![img-124.jpeg|300] ![[img-128.jpeg|300]]
+![img-124.jpeg]
+
+![[img-128.jpeg]]
 
 ## GÖVDE VE VÜCUT KORUYUCULARI
 
