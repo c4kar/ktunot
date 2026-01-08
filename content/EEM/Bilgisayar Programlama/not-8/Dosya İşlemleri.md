@@ -230,6 +230,6 @@ disp('sinus.txt oluşturuldu.');
 
 --- 
 
-Hazırlayan: Öğrenci / Öğretim Görevlisi  
+Hazırlayan: ÇAKAR
 Tarih: 5 Nisan 2025  
 Ders: Bilgisayar Programlama 2 (MATLAB)
