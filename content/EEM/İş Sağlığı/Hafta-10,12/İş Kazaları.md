@@ -1,20 +1,3 @@
-# İçindekiler
-
-*   Genel Özet
-*   Temel Terimler ve Kavramlar
-*   Ana Gövde: Kronolojik veya Tematik Kayıt
-    *   İş Kazasının Tanımı ve Kapsamı
-    *   İş Kazalarının Sınıflandırılması
-    *   İş Kazasının Yasal Unsurları
-    *   Kaza Sebep Teorileri
-    *   Kaza Nedenlerinin Analizi (4M Modeli)
-    *   Tehlikeli Durumlar ve Davranışlar
-    *   İş Kazalarını Önleme Yöntemleri
-    *   Zarar Çeşitleri ve İş Göremezlik
-*   Temel Formüller ve Hızlı Bilgiler
-    *   Kaza İstatistikleri Formülleri
-*   Kaynaklar
-
 # Genel Özet
 
 Bu belge, **İş Sağlığı ve Güvenliği (İSG)** disiplininin en kritik konularından biri olan **İş Kazaları** üzerine kapsamlı bir inceleme sunmaktadır. Belge içerisinde, iş kazasının uluslararası kuruluşlar (ILO, WHO) ve ulusal mevzuat (5510 sayılı Kanun) çerçevesindeki tanımları, kazaların sınıflandırılması, yasal unsurları ve oluşum süreçlerini açıklayan teorik yaklaşımlar detaylandırılmaktadır.
@@ -39,7 +22,7 @@ Bu belge, **İş Sağlığı ve Güvenliği (İSG)** disiplininin en kritik konu
 
 İş kazası kavramı, yalnızca üretim anında meydana gelen olayları değil, işverenin otoritesi altında geçen geniş bir zaman dilimini kapsar. 5510 sayılı Kanun'un 13. maddesine göre bir olayın iş kazası sayılabilmesi için belirli şartlar gerekir.
 
-![img-0.jpeg|400]
+![img-0.jpeg]
 
 >[!note] Yasal Durumlar
 >Aşağıdaki durumlarda meydana gelen kazalar iş kazası sayılır:
@@ -62,13 +45,13 @@ Kazalar farklı kriterlere göre kategorize edilir:
 
 *   **Vaka 1: Dalgınlık Sonucu Kopan Uzuvlar**
     İstanbul Kartal'da bir işçi, bir anlık dalgınlık sonucu kolunu sac kesme makinesine kaptırmıştır.
-    ![img-1.jpeg|300]
-    ![img-2.jpeg|300]
+    ![img-1.jpeg]
+    ![img-2.jpeg]
 
 *   **Vaka 2: Tehlikeli Hareketlerin Sonucu (Saç Kaptırma)**
     Adana'da ve Söke'de yaşanan vakalarda, çalışanların saçlarını makineye kaptırması sonucu ağır yaralanmalar ve can kayıpları yaşanmıştır. Bu vakalar, dönen aksamlarda çalışırken uygun kişisel koruyucu kullanımının ve dikkatli hareket etmenin önemini gösterir.
-    ![img-12.jpeg|300]
-    ![img-13.jpeg|300]
+    ![img-12.jpeg]
+    ![img-13.jpeg]
 
 ## İş Kazasının Yasal Unsurları
 
@@ -88,7 +71,7 @@ Bir olayın hukuken "İş Kazası" olarak nitelenmesi için dört ana unsurun bi
 ### Domino Kuramı (Heinrich)
 Heinrich'e göre kazalar beş taşın birbirini devirmesi gibi oluşur. En kritik müdahale noktası **Tehlikeli Hareket ve Koşullar** taşıdır. Bu taş çekilirse kaza ve yaralanma önlenir.
 
-![img-17.jpeg|500]
+![img-17.jpeg]
 
 *   **Yüzdesel Dağılım:** Kazaların %88'i güvenli olmayan davranışlardan, %10'u güvenli olmayan koşullardan, %2'si ise kaçınılmaz talih faktöründen kaynaklanır.
 
@@ -103,7 +86,7 @@ Kaza oluşumunu incelemek için modern bir yaklaşım olan 4M kavramı kullanıl
 | **Media (Ortam)** | Çevresel faktörler | Gürültü, kaygan zemin, yetersiz aydınlatma |
 | **Management (Yönetim)** | Yönetimsel eksiklikler | Talimat eksikliği, yanlış personel seçimi |
 
-![img-23.jpeg|400]
+![img-23.jpeg]
 
 ## Tehlikeli Durumlar ve Davranışlar
 
@@ -111,10 +94,10 @@ Kaza oluşumunu incelemek için modern bir yaklaşım olan 4M kavramı kullanıl
 >**Tehlikeli Durum (Koşul):** "Bu merdiven kırık." (Fiziksel eksiklik)
 >**Tehlikeli Davranış (Hareket):** "Kırık olduğunu bildiğim merdivene koşarak çıkıyorum." (İnsan hatası)
 
-![img-24.jpeg|300]
+![img-24.jpeg]
 *Yukarıdaki görselde, yükleme sırasında yapılan bir tehlikeli davranış örneği görülmektedir.*
 
-![img-46.jpeg|500]
+![img-46.jpeg]
 
 # Temel Formüller ve Hızlı Bilgiler
 
