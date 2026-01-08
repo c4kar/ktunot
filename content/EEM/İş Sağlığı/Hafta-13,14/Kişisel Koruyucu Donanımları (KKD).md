@@ -41,7 +41,7 @@ Bir KKD'nın etkin olabilmesi için belirli standartları karşılaması gerekir
 
 CE işareti, ürünün bağımsız laboratuvarlarca test edildiğini ve Avrupa standartlarına (EN) uygun olduğunu belgeler.
 
-![img-21.jpeg]
+![img-21.jpeg](img-21.jpeg)
 
 >[!infobox]
 > CE işaretinin yanında yer alan rakamlar (örn. CE 1234), üreticinin kalite yönetim sistemini onaylayan kurumun kodunu temsil eder. Ürün üzerinde mutlaka **Türkçe kullanım kılavuzu** bulunmalıdır.
@@ -72,7 +72,7 @@ Baş koruyucuları temel olarak baretler ve saçlı deri koruyucuları olarak ay
 > - **Turuncu:** Ustabaşı ve sörveyanlar.
 > - **Kırmızı:** İtfaiye, İSG personeli.
 
-![img-26.jpeg]
+![img-26.jpeg](img-26.jpeg)
 
 ## KULAK KORUYUCULARI
 
@@ -90,7 +90,7 @@ Gözleri uçuşan parçalardan, radyasyondan ve kimyasallardan korur.
 - **Yüz Siperleri:** Taşlama veya asit aktarımı sırasında tüm yüzü korur.
 - **Kaynak Siperleri:** Ultraviyole ve kızılötesi (infrare) radyasyonu filtreler.
 
-![img-20.jpeg]
+![img-20.jpeg](img-20.jpeg)
 
 ![[img-83.jpeg]]
 
@@ -114,7 +114,7 @@ El kazaları en yaygın iş kazalarıdır. Koruma tipine göre eldiven seçilmel
 - **Çelik Örgü:** Kesilmelere karşı (et kesimi, metal şekillendirme).
 - **Yalıtkan Eldiven:** Elektrik işlerinde (Voltaj dayanımı üzerinde yazmalıdır).
 
-![img-100.jpeg]
+![img-100.jpeg](img-100.jpeg)
 
 ## AYAK VE BACAK KORUYUCULARI
 
@@ -124,7 +124,7 @@ Ayak koruyucularda "burun koruması" (çelik/kompzit) temel unsurdur.
 - **Yalıtkan Ayakkabılar:** Elektrik şokundan korur.
 - **Çelik Burunlu Ayakkabı:** Ayak üzerine ağır malzeme düşme riskine karşı.
 
-![img-124.jpeg]
+![img-124.jpeg](img-124.jpeg)
 
 ![[img-128.jpeg]]
 
