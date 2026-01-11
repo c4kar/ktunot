@@ -2,8 +2,8 @@
 
 Bu depo **Konya Teknik Üniversitesi - Mühendislik Bölümleri** derslerinin notlarını, video kayıtlarını, özetlerini ve bütün ilgili kaynaklara kolay erişim sunmayı amaçlayan bir **öğrenci** oluşumudur.
 
-> Site ve depo halen geliştirilme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde hata olabilir. Eğer karşılaşırsanız [lütfen bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz özellikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md).
-> "Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir. Daha sonrasında ortak derslere sahip diğer bölümlerinin notları eklenerek bütün üniversiteyi kapsamayı hedeflemektedir. Eğer bölümünüzün notları depoda bulunmuyorsa [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE)
+> Site ve depo halen geliştirilme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde hata olabilir. Eğer karşılaşırsanız [bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz özellikleri [bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md).
+> "Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir. Daha sonrasında ortak derslere sahip diğer bölümlerinin notları eklenerek bütün üniversiteyi kapsamayı hedeflemektedir. Eğer bölümünüzün notları depoda bulunmuyorsa [bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE)
 
 Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notları **n8n** otomasyon sistemine gönderdikten sonra moderatör arkadaşlarımız özetlenmiş, düzenlenmiş notu inceliyor, eğer hata varsa düzeltiyor ve daha sonra sitemizde paylaşıyoruz.
 
@@ -37,16 +37,7 @@ Bu topluluk projesine katkıda bulunmak çok kolay! Elinizdeki ders notlarını,
 1.  [Buraya tıklayarak](#) *(Dosya yükleme linki eklenecek - örn. Google Form veya Drive/SharePoint)* dosyalarınızı yükleyebilirsiniz.
 2.  Veya doğrudan bu repoya **Pull Request** gönderebilirsiniz.
 
-## 👥 Katkıda Bulunanlar
-
 Projeye katkı sağlayan herkese teşekkürler!
-
-<a href="https://github.com/c4kar/ktunot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=c4kar/ktunot" />
-</a>
-
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=c4kar&label=Görüntülenme+Sayısı&abbreviated=true&style=for-the-badge&color=orange" />
-</p>
 
 ---
 
@@ -57,6 +48,10 @@ Projeye katkı sağlayan herkese teşekkürler!
 - [ ] LMS scriptini paylaş
 - [ ] Yorum bölümü
 - [ ] Örnek çalışmalar
+
+<p align="center">
+<img src="https://komarev.com/ghpvc/?username=c4kar&label=Görüntülenme+Sayısı&abbreviated=true&style=for-the-badge&color=orange" />
+</p>
 
 ---
 
