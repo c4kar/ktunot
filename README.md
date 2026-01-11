@@ -2,12 +2,55 @@
 
 Bu depo **Konya Teknik Üniversitesi - Mühendislik Bölümleri** derslerinin notlarını, video kayıtlarını, özetlerini ve bütün ilgili kaynaklara kolay erişim sunmayı amaçlayan bir **öğrenci** oluşumudur.
 
-> Site ve depo halen geliştirilme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde hata olabilir. Eğer karşılaşırsanız [lütfen bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz özellikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md). 
+> Site ve depo halen geliştirilme aşamasındadır. Notlarda yazım hataları, yanlış bilgiler, hatalı formatlandırma, yanlış isimlendirme, video linklerinde hata olabilir. Eğer karşılaşırsanız [lütfen bize bildirin](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE). Projemizde yer almasını istediğiniz özellikleri [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md).
 > "Planımız, öncelikli olarak EEE fakültesinin 4 yıllık kaynakları üzerine odaklı olarak geliştirilmektedir. Daha sonrasında ortak derslere sahip diğer bölümlerinin notları eklenerek bütün üniversiteyi kapsamayı hedeflemektedir. Eğer bölümünüzün notları depoda bulunmuyorsa [lütfen bizimle paylaşın](https://github.com/c4kar/ktunot/issues/new?template=BLANK_ISSUE)
 
 Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notları **n8n** otomasyon sistemine gönderdikten sonra moderatör arkadaşlarımız özetlenmiş, düzenlenmiş notu inceliyor, eğer hata varsa düzeltiyor ve daha sonra sitemizde paylaşıyoruz.
 
 **[ktünot'un](ktunot.net.tr)** temelleri [_quartz_](https://quartz.jzhao.xyz/) üzerine kuruludur. Kelime arama, _backlinks_ ve akıl haritası özellikleri bu şablonu tercih etmemize sebep oldu.
+
+---
+
+<details>
+<summary><b>🗂 İçindekiler</b></summary>
+
+- [🗣️ Geri Bildirim ve Değerlendirme](#-geri-bildirim-ve-değerlendirme)
+- [🤝 Katkıda Bulunun](#-katkıda-bulunun)
+- [👥 Katkıda Bulunanlar](#-katkıda-bulunanlar)
+- [📝 Yapılacaklar Listesi](#-yapılacaklar-listesi)
+
+</details>
+
+## 🗣️ Geri Bildirim ve Değerlendirme
+
+Öğrenciler ve hocalar, derslerle ilgili geri bildirimlerinizi aşağıdaki linkler aracılığıyla paylaşabilirsiniz:
+
+- [✍️ **Hocalar için yorum yapın**](#) *(Link eklenecek)*
+- [⭐ **Dersler için yorum yapın**](#) *(Link eklenecek)*
+- [🏫 **Üniversite değerlendirmesi**](#) *(Link eklenecek)*
+
+## 🤝 Katkıda Bulunun
+
+Bu topluluk projesine katkıda bulunmak çok kolay! Elinizdeki ders notlarını, çıkmış soruları veya faydalı kaynakları bizimle paylaşabilirsiniz.
+
+**Nasıl Belge Yüklerim?**
+1.  [Buraya tıklayarak](#) *(Dosya yükleme linki eklenecek - örn. Google Form veya Drive/SharePoint)* dosyalarınızı yükleyebilirsiniz.
+2.  Veya doğrudan bu repoya **Pull Request** gönderebilirsiniz.
+
+## 👥 Katkıda Bulunanlar
+
+Projeye katkı sağlayan herkese teşekkürler!
+
+<a href="https://github.com/c4kar/ktunot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=c4kar/ktunot" />
+</a>
+
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=c4kar&label=Görüntülenme+Sayısı&abbreviated=true&style=for-the-badge&color=orange" />
+</p>
+
+---
+
+## 📝 Yapılacaklar Listesi
 
 - [ ] n8n otomasyonunu paylaş
 - [ ] mermaid-diagram
@@ -16,8 +59,6 @@ Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notlar�
 - [ ] Örnek çalışmalar
 
 ---
-
-## _İncelemek isteyenler için aşağıya orijinal README'yi bıraktım._
 
 # Quartz v4
 
