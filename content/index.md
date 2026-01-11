@@ -2,7 +2,7 @@
 title: Hoş Geldiniz
 subtitles: okumadan geçmeyin
 date created: 2025-10-05T19:30
-comments: "false"
+comments: "true"
 ---
 
 **ktünot**, üniversitemizdeki **öğrencilerin** ve **öğretim üyelerinin** ders materyallerine, kaynaklara ve akademik bilgilere kolayca erişebilmesi amacıyla tasarlanmıştır. Amacımız, eğitim sürecimizi her beraber çalışarak desteklemek ve bilgiye erişimi sorunsuz hale getirmektir.
