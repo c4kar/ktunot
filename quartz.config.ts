@@ -13,7 +13,8 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: false,
     analytics: {
-      provider: "plausible",
+      provider: "goatcounter",
+      websiteId: "c4kar"
     },
     locale: "tr-TR",
     baseUrl: "ktunot.net.tr",
