@@ -23,21 +23,31 @@ Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notlar�
 
 ## 🗣️ Geri Bildirim ve Değerlendirme
 
-Öğrenciler ve hocalar, derslerle ilgili geri bildirimlerinizi aşağıdaki linkler aracılığıyla paylaşabilirsiniz:
+Derslerle ve hocalarla ilgili geri bildirimlerinizi aşağıdaki formlar aracılığıyla paylaşabilirsiniz:
 
-- [✍️ **Hocalar için yorum yapın**](#) *(Link eklenecek)*
-- [⭐ **Dersler için yorum yapın**](#) *(Link eklenecek)*
-- [🏫 **Üniversite değerlendirmesi**](#) *(Link eklenecek)*
+- [✍️ **Hocalar için yorum yapın**](#placeholder-hoca-yorum) _(Form linki eklenecek)_
+- [⭐ **Hocalar için yıldız verin**](#placeholder-hoca-yildiz) _(Form linki eklenecek)_
+- [✍️ **Dersler için yorum yapın**](#placeholder-ders-yorum) _(Form linki eklenecek)_
+- [⭐ **Dersler için yıldız verin**](#placeholder-ders-yildiz) _(Form linki eklenecek)_
 
 ## 🤝 Katkıda Bulunun
 
 Bu topluluk projesine katkıda bulunmak çok kolay! Elinizdeki ders notlarını, çıkmış soruları veya faydalı kaynakları bizimle paylaşabilirsiniz.
 
 **Nasıl Belge Yüklerim?**
-1.  [Buraya tıklayarak](#) *(Dosya yükleme linki eklenecek - örn. Google Form veya Drive/SharePoint)* dosyalarınızı yükleyebilirsiniz.
+
+1.  [📤 **Buraya tıklayarak**](#placeholder-not-yukleme) dosyalarınızı yükleyebilirsiniz. _(Google Forms linki eklenecek)_
 2.  Veya doğrudan bu repoya **Pull Request** gönderebilirsiniz.
 
 Projeye katkı sağlayan herkese teşekkürler!
+
+---
+
+## 👥 Katkıda Bulunanlar
+
+Bu projeye katkıda bulunan herkese teşekkür ederiz!
+
+- [@c4kar](https://github.com/c4kar) - Kurucu ve ana geliştirici
 
 ---
 
@@ -50,26 +60,9 @@ Projeye katkı sağlayan herkese teşekkürler!
 - [ ] Örnek çalışmalar
 
 <p align="center">
-<img src="https://komarev.com/ghpvc/?username=c4kar&label=Görüntülenme+Sayısı&abbreviated=true&style=for-the-badge&color=orange" />
+<img src="https://komarev.com/ghpvc/?username=ktunot&label=Görüntülenme+Sayısı&abbreviated=true&style=for-the-badge&color=orange" />
 </p>
 
 ---
 
-# Quartz v4
-
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
-
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
-
-🔗 Read the documentation and get started: <https://quartz.jzhao.xyz/>
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Bu site [Quartz v4](https://quartz.jzhao.xyz/) ile oluşturulmuştur.
