@@ -124,11 +124,11 @@ Plan tamamlandığında şunlar sağlanmalı:
 
 **Beklenen Çıktı**:
 
-- [ ] `.sisyphus/guides/google-forms-setup.md` dosyası oluşturuldu
-- [ ] 4 form için detaylı talimat (adım adım, ekran görüntülü açıklama metni)
-- [ ] Form soruları örnekleri
-- [ ] Form ayarları (anonim, sonuç gizleme vb.)
-- [ ] README'ye entegrasyon talimatı
+- [x] `.sisyphus/guides/google-forms-setup.md` dosyası oluşturuldu
+- [x] 4 form için detaylı talimat (adım adım, ekran görüntülü açıklama metni)
+- [x] Form soruları örnekleri
+- [x] Form ayarları (anonim, sonuç gizleme vb.)
+- [x] README'ye entegrasyon talimatı
 
 **4 Form**:
 
@@ -165,9 +165,9 @@ Plan tamamlandığında şunlar sağlanmalı:
 
 **Beklenen Çıktı**:
 
-- [ ] `CONTRIBUTING.md` dosyası oluşturuldu
-- [ ] Türkçe, kısa (maksimum 100 satır)
-- [ ] 3 katkı yöntemi açıklandı:
+- [x] `CONTRIBUTING.md` dosyası oluşturuldu
+- [x] Türkçe, kısa (maksimum 100 satır)
+- [x] 3 katkı yöntemi açıklandı:
   1. Google Forms ile not yükleme
   2. GitHub Issues ile hata bildirme
   3. Pull Request ile doğrudan katkı
@@ -221,11 +221,11 @@ yc4kar[at]gmail[nokta]com
 
 **Beklenen Çıktı**:
 
-- [ ] `.github/ISSUE_TEMPLATE/bug_report.md` oluşturuldu
-- [ ] `.github/ISSUE_TEMPLATE/feature_request.md` oluşturuldu
-- [ ] `.github/ISSUE_TEMPLATE/BLANK_ISSUE.md` oluşturuldu
-- [ ] Tüm template'ler Türkçe
-- [ ] YTÜ template'lerinden ilham alınmış
+- [x] `.github/ISSUE_TEMPLATE/bug_report.md` oluşturuldu
+- [x] `.github/ISSUE_TEMPLATE/feature_request.md` oluşturuldu
+- [x] `.github/ISSUE_TEMPLATE/BLANK_ISSUE.md` oluşturuldu
+- [x] Tüm template'ler Türkçe
+- [x] YTÜ template'lerinden ilham alınmış
 
 **Araçlar**:
 
