@@ -1,40 +1,42 @@
 ---
-name: Bug report
-about: Something about Quartz isn't working the way you expect
-title: ""
+name: 🐛 Hata Bildirimi
+about: Sitede veya içerikte bulduğunuz hataları bildirin
+title: "[HATA] "
 labels: bug
 assignees: ""
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## 🐛 Hata Açıklaması
 
-**To Reproduce**
-Steps to reproduce the behavior:
+Hatayı net bir şekilde açıklayın.
 
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## 📍 Hangi Sayfada?
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+Hatanın olduğu sayfa linkini veya ders adını yazın.
 
-**Screenshots and Source**
-If applicable, add screenshots to help explain your problem.
+**Örnek**: `content/EEM/Dönem1/Fizik/Fizik-Ders-Notu.md`
 
-You can help speed up fixing the problem by either
+## 📸 Ekran Görüntüsü (Opsiyonel)
 
-1. providing a simple reproduction
-2. linking to your Quartz repository where the problem can be observed
+Ekran görüntüsü ekleyerek hatayı daha iyi açıklayabilirsiniz.
 
-**Desktop (please complete the following information):**
+## 🔄 Nasıl Tekrarlanır?
 
-- Quartz Version: [e.g. v4.1.2]
-- `node` Version: [e.g. v18.16]
-- `npm` version: [e.g. v10.1.0]
-- OS: [e.g. iOS]
-- Browser [e.g. chrome, safari]
+Hatayı tekrarlamak için izlenen adımlar:
 
-**Additional context**
-Add any other context about the problem here.
+1. '...' sayfasına git
+2. '...' butonuna tıkla
+3. '...' bölümüne bak
+4. Hatayı gör
+
+## ✅ Beklenen Davranış
+
+Neyin olmasını bekliyordunuz?
+
+## ℹ️ Ek Bilgi (Opsiyonel)
+
+Hatayı çözmek için eklemek istediğiniz başka bir bilgi var mı?
+
+---
+
+**Teşekkürler!** Raporunuz KTÜN topluluğuna yardımcı olacak.

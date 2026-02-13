@@ -1,19 +1,38 @@
 ---
-name: Feature request
-about: Suggest an idea or improvement for Quartz
-title: ""
+name: ✨ Özellik İsteği
+about: Projede görmek istediğiniz özellikleri önerin
+title: "[ÖZELLİK] "
 labels: enhancement
 assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## ✨ Özellik Açıklaması
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+Özelliği net bir şekilde açıklayın.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## 🎯 Neden Gerekli?
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Bu özellik hangi sorunu çözecek? Nasıl faydalı olacak?
+
+**Kullanım Senaryosu**:  
+_"Bir öğrenci olarak, [...] yapabilmek istiyorum, çünkü [...]"_
+
+## 💡 Nasıl Çalışmalı?
+
+Özelliğin nasıl çalışmasını öneriyorsunuz?
+
+1. Adım 1
+2. Adım 2
+3. Adım 3
+
+## 🔄 Alternatifler (Opsiyonel)
+
+Düşündüğünüz başka çözümler var mı?
+
+## 📋 Ek Notlar (Opsiyonel)
+
+Eklemek istediğiniz başka bir şey var mı?
+
+---
+
+**Teşekkürler!** Önerileriniz projenin gelişmesine katkıda bulunur.
