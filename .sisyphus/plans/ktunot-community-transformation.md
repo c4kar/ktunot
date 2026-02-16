@@ -471,9 +471,9 @@ Staj parça parça yapılabilir. Bu parçalar 10'un katı olmalıdır...
 
 **Beklenen Çıktı**:
 
-- [ ] Tüm `[[wikilink]]` formatı doğru
-- [ ] Kırık linkler yok
-- [ ] index.md'deki linkler çalışıyor
+- [x] Tüm `[[wikilink]]` formatı doğru
+- [x] Kırık linkler yok
+- [x] index.md'deki linkler çalışıyor
 
 **Araçlar**:
 
@@ -488,10 +488,10 @@ Staj parça parça yapılabilir. Bu parçalar 10'un katı olmalıdır...
 
 **Beklenen Çıktı**:
 
-- [ ] README, CONTRIBUTING, issue templates tutarlı
-- [ ] Ton ve dil tutarlı (Türkçe, resmi olmayan ama saygılı)
-- [ ] Email formatı tutarlı (`yc4kar[at]gmail[nokta]com`)
-- [ ] Link formatları tutarlı
+- [x] README, CONTRIBUTING, issue templates tutarlı
+- [x] Ton ve dil tutarlı (Türkçe, resmi olmayan ama saygılı)
+- [x] Email formatı tutarlı (`yc4kar[at]gmail[nokta]com`)
+- [x] Link formatları tutarlı
 
 **Araçlar**:
 
@@ -508,9 +508,9 @@ Staj parça parça yapılabilir. Bu parçalar 10'un katı olmalıdır...
 
 **Beklenen Çıktı**:
 
-- [ ] Komarev badge görünüyor
-- [ ] `username=ktunot` parametresi doğru
-- [ ] Badge stili YTÜ ile aynı (`for-the-badge`, `color=orange`)
+- [x] Komarev badge görünüyor
+- [x] `username=ktunot` parametresi doğru
+- [x] Badge stili YTÜ ile aynı (`for-the-badge`, `color=orange`)
 
 **Badge Kodu**:
 
@@ -531,9 +531,9 @@ Staj parça parça yapılabilir. Bu parçalar 10'un katı olmalıdır...
 
 **Beklenen Çıktı**:
 
-- [ ] README'de "👥 Katkıda Bulunanlar" bölümü var
-- [ ] Başlangıçta kurucu ekip eklendi (kullanıcının isteğine göre)
-- [ ] Manuel ekleme talimatı `CONTRIBUTING.md`'de
+- [x] README'de "👥 Katkıda Bulunanlar" bölümü var
+- [x] Başlangıçta kurucu ekip eklendi (kullanıcının isteğine göre)
+- [x] Manuel ekleme talimatı `CONTRIBUTING.md`'de
 
 **Format**:
 
