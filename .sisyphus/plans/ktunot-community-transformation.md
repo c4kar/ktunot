@@ -300,9 +300,9 @@ assignees: ""
 
 **Beklenen Çıktı**:
 
-- [ ] `content/Kavramlar/` klasörü oluşturuldu
-- [ ] `content/Kavramlar/index.md` ana sayfa oluşturuldu
-- [ ] KTÜN'e özel kavramlar belirlendi (7-8 tane MVP)
+- [x] `content/Kavramlar/` klasörü oluşturuldu
+- [x] `content/Kavramlar/index.md` ana sayfa oluşturuldu
+- [x] KTÜN'e özel kavramlar belirlendi (7-8 tane MVP)
 
 **MVP Kavramlar** (KTÜN'e Özel İçerik):
 

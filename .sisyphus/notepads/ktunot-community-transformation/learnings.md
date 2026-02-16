@@ -79,3 +79,22 @@
 - Quartz footer: Minimal branding (README ile tutarlı)
 - PR workflow: Standard GitHub flow (fork + branch + PR)
 - Katkı odağı: Markdown content only (code değişikliği yok)
+
+## [2026-02-16] Task 3.1: Kavramlar Klasör Yapısı
+
+### Öğrenilenler
+- Quartz wikilink formatı: [[Kavram Adı]] (internal linking)
+- Kavramlar organizasyonu: 4 kategori (Sınavlar, Akademik Süreçler, Kampüs Yaşamı, Uluslararası)
+- 8 kavram belirlendi: Vize, Final, Bütünleme, Ders Seçimi, Staj, Yatay Geçiş, Öğrenci Toplulukları, Erasmus
+- Frontmatter: title only (minimal Quartz config)
+
+### Kararlar
+- Klasör adı: Kavramlar (Türkçe, okunabilir URL)
+- Index organizasyonu: Kategori bazlı (kronolojik değil)
+- Disclaimer eklendi: "Resmi bilgi için bölüm sekreterliğine başvurunuz"
+- Katkı linklerı eklendi: Issue ve CONTRIBUTING.md referansları
+
+### Yapı
+- 4 kategori başlığı (📝 🎓 🏫 🌍 emoji)
+- Her kavram kısa açıklama ile listelendi
+- Nasıl kullanılır bölümü eklendi (kullanıcı rehberliği)
