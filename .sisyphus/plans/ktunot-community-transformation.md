@@ -366,10 +366,10 @@ KTÜN öğrenci hayatınızda karşılaşacağınız kavramlar hakkında detayl�
 
 **Beklenen Çıktı**:
 
-- [ ] 7-8 kavram sayfası oluşturuldu
-- [ ] Her sayfa KTÜN'e özel içerik
-- [ ] Tutarlı format (Soru-Cevap yapısı)
-- [ ] İçsel linkler (Quartz wikilink: `[[Kavram Adı]]`)
+- [x] 7-8 kavram sayfası oluşturuldu
+- [x] Her sayfa KTÜN'e özel içerik
+- [x] Tutarlı format (Soru-Cevap yapısı)
+- [x] İçsel linkler (Quartz wikilink: `[[Kavram Adı]]`)
 
 **Format Örneği** (`content/Kavramlar/Staj.md`):
 

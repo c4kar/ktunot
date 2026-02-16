@@ -98,3 +98,20 @@
 - 4 kategori başlığı (📝 🎓 🏫 🌍 emoji)
 - Her kavram kısa açıklama ile listelendi
 - Nasıl kullanılır bölümü eklendi (kullanıcı rehberliği)
+
+## [2026-02-17] Task 3.2: Kavram Sayfaları Oluşturma
+
+### Öğrenilenler
+- 8 kavram sayfası oluşturuldu (KTÜN resmi kaynaklarından)
+- Tutarlı format: Nedir, Süreç, Tarihler, Belgeler, SSS, Linkler, İpuçları, İletişim
+- KTÜN'e özel içerik: ktun.edu.tr resmi araştırmasından alındı
+- Quartz wikilink formatı kullanıldı: [[Kavram Adı]]
+- Her sayfada disclaimer eklendi
+
+### Kararlar
+- Dosya adları: Tire ile ayırma (Ders-Seçimi.md, Yatay-Geçiş.md, Öğrenci-Toplulukları.md)
+- Tags: [akademik, süreç] veya [akademik, sınav] veya [kampüs, sosyal] vb.
+- SSS sayısı: 3-5 soru (fazla detaydan kaçınıldı)
+- Linkler: Sadece resmi KTÜN linkleri (OBS, Proto, Yatay Geçiş sistemi vb.)
+- İpuçları: Öğrenci perspektifinden pratik öneriler
+- KTÜN'e özel bilgiler: 2025-2026 tarihleri, telefon numaraları, email adresleri
