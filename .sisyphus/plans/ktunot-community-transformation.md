@@ -453,8 +453,8 @@ Staj parça parça yapılabilir. Bu parçalar 10'un katı olmalıdır...
 
 **Beklenen Çıktı**:
 
-- [ ] README'deki placeholder linkler gerçek Google Form linkleriyle değiştirildi
-- [ ] Tüm linkler test edildi (404 kontrolü)
+- [x] README'deki placeholder linkler gerçek Google Form linkleriyle değiştirildi
+- [x] Tüm linkler test edildi (404 kontrolü)
 
 **Not**: Bu task **kullanıcı** Google Forms oluşturduktan sonra yapılacak
 
