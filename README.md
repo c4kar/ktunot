@@ -25,10 +25,8 @@ Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notlar�
 
 Derslerle ve hocalarla ilgili geri bildirimlerinizi aşağıdaki formlar aracılığıyla paylaşabilirsiniz:
 
-- [✍️ **Hocalar için yorum yapın**](#placeholder-hoca-yorum) _(Form linki eklenecek)_
-- [⭐ **Hocalar için yıldız verin**](#placeholder-hoca-yildiz) _(Form linki eklenecek)_
-- [✍️ **Dersler için yorum yapın**](#placeholder-ders-yorum) _(Form linki eklenecek)_
-- [⭐ **Dersler için yıldız verin**](#placeholder-ders-yildiz) _(Form linki eklenecek)_
+- [👨‍🏫 **Öğretmen görüş formu** (yorum + yıldız)](https://forms.gle/PgDyoo2j2odu1ZK96)
+- [📚 **Ders görüş formu**](https://forms.gle/uxnGWzAG3LaBUB1v5)
 
 ## 🤝 Katkıda Bulunun
 
@@ -36,7 +34,7 @@ Bu topluluk projesine katkıda bulunmak çok kolay! Elinizdeki ders notlarını,
 
 **Nasıl Belge Yüklerim?**
 
-1.  [📤 **Buraya tıklayarak**](#placeholder-not-yukleme) dosyalarınızı yükleyebilirsiniz. _(Google Forms linki eklenecek)_
+1.  [📤 **Not yükleme formunu**](https://forms.gle/EK7BruSNk6yYxL8A8) doldurarak dosyalarınızı yükleyebilirsiniz.
 2.  Veya doğrudan bu repoya **Pull Request** gönderebilirsiniz.
 
 Projeye katkı sağlayan herkese teşekkürler!
