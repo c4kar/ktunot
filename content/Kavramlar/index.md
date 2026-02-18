@@ -63,4 +63,4 @@ Bir kavram eksik mi? Bilgiler güncel değil mi?
 - [Geri bildirim gönderin](https://github.com/c4kar/ktunot/issues/new?template=feature_request.md)
 - [Değişiklik önerin](https://github.com/c4kar/ktunot/blob/v4/CONTRIBUTING.md)
 
-Her katkınız KTÜN topluluğuna yardımcı olur!
+"Öğrenciler için öğrenciyiz!"
