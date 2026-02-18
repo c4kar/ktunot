@@ -25,7 +25,7 @@ Arşivleme [depomuzdan](https://github.com/c4kar/ktunDepo) aldığımız notlar�
 
 Derslerle ve hocalarla ilgili geri bildirimlerinizi aşağıdaki formlar aracılığıyla paylaşabilirsiniz:
 
-- [👨‍🏫 **Öğretmen görüş formu** (yorum + yıldız)](https://forms.gle/PgDyoo2j2odu1ZK96)
+- [👨‍🏫 **Öğretmen görüş formu**](https://forms.gle/PgDyoo2j2odu1ZK96)
 - [📚 **Ders görüş formu**](https://forms.gle/uxnGWzAG3LaBUB1v5)
 
 ## 🤝 Katkıda Bulunun
@@ -46,6 +46,7 @@ Projeye katkı sağlayan herkese teşekkürler!
 Bu projeye katkıda bulunan herkese teşekkür ederiz!
 
 - [@c4kar](https://github.com/c4kar) - Kurucu ve ana geliştirici
+- [Halil Bozoğlu](https://github.com/halilbozoglu) - [GANO Hesaplayıcı](https://halilbozoglu.github.io/website/) geliştiricisi
 
 ---
 
@@ -54,7 +55,7 @@ Bu projeye katkıda bulunan herkese teşekkür ederiz!
 - [ ] n8n otomasyonunu paylaş
 - [ ] mermaid-diagram
 - [ ] LMS scriptini paylaş
-- [ ] Yorum bölümü
+- [x] Yorum bölümü
 - [ ] Örnek çalışmalar
 
 <p align="center">

@@ -1733,10 +1733,11 @@ BCD kodunda verilmiş bir ifadenin sayı biçiminde gösterilmesi amacıyla kull
 > |        1         |        1         |        0         |        1         |                   0                   |                0                |               0               |                0                |
 > |        1         |        1         |        1         |        0         |                   1                   |                0                |               1               |                0                |
 > |        1         |        1         |        1         |        1         |                   0                   |                0                |               0               |                1                |
->
-> ```latex
-> F_{iyi/iskarta} = \bar{a}bcd + abc\bar{d} = bc(\bar{a}d + a\bar{d}) = bc(a \oplus d)
-> ```
+
+
+$$
+F_{iyi/iskarta} = \bar{a}bcd + abc\bar{d} = bc(\bar{a}d + a\bar{d}) = bc(a \oplus d)
+$$
 
 ---
 
