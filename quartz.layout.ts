@@ -21,7 +21,10 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/c4kar/ktunot",
       "Okul Websitesi": "https://www.ktun.edu.tr/",
-      "Not Hesaplama": "https://halilbozoglu.github.io/website/"
+      "Not Hesaplama": "https://halilbozoglu.github.io/website/",
+      "Not yükleme formunu": "https://forms.gle/EK7BruSNk6yYxL8A8",
+      "Ders görüş formu": "https://forms.gle/uxnGWzAG3LaBUB1v5",
+      "Öğretmen görüş formu": "https://forms.gle/PgDyoo2j2odu1ZK96"
     },
   }),
 }
