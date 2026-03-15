@@ -1,0 +1,39 @@
+name: Update News Section
+
+on:
+  push:
+    branches:
+      - v4
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    if: ${{ github.repository != 'jackyzha0/quartz' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Update news section
+        run: npm run news
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No news updates"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/index.md
+          git commit -m "chore(news): update index news"
+          git push
