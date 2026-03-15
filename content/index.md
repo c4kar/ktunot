@@ -9,6 +9,7 @@ comments: true
 
 ## 📰 Haberler
 
+- 16/03/2026 (🆕) KTÜN konsept sayfaları yayında; kalite kontrol adımları devam ediyor.
 - 2026-02-19 (📝/🔧) GitHub düzenleme bağlantıları ve geri bildirim yönlendirmeleri güncellendi.
 - 2026-02-18 (🆕) Ders, öğretmen ve not yükleme formları yayında; **Kavramlar** bölümü genişletildi.
 - 2026-02-17 (🆕) KTÜN konsept sayfaları ve kalite kontrol adımları tamamlandı.
