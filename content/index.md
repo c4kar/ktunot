@@ -9,76 +9,76 @@ comments: true
 
 ## 📰 Haberler
 
-- 16/03/2026 (🆕) KTÜN konsept sayfaları yayında; kalite kontrol adımları devam ediyor.
-- 2026-02-19 (📝/🔧) GitHub düzenleme bağlantıları ve geri bildirim yönlendirmeleri güncellendi.
-- 2026-02-18 (🆕) Ders, öğretmen ve not yükleme formları yayında; **Kavramlar** bölümü genişletildi.
-- 2026-02-17 (🆕) KTÜN konsept sayfaları ve kalite kontrol adımları tamamlandı.
-- 2026-02-14 (🆕/📝) Katkı altyapısı kuruldu, README Türkçe rehber olarak yenilendi.
+  > - 17/03/2026 (🆕) ktünot v2. Telegram not arşivi + yeni tasarım + yeni renk paleti + ders kaynağı düzenleyici yapay zeka ajanı
+  > - 2026-02-19 (📝/🔧) GitHub düzenleme bağlantıları ve geri bildirim yönlendirmeleri güncellendi.
+  > - 2026-02-18 (🆕) Ders, öğretmen ve not yükleme formları yayında; **Kavramlar** bölümü genişletildi.
+  > - 2026-02-17 (🆕) KTÜN konsept sayfaları ve kalite kontrol adımları tamamlandı.
+  > - 2026-02-14 (🆕/📝) Katkı altyapısı kuruldu, README Türkçe rehber olarak yenilendi.
 
 ## 📚 **ktünot**'un Özellikleri
 
-Kaybolduysanız, site haritasını kontrol edebilir veya dosyaları arama özelliğini kullanabilirsiniz.
+  Kaybolduysanız, site haritasını kontrol edebilir veya dosyaları arama özelliğini kullanabilirsiniz.
 
-- **Akademik Kaynaklar:** Tüm notlarımız profesörlerimiz, doçentlerimiz ve öğretim üyesi öğretmenlerimiz tarafından hazırlanmış güvenilir kaynaklardan oluşmaktadır.
-- **Kesintisiz Erişim:** İster kampüste, ister evde olun, gerekli materyallere **07/24** ulaşabilirsiniz.
-- **Güncel İçerik:** Notlarımız düzenli olarak güncellenmekte ve kontrol edilmektedir. Böylece her zaman en güncel bilgiler ile çalışmamız sağlanmaktadır.
+  - **Akademik Kaynaklar:** Tüm notlarımız profesörlerimiz, doçentlerimiz ve öğretim üyesi öğretmenlerimiz tarafından hazırlanmış güvenilir kaynaklardan oluşmaktadır.
+  - **Kesintisiz Erişim:** İster kampüste, ister evde olun, gerekli materyallere **07/24** ulaşabilirsiniz.
+  - **Güncel İçerik:** Notlarımız düzenli olarak güncellenmekte ve kontrol edilmektedir. Böylece her zaman en güncel bilgiler ile çalışmamız sağlanmaktadır.
 
 ## 📖 Nasıl Kullanılır?
 
-1. **Arama Yapın:** Arama çubuğunu kullanarak ihtiyacınız olan konuları hızlıca bulun. Aradağınız kelimeyi içeren notlar sırasıyla karşınıza çıkacaktır.
-2. **Kategorilere Göz Atın:** Dersler, bölümler ve konulara göre düzenlenmiş içerikleri keşfedin.
-3. **İndirin:** Gerekli materyalleri indirerek çevrimdışı erişim sağlayın.
+  1. **Arama Yapın:** Arama çubuğunu kullanarak ihtiyacınız olan konuları hızlıca bulun. Aradağınız kelimeyi içeren notlar sırasıyla karşınıza çıkacaktır.
+  2. **Kategorilere Göz Atın:** Dersler, bölümler ve konulara göre düzenlenmiş içerikleri keşfedin.
+  3. **İndirin:** Gerekli materyalleri indirerek çevrimdışı erişim sağlayın.
 
-_Sitemizde çoğunlukla taratılmış ya da düzenlenmiş ders kaynakları mevcuttur. Eğer ham materyallerden yararlanmak isterseniz [git repomuzu](https://github.com/c4kar/ktunDepo) ziyaret edebilirsiniz_
-%%
+  _Sitemizde çoğunlukla taratılmış ya da düzenlenmiş ders kaynakları mevcuttur. Eğer ham materyallerden yararlanmak isterseniz [git repomuzu](https://github.com/c4kar/ktunDepo) ziyaret edebilirsiniz_
+  %%
 
-//TODO BU KISMI DAHA SONRA YAPACAĞIM
+  //TODO BU KISMI DAHA SONRA YAPACAĞIM
 
 ### 🔍 Gelişmiş Arama İpuçları
 
-Aşağıdaki parametreleri kullanarak aramanızı daha verimli hale getirebilirsiniz:
+  Aşağıdaki parametreleri kullanarak aramanızı daha verimli hale getirebilirsiniz:
 
-```markdown
-Ders Kodu: "MAT101"
-Konu: "İntegral"
-Dönem: "2023-Bahar"
-```
+  ```markdown
+  Ders Kodu: "MAT101"
+  Konu: "İntegral"
+  Dönem: "2023-Bahar"
+  ```
 
-%%
+  %%
 
 ## 💭 Niye ktünot'u Yaptık ?
 
-LMS sistemi üzerinden indirdiğimiz PDF'lerden not alma, slaytların fotoğrafını çekme, videoların en önemli yerlerini bulma işinden çok sıkılmaya başlamıştık. Hepsini tek bir yerde görmek, aramak ve tekrar istemek için bir sistem arayışına girdim ve bir _Python_ otomasyonu yazdım. _LLM_'leri kullanarak otomatik indirdiğim ders notlarının sadece önemli kısımlarını (dosya formatı farketmeksizin) çıkaran bir _prompt_ yazarak otomasyonu tamamladım. Geriye tek kalan iş benimle aynı sıkıntıyı yaşayan öğrenci arkadaşlarımla paylaşmak olmuştu.
+  LMS sistemi üzerinden indirdiğimiz PDF'lerden not alma, slaytların fotoğrafını çekme, videoların en önemli yerlerini bulma işinden çok sıkılmaya başlamıştık. Hepsini tek bir yerde görmek, aramak ve tekrar istemek için bir sistem arayışına girdim ve bir _Python_ otomasyonu yazdım. _LLM_'leri kullanarak otomatik indirdiğim ders notlarının sadece önemli kısımlarını (dosya formatı farketmeksizin) çıkaran bir _prompt_ yazarak otomasyonu tamamladım. Geriye tek kalan iş benimle aynı sıkıntıyı yaşayan öğrenci arkadaşlarımla paylaşmak olmuştu.
 
 ## 🦾🤖 Yapay Zekanın Rolü
 
-Notlara baktıysanız farketmişsinizdir; Orijinal dosyanın yazım sırası, tarzı, formatı ne olursa olsun notların yazılış tarzı benzer. Bu hazırladığım _prompt_ ile alakalı. En verimli düzenin bu olduğu kanısına vardığım için bu şekilde ayarladım. İlerleyen dönemlerde daha optimum bir düzene evrilebilir.
+  Notlara baktıysanız farketmişsinizdir; Orijinal dosyanın yazım sırası, tarzı, formatı ne olursa olsun notların yazılış tarzı benzer. Bu hazırladığım _prompt_ ile alakalı. En verimli düzenin bu olduğu kanısına vardığım için bu şekilde ayarladım. İlerleyen dönemlerde daha optimum bir düzene evrilebilir.
 
 ## ✅ Planlar ve Hedefler
 
-- [x] github repo sync
-- [ ] tag ve date sistemi
-- [ ] final custom stil
-- [ ] haftalık blog ?
-- [ ] notebooklm entegre
-- [ ] geçmiş sınav soruları
-- [ ] EEM Bölümü 4 yıl tam not
-- [ ] iç içe not sistemi ve **temeller** bölümü
-- [ ] Bilgisayar Müh. 4 '' '' ''
-- [ ] Makine Müh. 4 '' '' ''
-- [ ] ve daha nicesi....
+  - [x] github repo sync
+  - [ ] tag ve date sistemi
+  - [x] final custom stil
+  - [ ] haftalık blog ?
+  - [x] notebooklm entegre
+  - [x] geçmiş sınav soruları (Olmayanlar en yakın zamanda eklenecektir)
+  - [ ] EEM Bölümü 4 yıl tam not (Notların çekilip agenta atılması lazım sadece)
+  - [ ] iç içe not sistemi ve **temeller** bölümü (Kavramlar bölümü ile bir giriş yapıldı)
+  - [ ] Bilgisayar Müh. 4 '' '' '' (GDrive linki üzerinden düzenlenip siteye aktarılacak)
+  - [ ] Makine Müh. 4 '' '' '' (GDrive linki üzerinden düzenlenip siteye aktarılacak)
+  - [ ] ve daha nicesi....
 
 ## 📩 İletişim ve Destek
 
-Platformla ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen bizimle iletişime geçmekten çekinmeyin(lütfen). Amacımız, hep beraber eğitim sürecimizi en verimli şekilde geçirmektir. Sizi çok seviyoruz. İyi ki varsınız 💚
+  Platformla ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen bizimle iletişime geçmekten çekinmeyin(lütfen). Amacımız, hep beraber eğitim sürecimizi en verimli şekilde geçirmektir. Sizi çok seviyoruz. İyi ki varsınız 💚
 
-💚 Soru ve öneriler için mail adresim:
-**yc4kar[at]gmail[nokta]com**
+  💚 Soru ve öneriler için mail adresim:
+  **yc4kar[at]gmail[nokta]com**
 
-[🖤 Depo GitHub Repomuzdan düzenleme için 🖤](https://github.com/c4kar/ktunDepo/issues/new)
+  [🖤 Depo GitHub Repomuzdan düzenleme için 🖤](https://github.com/c4kar/ktunDepo/issues/new)
 
-[🖤 Ana GitHub Repomuzdan düzenleme için 🖤](https://github.com/c4kar/ktunoto/issues/new)
+  [🖤 Ana GitHub Repomuzdan düzenleme için 🖤](https://github.com/c4kar/ktunoto/issues/new)
 
-[♥️ Üniversitemizin Web Sitesi ♥️](https://www.ktun.edu.tr/)
+  [♥️ Üniversitemizin Web Sitesi ♥️](https://www.ktun.edu.tr/)
 
-> "Öğrenciler için öğrenciyiz!"
+  > "Öğrenciler için öğrenciyiz!"
