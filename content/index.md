@@ -7,6 +7,13 @@ comments: true
 
 **ktünot**, üniversitemizdeki **öğrencilerin** ve **öğretim üyelerinin** ders materyallerine, kaynaklara ve akademik bilgilere kolayca erişebilmesi amacıyla tasarlanmıştır. Amacımız, eğitim sürecimizi her beraber çalışarak desteklemek ve bilgiye erişimi sorunsuz hale getirmektir.
 
+## 📰 Haberler
+
+- 2026-02-19 (📝/🔧) GitHub düzenleme bağlantıları ve geri bildirim yönlendirmeleri güncellendi.
+- 2026-02-18 (🆕) Ders, öğretmen ve not yükleme formları yayında; **Kavramlar** bölümü genişletildi.
+- 2026-02-17 (🆕) KTÜN konsept sayfaları ve kalite kontrol adımları tamamlandı.
+- 2026-02-14 (🆕/📝) Katkı altyapısı kuruldu, README Türkçe rehber olarak yenilendi.
+
 ## 📚 **ktünot**'un Özellikleri
 
 Kaybolduysanız, site haritasını kontrol edebilir veya dosyaları arama özelliğini kullanabilirsiniz.
