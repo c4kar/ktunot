@@ -9,4 +9,5 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-md/
+md/ 
+content/temp/
