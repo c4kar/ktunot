@@ -1,0 +1,1165 @@
+<!DOCTYPE html><html lang="tr"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>programlama cikmis cakar | ktünot</title><meta name="description" content="programlama cikmis cakar - bilgisayar programlama 1 dersi, 1. Yıl Bahar (EEM-2)."><meta property="og:title" content="programlama cikmis cakar | ktünot"><meta property="og:description" content="programlama cikmis cakar - bilgisayar programlama 1 dersi, 1. Yıl Bahar (EEM-2)."><meta property="og:url" content="https://ktunot.net.tr/dosya/69092f20ffa0/"><meta property="og:type" content="article"><meta property="og:site_name" content="ktünot"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      if (stored === "dark" || (!stored && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      }
+    </script><script data-goatcounter="https://c4kar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/_astro/global.BdXjB88_.css">
+<style>.bg-checkered[data-astro-cid-jr3ox3md]{background-color:#fff;background-image:linear-gradient(45deg,#f0f0f0 25%,transparent 25%),linear-gradient(-45deg,#f0f0f0 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f0f0f0 75%),linear-gradient(-45deg,transparent 75%,#f0f0f0 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0px}.dark[data-astro-cid-jr3ox3md] .bg-checkered[data-astro-cid-jr3ox3md]{background-color:#1e2326;background-image:linear-gradient(45deg,#272e33 25%,transparent 25%),linear-gradient(-45deg,#272e33 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#272e33 75%),linear-gradient(-45deg,transparent 75%,#272e33 75%)}
+</style></head> <body class="min-h-screen flex flex-col bg-ef-bg dark:bg-efd-bg text-ef-text dark:text-efd-text"> <header class="sticky top-0 z-40 w-full border-b border-ef-bg2 dark:border-efd-bg2 bg-ef-bg/80 dark:bg-efd-bg/80 backdrop-blur-md"> <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"> <!-- Logo --> <a href="/" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ef-green/50 rounded-lg"> <span class="text-2xl font-bold font-heading text-ef-text dark:text-efd-text group-hover:text-ef-green dark:group-hover:text-efd-green transition-colors"> <span class="text-ef-green dark:text-efd-green">ktü</span>not
+</span> </a> <!-- Desktop Navigation --> <nav class="hidden md:flex items-center gap-6"> <a href="/" class="text-sm font-medium transition-colors hover:text-ef-green dark:hover:text-efd-green focus:outline-none focus:ring-2 focus:ring-ef-green/50 rounded-lg px-2 py-1 text-ef-text dark:text-efd-text"> Ana Sayfa </a><a href="/hakkinda" class="text-sm font-medium transition-colors hover:text-ef-green dark:hover:text-efd-green focus:outline-none focus:ring-2 focus:ring-ef-green/50 rounded-lg px-2 py-1 text-ef-text dark:text-efd-text"> Hakkında </a> </nav> <!-- Right Actions --> <div class="flex items-center gap-2 sm:gap-4"> <div class="flex items-center"> <button id="search-trigger" class="p-2 rounded-lg text-ef-text2 dark:text-efd-text2 hover:bg-ef-bg2 dark:hover:bg-efd-bg2 transition-colors focus:outline-none focus:ring-2 focus:ring-ef-green/50" aria-label="Arama Yap"> <svg width="1em" height="1em" class="w-5 h-5" data-icon="lucide:search">   <symbol id="ai:lucide:search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol><use href="#ai:lucide:search"></use>  </svg> </button> <script>
+  const searchTrigger = document.getElementById("search-trigger");
+
+  searchTrigger?.addEventListener("click", () => {
+    // Navigate to /ara page where the full Pagefind UI is located
+    window.location.href = "/ara";
+  });
+</script> <button id="theme-toggle" class="p-2 rounded-lg text-ef-text2 dark:text-efd-text2 hover:bg-ef-bg2 dark:hover:bg-efd-bg2 transition-colors focus:outline-none focus:ring-2 focus:ring-ef-green/50" aria-label="Koyu/Açık Tema Değiştir"> <svg width="1em" height="1em" class="w-5 h-5 hidden dark:block" data-icon="lucide:sun">   <symbol id="ai:lucide:sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></g></symbol><use href="#ai:lucide:sun"></use>  </svg> <svg width="1em" height="1em" class="w-5 h-5 block dark:hidden" data-icon="lucide:moon">   <symbol id="ai:lucide:moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></symbol><use href="#ai:lucide:moon"></use>  </svg> </button> <script>
+  const themeToggle = document.getElementById("theme-toggle");
+
+  themeToggle?.addEventListener("click", () => {
+    const html = document.documentElement;
+    const isDark = html.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script> </div> <a href="https://forms.gle/EK7BruSNk6yYxL8A8" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ef-green/50 dark:focus:ring-offset-efd-bg"> <svg width="1em" height="1em" class="w-4 h-4" data-icon="lucide:upload">   <symbol id="ai:lucide:upload" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m5-7l-5-5l-5 5m14 7v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></symbol><use href="#ai:lucide:upload"></use>  </svg> <span>Not Yükle</span> </a> <!-- Mobile Menu Trigger --> <button id="mobile-menu-trigger" class="md:hidden p-2 text-ef-text2 dark:text-efd-text2 hover:bg-ef-bg2 dark:hover:bg-efd-bg2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-ef-green/50" aria-label="Menüyü Aç"> <svg width="1em" height="1em" class="w-5 h-5" data-icon="lucide:menu">   <symbol id="ai:lucide:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/></symbol><use href="#ai:lucide:menu"></use>  </svg> </button> </div> </div> <!-- Mobile Menu --> <div id="mobile-menu" class="md:hidden hidden border-t border-ef-bg2 dark:border-efd-bg2 bg-ef-bg dark:bg-efd-bg absolute w-full left-0 origin-top shadow-lg"> <div class="px-4 py-4 space-y-4 shadow-xl"> <nav class="flex flex-col space-y-2"> <a href="/" class="block px-3 py-2 rounded-md text-base font-medium transition-colors hover:bg-ef-bg2 dark:hover:bg-efd-bg2 text-ef-text dark:text-efd-text"> Ana Sayfa </a><a href="/hakkinda" class="block px-3 py-2 rounded-md text-base font-medium transition-colors hover:bg-ef-bg2 dark:hover:bg-efd-bg2 text-ef-text dark:text-efd-text"> Hakkında </a> </nav> <div class="pt-4 border-t border-ef-bg2 dark:border-efd-bg2"> <a href="https://forms.gle/EK7BruSNk6yYxL8A8" target="_blank" rel="noopener noreferrer" class="flex w-full btn-primary justify-center"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="w-4 h-4 mr-2" data-icon="lucide:upload">   <use href="#ai:lucide:upload"></use>  </svg> <span>Not Yükle</span> </a> </div> </div> </div> </header> <script>
+  const mobileMenuTrigger = document.getElementById("mobile-menu-trigger");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (mobileMenuTrigger && mobileMenu) {
+    mobileMenuTrigger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script> <main class="flex-1">  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 max-w-5xl" data-astro-cid-jr3ox3md> <!-- Breadcrumb --> <nav class="flex text-sm text-ef-text2 dark:text-efd-text2 mb-8 font-medium" aria-label="Breadcrumb" data-astro-cid-jr3ox3md> <ol class="inline-flex items-center space-x-1 md:space-x-3" data-astro-cid-jr3ox3md> <li class="inline-flex items-center" data-astro-cid-jr3ox3md> <a href="/" class="hover:text-ef-green dark:hover:text-efd-green transition-colors" data-astro-cid-jr3ox3md>ktünot</a> </li> <li data-astro-cid-jr3ox3md> <div class="flex items-center" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" class="w-4 h-4 mx-1" data-astro-cid-jr3ox3md="true" data-icon="lucide:chevron-right">   <symbol id="ai:lucide:chevron-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></symbol><use href="#ai:lucide:chevron-right"></use>  </svg> <a href="/donem/EEM-2" class="hover:text-ef-green dark:hover:text-efd-green transition-colors" data-astro-cid-jr3ox3md>EEM-2</a> </div> </li> <li data-astro-cid-jr3ox3md> <div class="flex items-center" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" viewBox="0 0 24 24" class="w-4 h-4 mx-1" data-astro-cid-jr3ox3md="true" data-icon="lucide:chevron-right">   <use href="#ai:lucide:chevron-right"></use>  </svg> <span class="truncate max-w-[100px] sm:max-w-[200px]" data-astro-cid-jr3ox3md>bilgisayar programlama 1</span> </div> </li> <li aria-current="page" data-astro-cid-jr3ox3md> <div class="flex items-center text-ef-gray dark:text-efd-gray" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" viewBox="0 0 24 24" class="w-4 h-4 mx-1" data-astro-cid-jr3ox3md="true" data-icon="lucide:chevron-right">   <use href="#ai:lucide:chevron-right"></use>  </svg> <span class="truncate max-w-[150px] sm:max-w-xs" data-astro-cid-jr3ox3md>programlama cikmis cakar</span> </div> </li> </ol> </nav> <!-- Header Section --> <div class="mb-10" data-astro-cid-jr3ox3md> <div class="flex flex-wrap items-center gap-3 mb-4" data-astro-cid-jr3ox3md> <span class="tag px-3 py-1 font-semibold text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" data-astro-cid-jr3ox3md> Not </span> <span class="semester-badge px-3 py-1 text-sm" data-astro-cid-jr3ox3md>1. Yıl Bahar (EEM-2)</span> </div> <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-ef-text dark:text-efd-text tracking-tight mb-6" data-astro-cid-jr3ox3md> programlama cikmis cakar </h1> <!-- Metada Row --> <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-ef-text2 dark:text-efd-text2 p-4 rounded-xl bg-white/50 dark:bg-efd-bg2/50 backdrop-blur-sm border border-ef-bg2 dark:border-efd-bg2" data-astro-cid-jr3ox3md> <div class="flex items-center gap-2" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" class="w-4 h-4 text-ef-gray dark:text-efd-gray" data-astro-cid-jr3ox3md="true" data-icon="lucide:hard-drive">   <symbol id="ai:lucide:hard-drive" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 16h.01m-7.798-4.423a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11zm19.734.436H2.054M6 16h.01"/></symbol><use href="#ai:lucide:hard-drive"></use>  </svg> <span data-astro-cid-jr3ox3md>28.6 KB</span> </div> <div class="flex items-center gap-2" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" class="w-4 h-4 text-ef-gray dark:text-efd-gray" data-astro-cid-jr3ox3md="true" data-icon="lucide:calendar">   <symbol id="ai:lucide:calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 2v4m8-4v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></g></symbol><use href="#ai:lucide:calendar"></use>  </svg> <span data-astro-cid-jr3ox3md>16.03.2026</span> </div>  </div> </div> <!-- Actions Row --> <div class="flex flex-wrap items-center gap-4 mb-10" data-astro-cid-jr3ox3md> <a href="https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-2/bilgisayar-programlama-1/cikmis/programlama-cikmis-cakar.md" download class="btn-primary text-base px-6 py-3 shadow-sm shadow-ef-green/20" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" class="w-5 h-5" data-astro-cid-jr3ox3md="true" data-icon="lucide:download">   <symbol id="ai:lucide:download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10l5 5l5-5"/></g></symbol><use href="#ai:lucide:download"></use>  </svg> <span data-astro-cid-jr3ox3md>Dosyayı İndir</span> </a> <button id="copy-link-btn" class="btn-secondary text-base px-6 py-3" data-url="https://ktunot.net.tr/dosya/69092f20ffa0" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" class="w-5 h-5" data-astro-cid-jr3ox3md="true" data-icon="lucide:link">   <symbol id="ai:lucide:link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></g></symbol><use href="#ai:lucide:link"></use>  </svg> <span data-astro-cid-jr3ox3md>Bağlantıyı Kopyala</span> </button> <a href="https://github.com/c4kar/ktunot/issues/new?title=Hata Bildirimi: programlama cikmis cakar&#38;body=Dosya URL: https://ktunot.net.tr/dosya/69092f20ffa0" target="_blank" rel="noopener noreferrer" class="ml-auto flex items-center gap-2 text-sm text-red-600 dark:text-red-400 hover:underline" data-astro-cid-jr3ox3md> <svg width="1em" height="1em" class="w-4 h-4" data-astro-cid-jr3ox3md="true" data-icon="lucide:alert-triangle">   <symbol id="ai:lucide:alert-triangle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3M12 9v4m0 4h.01"/></symbol><use href="#ai:lucide:alert-triangle"></use>  </svg> <span data-astro-cid-jr3ox3md>Hata Bildir</span> </a> </div> <!-- Preview Section --> <div class="mb-16" data-astro-cid-jr3ox3md> <h2 class="text-xl font-semibold font-heading text-ef-text dark:text-efd-text mb-4" data-astro-cid-jr3ox3md>Önizleme</h2> <div class="rounded-2xl border border-ef-bg2 dark:border-efd-bg2 bg-white/30 dark:bg-efd-bg2/30 backdrop-blur-sm overflow-hidden shadow-sm relative" data-astro-cid-jr3ox3md> <div class="p-6 md:p-10 prose dark:prose-invert prose-ef max-w-none" data-astro-cid-jr3ox3md> <pre class="whitespace-pre-wrap" data-astro-cid-jr3ox3md><code class="text-sm" data-astro-cid-jr3ox3md>### Soru 1 (Sayfa 1)
+
+&gt; Matlab Simulink ortamında bir sinyalin zamana göre değişimini gözlemlemek istersek hangi bloğu kullanmalıyız?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Time Analyzer
+* b. Logic Analyzer
+* **c. Scope**
+* d. Radar
+* e. Logic Probe
+
+-----
+
+### Soru 2 (Sayfa 2)
+
+&gt; Matlab&#39;de $p(x)=x^{2}+x$ polinomunun 1&#39;den 3&#39;e kadar x değerleri için çözümü aşağıdakilerden hangisi ile bulunabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `a=1-3; polyval([1 0 1 0],a);`
+* b. `x=1-3; polyval([1 0 1 0],x)`
+* c. `polyval([1 1 0],1:3)` (Tahmin: 1.3 yerine 1:3)
+* d. `polyval(x,1:3); x=[1 0 1 0]`
+* e. `polyval([1 0 1 0],1:3)` (Tahmin: 1.3 yerine 1:3)
+
+-----
+
+### Soru 3 (Sayfa 3)
+
+&gt; MATLAB&#39; de $V=[5 \ 6 \ 7 \ 8 \ 9 \ 10]$ vektörünü oluşturmak için aşağıda[kilerden hangisi kullanılamaz?] (Tahmin: Soru kökü eksik)
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `V=[5,6,7,8,9,10]`
+* b. `V=[5:1:10]`
+* c. `v=linspace(5,10,6)`
+* d. `V=[5 6 7 8 9 10]`
+* e. `V=[&#39;5:10&#39;]`
+
+-----
+
+### Soru 4 (Sayfa 4)
+
+&gt; $A=[\begin{matrix}2&amp;-7&amp;9\\ 7&amp;4&amp;8\\ 5&amp;6&amp;-3\end{matrix}]$
+&gt;
+&gt; Yukarıda verilen A matrisinin Matlab&#39;de &quot;A&quot; değişkeni ile [tanımlandığı biliniyor. (Soru ifadesi eksik. Tahmin: Sayfa 17&#39;deki gibi A(1, :) \* A(:, 2) )] ifadesinin üreteceği sonuç aşağıdakilerden hangisidir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. [14 28 40]
+* b. 82
+* c. 58
+* d. 12
+* e. [14 -28 72]
+
+*(Not: Sayfa 5&#39;te `&gt;&gt; A(2:3,1:2)&#39;` komutu ve sonucu `ans = 7 5 4 6` görünmektedir, ancak bu Sayfa 4&#39;teki seçeneklerle eşleşmemektedir.)*
+
+-----
+
+### Soru 5 (Sayfa 6)
+
+&gt; $p(x)=2x^{4}-4x^{2}+10x-3$ polinomunu ifade etmek için Matlab&#39;de aşağıdaki de[ğişkenlerden hangisi kullanılabilir?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `p1=[2 -4 10 -3];`
+* b. `p1=[4 -2 10 -1];`
+* c. `p2=[2 0 -4 10 -3];`
+* d. `p2=[1 0 -1 2 -3];`
+* e. `p1=[8 0 -8 10 0];`
+
+-----
+
+### Soru 6 (Sayfa 7)
+
+&gt; İki polinom fonksiyonu p1 $=[2 \ 4 \ 5]$ ve $p2=[3 \ -5 \ 7]$ olarak tanım[lanmıştır. Bu iki polinomun çarpımını bulmak için hangi kod kullanılır?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `p1*p2`
+* b. hiçbiri
+* c. `deconv(p1,p2)`
+* d. `p1.*p2`
+* e. `conv(p1,p2)`
+
+-----
+
+### Soru 7 (Sayfa 8)
+
+&gt; Matlab&#39;de A=[1 2; 2 5] ve B=[-1 3; 4 2] olarak tanımlanmıştır. $B.^{*}(A^{\prime})$ işleminin sonucu aşağıdakilerden hangisi ile [aynıdır?]
+&gt;
+&gt; Lütfen birini seçin:
+
+*(Seçenekler okunamayacak kadar bozuk.)*
+
+-----
+
+### Soru 8 (Sayfa 9)
+
+&gt; MATLAB&#39;de blok diyagramlar kullanarak bir sistemi modellemek istersek aşağıdakilerden hangisini yapmalıyız?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Simulink butonu tıklanmalıdır.
+* b. Komut penceresine &quot;Model Block Diagram&quot; komutu yazılmalıdır.
+* c. Model butonu tıklanmalıdır.
+* d. Komut penceresine &quot;Simulink Block Diagram&quot; komutu yazılmalıdır.
+* e. Komut penceresine &quot;Start Block Diagram&quot; komutu yazılmalıdır.
+
+-----
+
+### Soru 9 (Sayfa 10)
+
+&gt; MATLAB komut satırına `&gt;&gt; 1e3 + 3` yazıldığında çıktı ne olur?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 1000000
+* b. 4
+* c. 1
+* d. 3+3
+* e. 1003
+
+-----
+
+### Soru 10 (Sayfa 12)
+
+&gt; Yukarıdaki gibi 2 farklı grafiği üst üste tek pencerede çizdirebilmek için ihtiyaç duyula[n komut hangisidir?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. subfigure
+* b. plot(6)
+* c. subplot
+* d. figure(6)
+* e. hold on
+
+-----
+
+### Soru 11 (Sayfa 13)
+
+&gt; MATLAB&#39; de ekrana &quot;Merhaba&quot; yazdırmak için aşağıdakilerden hangisini kullanabi[liriz?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `show(&#39;Merhaba&#39;)`
+* b. `printf(&#39;Merhaba&#39;)`
+* c. `scanf(&#39;Merhaba&#39;)`
+* d. `disp(&#39;Merhaba&#39;)`
+* e. `output(&#39;Merhaba&#39;)`
+
+-----
+
+### Soru 12 (Sayfa 14)
+
+&gt; $B=[\begin{matrix}2&amp;5&amp;11\\ 0&amp;7&amp;8\\ -4&amp;3&amp;-5\end{matrix}]$
+&gt;
+&gt; Yukarıda verilen B matrisi Matlab&#39;de tanımlandıktan sonra komut satırından $B(2,3)$, $B(2:5)$, $B(7)$, $B(2,:)$ değerleri hesaplanıyor.
+&gt;
+&gt; Hangisi bu işlemler sonucunda elde edilen sonuçlardan biri değildir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. [0 7 8]
+* b. 11
+* c. -4
+* d. 8
+* e. [0 -4 5 7] (Tahmin: `B(2:5)`&#39;in çıktısı `[0; -4; 5; 7]` vektörüdür)
+
+-----
+
+### Soru 13 (Sayfa 15)
+
+&gt; $6+5i$ karmaşık ifadesi Matlab de aşağıdakilerden hangisi ile tanımlanamaz?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `6-(-5)^2`
+* b. `6+i*5`
+* c. `6+j*5`
+* d. `6+5i`
+* e. `6-(-5)i`
+
+-----
+
+### Soru 14 (Sayfa 16)
+
+&gt; $A=[\begin{matrix}2&amp;-7&amp;9\\ 7&amp;4&amp;8\\ 5&amp;6&amp;-3\end{matrix}]$
+&gt;
+&gt; $B=[\begin{matrix}7&amp;5\\ 4&amp;6\end{matrix}]$
+&gt;
+&gt; Yukarıda verilen A matrisinin Matlab&#39;de &quot;A&quot; değişkeni ile tanımlandığı biliniyor. A matrisini kullanarak B matrisini elde etm[ek için hangi komut] kullanılabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `B=A(1:2,2:3)`
+* b. `B=A(2:3,1:2)&#39;`
+* c. `B=A(1:2,2:3)&#39;`
+* d. `B=inv(A(1:2,2:3))`
+* e. `B=A&#39;(1:2,2:3)`
+
+-----
+
+### Soru 15 (Sayfa 17)
+
+&gt; $A=[\begin{matrix}2&amp;-7&amp;9\\ 7&amp;4&amp;8\\ 5&amp;6&amp;-3\end{matrix}]$
+&gt;
+&gt; Yukarıda verilen A matrisinin Matlab&#39;de &quot;A&quot; değişkeni ile tanımlandığı biliniyor.
+&gt;
+&gt; Buna göre komut satırına yazılan `A(1,:) * A(:,2)` (Tahmin: Metin okunamıyor, Sayfa 4&#39;ten çıkarım) ifadesinin üreteceği sonuç aşağıdakilerden hangisidir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 58
+* b. [14 -28 72]
+* c. 12
+* d. [14 28 40]
+* e. 82
+
+-----
+
+### Soru 16 (Sayfa 18)
+
+&gt; MATLAB&#39; de değişkenlerin içeriğinin gösterildiği pencere aşağıda[kilerden hangisidir?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Simulink
+* b. Matlab Writer
+* c. Workspace
+* d. Code Writer
+* e. Editor
+
+-----
+
+### Soru 17 (Sayfa 19)
+
+&gt; (GNO ve S/H tablosu)
+&gt;
+&gt; Yukarıda bir sınıftaki öğrencilerin haftalık ortalama çalışma saatlerine karşılık genel not ortalamaları verilmiştir.
+&gt;
+&gt; Bu iki veri baz alınarak 6.5 saat çalışmaya karşılık gelen not ortalamasını Matlab ile bulmak için kullanılabilecek interpolasyon yöntemleri arasında aşağıdakilerden hangisi yoktur?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Cubic
+* b. Linear
+* c. Nearest
+* d. Spline
+* e. interp1
+
+-----
+
+### Soru 18 (Sayfa 20)
+
+&gt; Resimdeki grafiğin (polar grafik) çizdirilebilmesi için verilen program parçasındaki noktalarla gösterilen yerde hangi komut kullanılmalıdı[r]?
+&gt;
+&gt; `t=[0: 0.01: 2*pi]`
+&gt;
+&gt; `y=cos(t)`
+&gt;
+&gt; [...]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. polar
+* b. graph
+* c. `draw(t,y)`
+* d. `graph(t,y)`
+* e. `polar(t,y)` (Tahmin: `polar(ty)` yerine)
+
+-----
+
+### Soru 19 (Sayfa 21)
+
+&gt; MATLAB komut satırına `&gt;&gt; 3e2 + 2` yazıldığında çıktı ne olur?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 302
+* b. 81
+* c. 11
+* d. 2,03
+* e. $\sqrt{}+2$ (Okunamıyor)
+
+-----
+
+### Soru 20 (Sayfa 22)
+
+&gt; Matlab&#39; de gerçekleştirilen `(2+3^2-sqrt(81)/2)*4+2^2+3` (Tahmin: Soru Sayfa 39 ile aynı) işleminin [sonucunun asal çarpanlarının bulunması için...] (Tahmin)
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `primes(11)`
+* b. `factor(33)`
+* c. `factor(39)`
+* d. `primes(33)`
+* e. `factor(11)`
+
+-----
+
+### Soru 21 (Sayfa 23)
+
+&gt; MATLAB&#39; de aşağıdaki komutlar sıra[sıyla çalıştırıldığında çıktı nasıl olur?]
+&gt;
+&gt; `&gt;&gt; x=6`
+&gt;
+&gt; `&gt;&gt; 6+2`
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. boşluk
+* b. `x=8`
+* c. error
+* d. 8
+* **e. `ans=8`**
+
+-----
+
+### Soru 22 (Sayfa 24)
+
+&gt; Aşağıdakilerden hangisi MATLAB&#39;e uygun bir değişken ismidir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `deger 1`
+* b. `1deger` (Tahmin: `Ideger`)
+* c. (Eksik) `debur 1` (Tahmin: &#39;d&#39; şıkkı &#39;c&#39; olmalı)
+* d. `debur 1`
+* e. `deger1`
+
+-----
+
+### Soru 23 (Sayfa 25)
+
+&gt; $ln(x) + arctan(x)$ matematiksel işleminin Matlab dilindeki karşılığı nedir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `ln(x) + atan(x)`
+* b. `ln(x) - atan(x)`
+* c. `log(x) + arctan(x)`
+* d. `log(x) + atan(x)`
+* e. `ln(x) + arc tan(x)`
+
+-----
+
+### Soru 24 (Sayfa 26)
+
+&gt; $log_5(17)$ (Tahmin: log 17) matematiksel işleminin Matlab ile hesaplanabilmesi için kom[ut satırına ne yazılmalıdır?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `log(5)/log(17)`
+* b. `ln(17)/ln(5)`
+* c. `log10(17)/log2(5)`
+* d. `log10(5)/log10(17)`
+* e. `log10(17)/log10(5)`
+
+-----
+
+### Soru 25 (Sayfa 27)
+
+&gt; Aşağıdakilerden hangisi M[ATLAB&#39;de bir çizim komutu değildir?] (Tahmin)
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. fplot
+* b. plot
+* c. fbar
+* d. pie
+* e. bar
+
+-----
+
+### Soru 26 (Sayfa 28)
+
+&gt; MATLAB&#39;de blok diyagramlar kullanarak bir sistemi modellemek istersek aşağıdakilerden hangisini yapmalıyız?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Model butonu tıklanmalıdır.
+* b. Simulink butonu tıklanmalıdır.
+* c. Komut penceresine &quot;Start Block Diagram&quot; komutu yazılmalıdır.
+* d. Komut penceresine &quot;Model Block Diagram&quot; komutu yazılmalıdır.
+* e. Komut penceresine &quot;Simulink Block Diagram&quot; komutu yazılmalıdır.
+
+-----
+
+### Soru 27 (Sayfa 29)
+
+&gt; Simulink&#39;te kurulmuş olan devrede (Resimdeki R-C devresi) numaralandırılmış bloklardan hangisi çıkartılsa da sistem düzgün çalışmaya devam eder?
+&gt; (1: Constant, 2: Simulink-PS Converter, 3: Solver Configuration, 4: Converter (PS-Simulink) )
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 1
+* b. 2
+* c. 4
+* d. 3
+* (Seçenek &#39;e&#39; eksik)
+
+-----
+
+### Soru 28 (Sayfa 30)
+
+&gt; Simulink&#39;te simülasyon belirli bir süre gerçekleşip simülasyon sonlanmaktadır. Bunun yerine simülasyonun sürekli çalışmaya devam etmesi için aşağıdakilerden hangisi yapılmalıdır?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Bitiş zamanına &quot;inf&quot; yazılmalıdır.
+* b. Tasarım alanına &quot;Never Stop&quot; bloğu eklenmelidir.
+* c. Tasarım alanına &quot;Continuous&quot; bloğu eklenmelidir.
+* d. &quot;Never stop&quot; kutusu işaretlenmelidir.
+* e. &quot;Continuous&quot; kutusu işaretlenmelidir.
+
+-----
+
+### Soru 29 (Sayfa 31)
+
+&gt; Şekilde Simulink&#39;te sıklıkla kullanılan kütüphane kategorisinden örnek bloklar gösterilmekte (Integrator, Gain, Ground, AND, Logical) . Bu bloklara ulaştığımız kategorinin adı aşağıdakilerden hangisidir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. User Defined Functions
+* b. Simscape
+* c. Commonly Used Blocks
+* d. Popular Bus Blocks
+* e. Robotics System Toolbox
+
+-----
+
+### Soru 30 (Sayfa 32)
+
+&gt; $A=[\begin{matrix}2&amp;3&amp;-7\\ 8&amp;9&amp;4\\ -5&amp;6&amp;-1\end{matrix}]$
+&gt;
+&gt; Yukarıda verilen A matrisi Matlab&#39;de tanımlandıktan sonra sırasıyla aşağıdaki İşlemler gerçekleştir[ilirse] ne olur?
+&gt;
+&gt; `&gt;&gt; A(2,2) = -7`
+&gt;
+&gt; `&gt;&gt; A(3) = -3`
+&gt;
+&gt; `&gt;&gt; A(4,1) = 7`
+&gt;
+&gt; `&gt;&gt; A(:,2) = []`
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `[2 -7; 8 4; -3 -1; 7 0]` (Tahmin: sondaki &#39;d&#39; harfi &#39;0&#39; olmalı)
+* b. `[2 -3; 8 4; -5 -1; 7 0]`
+* c. (Okunamıyor)
+* d. `[2 -7 7; 8 4 0; -3 -1 0]`
+* (Seçenek &#39;e&#39; okunamıyor)
+
+-----
+
+### Soru 31 (Sayfa 33)
+
+&gt; [...] p1=[2 4 5] ve p2=[3 -5 7] olarak tanımlanmıştır. Bu iki polinomun çarpımını bulmak için Matlab&#39;de han[gi kod parçası kullanılır?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `p1*p2`
+* b. `conv(p1,p2)`
+* c. hiçbiri
+* d. `deconv(p1,p2)`
+* e. `p1.*p2`
+
+-----
+
+### Soru 32 (Sayfa 34)
+
+&gt; Kökleri (-1.2+3.5i), (-1.2-3.5i) ve 6.75 olan polinomun kendisi aşağıdakilerden hangisi ile bulunabili[r]?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `SPol = roots([-1.5+3.5i -1.5-3.5i 6.75])`
+* b. `SPol = poly([-1.2+3.5i -1.2-3.5i -6.75])`
+* c. `SPol = roots([-1.2+3.5i -1.2-3.5i 6.75])`
+* d. `SPol = polyval([-1.2+3.5i -1.2-3.5i 6.75])`
+* e. `SPol = polyder([-1.2+3.5i -1.2-3.5i 6.75])`
+
+-----
+
+### Soru 33 (Sayfa 35)
+
+&gt; Bir matrisin elemanlarını aralarında virgül kullanarak ayırıp dosyaya yazmaya yarayan fonksiyon han[gisidir?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. fgetl
+* b. dlmwrite (Tahmin: `dimwrite` yerine)
+* c. feof
+* d. (Okunamıyor `foef`)
+* e. dlmread (Tahmin: `dimreart` yerine)
+
+-----
+
+### Soru 34 (Sayfa 37)
+
+&gt; $log_5(17)$ (Tahmin: log 17) matematiksel işleminin Matlab [için komut penceresine yazılması gereken...]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `log(5)/log(17)`
+* b. `log10(17)/log2(5)`
+* c. `log10(5)/log10(17)`
+* d. `ln(17)/ln(5)`
+* e. `log10(17)/log10(5)`
+
+-----
+
+### Soru 35 (Sayfa 38)
+
+&gt; MATLAB&#39;de aşağıdaki komutlar sırasıyla çalıştırıldığında çıktı nasıl olur?
+&gt;
+&gt; `&gt;&gt; 4+2`
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. boşluk
+* b. 6
+* **c. `ans=6`**
+* d. `x=6`
+* e. error
+
+-----
+
+### Soru 36 (Sayfa 39)
+
+&gt; Matlab de gerçekleştirilen `(2+3^2-sqrt(81)/2)*4+2^2+3` işleminin sonucunun asal çarpanlarının bulunması için komut penceresine aşağıdakilerden hangisi yazılmalıdır?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `factor(33)`
+* b. `factor(30)`
+* c. `primes(11)`
+* d. `factor(11)`
+* e. `primes(33)`
+
+-----
+
+### Soru 37 (Sayfa 40)
+
+&gt; $p(x)=2x^{4}-4x^{2}+10x-3$ polinomunu ifade etmek için Matlab&#39;de aşağıdaki değişkenlerden hangisi kullanılabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `p1=[4 -2 10 -1];`
+* **b. `p2=[2 0 -4 10 -3];`**
+* c. `p1=[8 0 -8 10 0];`
+* d. `p2=[1 0 -1 2 -3];`
+* e. `p1=[2 -4 10 -3];`
+
+-----
+
+### Soru 38 (Sayfa 41)
+
+&gt; MATLAB komut satırına `&gt;&gt; 3+2*3-2*1*2-3` yazıldığında çıktı ne olur? (Not: Bu soru ile seçili cevap uyumsuz. Sayfa 47&#39;deki `1+2^3-1^2*2-3` sorusunun cevabı 4&#39;tür.)
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 243
+* b. 5
+* c. 12
+* d. 121
+* **e. 4**
+
+-----
+
+### Soru 39 (Sayfa 42)
+
+&gt; Şekilde a) bölümünde gösterilen tasarımı (Subsystem ) b) bölümünde görülene (Sum ) dönüştürmek için ne yapmak gerekir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. İlgili bölüm işaretlenerek &quot;Create Subsystem from Selection&quot; butonu kullanılır.
+* b. İlgili bölüm işaretlenerek &quot;Subsystem&quot; kutusunun içine sürüklenir.
+* c. &quot;Toplama&quot; ve &quot;Sine Wave&quot; blokları kaldırılıp yerine &quot;Subsystem&quot; bloğu eklenir.
+* d. İlgili bölüm işaretlenerek &quot;Subsystem&quot; bloğuna basılır.
+* e. İlgili bölüm işaretlenerek &quot;Expand&quot; butonu kullanılır.
+
+-----
+
+### Soru 40 (Sayfa 43)
+
+&gt; Matlab&#39;de $A=[\begin{matrix}1&amp;2&amp;-2&amp;5\end{matrix}]$ ve $B=[-1~3;4~2]$ olarak tanımlanmıştır. $B.^{*}(A)$ işleminin sonucu aşağıdakilerden hangisi ile aynıdır? (Not: Bu işlem matris boyutları uyuşmadığı için hata verir.)
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `[-7 13; 0 18]`
+* b. `[5 17; 8 2]`
+* c. `[-1 -6; 8 10]`
+* d. `[-1 8; -6 10]`
+* e. `[-7 0; 13 18]`
+
+-----
+
+### Soru 41 (Sayfa 44)
+
+&gt; Şekilde görülen tasarım penceresi (siyah gridli) hangi programa aittir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. ARES
+* b. Simulink
+* c. Python
+* (Diğer seçenekler eksik)
+
+-----
+
+### Soru 42 (Sayfa 45)
+
+&gt; $x+y=1$
+&gt;
+&gt; $2x+3y=8$
+&gt;
+&gt; $A=[\begin{matrix}1&amp;1\\ 2&amp;3\end{matrix}]$ $B=[\begin{matrix}1\\ 8\end{matrix}]$
+&gt;
+&gt; Yukarıdaki denklem sisteminin çözümü için, yine yukarıda verilen A ve B matrisleri kullanılacaktır. Aşağıdaki işl[emlerden hangisi] bu çözümü sağlar?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `A\B`
+* b. `A*B`
+* c. `A*inv(B)`
+* d. `A&#39;*B` (Tahmin: `A1*B` yerine)
+* e. `inv(A)*B`
+
+-----
+
+### Soru 43 (Sayfa 46)
+
+&gt; MATLAB komut satırına `&gt;&gt; 1e3 + 3` yazıldığında çıktı ne olur?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 4
+* b. 1000000
+* c. 3+3
+* **d. 1003**
+* e. 1
+
+-----
+
+### Soru 44 (Sayfa 47)
+
+&gt; MATLAB komut satırına `&gt;&gt; 1+2^3-1^2*2-3` yazıldığında çıktı ne olur?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 1349
+* b. 4
+* c. 30
+* d. 5
+* e. 2
+
+-----
+
+### Soru 45 (Sayfa 48)
+
+&gt; $\int_{1}^{log(2)} exp(5x) dx$ (Tahmin: Metin çok bulanık, `d` şıkkından çıkarım yapıldı) Integralinin değeri Matlab de aşağıdakilerden hangisi ile hesaplanabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `int(&#39;exp(2*x)&#39;)`
+* b. `quad(&#39;exp(...)&#39;, ..., log(2))` (Okunamıyor)
+* c. `quad(&#39;exp(5*x)&#39;, 1, log(2))`
+* d. `quad(&#39;exp(2*x)&#39;, 1, log(5))` (Tahmin: &#39;equad...&#39;)
+
+-----
+
+### Soru 46 (Sayfa 49)
+
+&gt; Aşağıdaki Matlab kodu ne işe yarar?
+&gt;
+&gt; ```matlab
+&gt; f = fopen(&#39;C:\Desktop\myfile.txt&#39;,&#39;r&#39;);
+&gt; while ~feof(f)
+&gt;     satir = fgetl(f);
+&gt;     fprintf(&#39;%s\n&#39;,satir)
+&gt; end
+&gt; ```
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. hiçbiri
+* b. myfile.txt dosyasının ilk satırını önce okur sonra ekrana yazar.
+* c. myfile.txt dosyasının ilk satırını okur.
+* d. myfile.txt dosyasının tüm içeriğini önce okur sonra ekrana yazar.
+* e. myfile.txt dosyasının ilk satırını ekrana yazar.
+
+-----
+
+### Soru 47 (Sayfa 50)
+
+&gt; Matlab&#39;de $p(x)=x^{3}+x$ polinomunun 1&#39;den 3&#39;e kadar x değerleri için çözümü aşağıdakilerden hangisi ile bulunabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `polyval([1 1 0], 1:3);`
+* b. `polyval([1 0 1 0], 1:3);`
+* **c. `x=1:3; polyval([1 0 1 0], x);`**
+* d. `polyval(x,1:3); x=[1 0 1 0]`
+* e. `a=1-3; polyval([1 0 1 0], a)`
+
+-----
+
+### Soru 48 (Sayfa 51)
+
+&gt; ISIS&#39;te tasarım yaparken kütüphaneye (library) ulaşıp tasarıma yeni eleman ekleyebilmek için şekildeki hangi numaralı kısayol butonuna basılmalıdır? (Resimde &#39;2&#39; DEVICES [L] simgesini göstermektedir)
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 1
+* b. 5
+* c. 4
+* d. 3
+* e. 2
+
+-----
+
+### Soru 49 (Sayfa 52)
+
+&gt; Matlab Simulink ortamında bir sinyalin zamana göre değişimini gözlemlemek istersek hangi bloğu kullanmalıyız?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Scope
+* b. Time Analyzer
+* (c eksik) c. Logic Probe
+* d. Logic Analyzer
+* e. Radar
+
+-----
+
+### Soru 50 (Sayfa 53)
+
+&gt; MATLAB&#39;de blok diyagramlar kullanarak bir sistemi modellemek istersek aşağıdakilerden hangisini yapmalıyız?
+&gt;
+&gt; Lütfen birini seçin:
+
+* **a. Simulink butonu tıklanmalıdır.**
+* b. Komut penceresine &quot;Simulink Block Diagram&quot; komutu yazılmalıdır.
+* c. Model butonu tıklanmalıdır.
+* d. Komut penceresine &quot;Model Block Diagram&quot; komutu yazılmalıdır.
+* e. Komut penceresine &quot;Start Block Diagram&quot; komutu yazılmalıdır.
+
+-----
+
+### Soru 51 (Sayfa 54)
+
+&gt; [n x n] boyutunda birim matris oluşturmak için aşağıdakilerden hangisi kullanılabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `ones(n)`
+* b. `eye(n)`
+* c. `all(n)`
+* d. `pascal(n)` (Seçeneklerde tekrar ediyor)
+* e. `magic(n)`
+
+-----
+
+### Soru 52 (Sayfa 55)
+
+&gt; MATLAB komut satırına `&gt;&gt; 1e3 + 3` yazıldığında çıktı ne olur?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. 1
+* b. 3+3
+* c. 4
+* d. 1003
+* e. 1000000
+
+-----
+
+### Soru 53 (Sayfa 56)
+
+&gt; Simulink&#39;te simülasyon belirli bir süre gerçekleşip simülasyon sonlanmaktadır. Bunun yerine simülasyonun sürekli çalışmaya devam etmesi için aşağıdakilerden hangisi yapılmalıdır?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Tasarım alanına &quot;Never Stop&quot; bloğu eklenmelidir.
+* b. Tasarım alanına &quot;Continuous&quot; bloğu eklenmelidir.
+* c. &quot;Never stop&quot; kutusu işaretlenmelidir.
+* d. &quot;Continuous&quot; kutusu işaretlenmelidir.
+* **e. Bitiş zamanına &quot;inf&quot; yazılmalıdır.**
+
+-----
+
+### Soru 54 (Sayfa 57)
+
+&gt; Aşağıdaki Matlab kodu ne işe yarar?
+&gt;
+&gt; ```matlab
+&gt; f = fopen(&#39;C:\Desktop\myfile.txt&#39;,&#39;r&#39;);
+&gt; while ~feof(f)
+&gt;     satir = fgetl(f);
+&gt;     fprintf(&#39;%s\n&#39;,satir)
+&gt; end
+&gt; ```
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. hiçbiri
+* **b. myfile.txt dosyasının tüm içeriğini önce okur sonra ekrana yazar.**
+* c. myfile.txt dosyasının ilk satırını okur.
+* d. myfile.txt dosyasının ilk satırını ekrana yazar.
+* e. myfile.txt dosyasının ilk satırını önce okur sonra ekrana yazar.
+
+-----
+
+### Soru 55 (Sayfa 58)
+
+&gt; Şekilde a) bölümünde gösterilen tasarımı (Sum ) b) bölümünde görülene (Subsystem ) dönüştürmek için ne yapmak gerekir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. İlgili bölüm işaretlenerek &quot;Subsystem&quot; bloğuna basılır.
+* b. &quot;Toplama&quot; ve &quot;Sine Wave&quot; blokları kaldırılıp yerine &quot;Subsystem&quot; bloğu eklenir.
+* c. İlgili bölüm işaretlenerek &quot;Subsystem&quot; kutusunun içine sürüklenir.
+* d. İlgili bölüm işaretlenerek &quot;Expand&quot; butonu kullanılır.
+* e. İlgili bölüm işaretlenerek &quot;Create Subsystem from Selection&quot; butonu kullanılır.
+
+-----
+
+### Soru 56 (Sayfa 59)
+
+&gt; Matlab Simulink ortamında bir sinyalin zamana göre değişimini gözlemlemek istersek hangi bloğu kullanmalıyız?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Radar
+* b. Logic Analyzer
+* **c. Scope**
+* d. Time Analyzer
+* e. Logic Probe
+
+-----
+
+### Soru 57 (Sayfa 60)
+
+&gt; $A=[\begin{matrix}2&amp;3&amp;-4\\ 6&amp;9&amp;4\\ -5&amp;6&amp;-1\end{matrix}]$
+&gt;
+&gt; Yukarıda verilen A matrisi Matlab&#39;de tanımlandıktan sonra sırasıyla aşağıdaki işlemler gerçekleştirilmiştir. Buna göre nihai sonuç ne olur?
+&gt;
+&gt; `&gt;&gt; A(2,2) = -7`
+&gt;
+&gt; `&gt;&gt; A(3) = -3`
+&gt;
+&gt; `&gt;&gt; A(4,1) = 7`
+&gt;
+&gt; `&gt;&gt; A(:,2) = []`
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `[2 -7; 8 4; -3 -1; 7 0]`
+* b. `[2 -7 7; 8 4 0; -3 -1 0]`
+* c. `[2 -3; 8 4; -5 -1; 7 0]`
+* d. (Okunamıyor)
+* e. (Okunamıyor)
+
+-----
+
+### Soru 58 (Sayfa 61)
+
+&gt; Şekilde Simulink&#39;te sıklıkla kullanılan kütüphane kategorisinden örnek bloklar gösterilmektedir. (Integrator, Ground, AND, Logical)
+&gt;
+&gt; Bu bloklara ulaştığımız kategorinin adı aşağıdakilerden hangisidir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* **a. Commonly Used Blocks**
+* b. Popular Bus Blocks
+* c. Robotics System Toolbox
+* d. Simscape
+* e. User Defined Functions
+
+-----
+
+### Soru 59 (Sayfa 62)
+
+&gt; Bir matrisin elemanlarını aralarında virgül kullanarak ayırıp dosyaya yazmaya yarayan fonksiyon hangisidir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. feof
+* b. dlmread (Tahmin: `dimread` yerine)
+* c. (Okunamıyor `foef`)
+* d. fgetl
+* e. dlmwrite (Tahmin: `dimwrite` yerine)
+
+-----
+
+### Soru 60 (Sayfa 63)
+
+&gt; [n x n] boyutunda birim matris oluşturmak için aşağıdakilerden hangisi kullanılabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `all(n)`
+* **b. `eye(n)`**
+* c. `ones(n)`
+* d. `magic(n)`
+* e. `pascal(n)`
+
+-----
+
+### Soru 61 (Sayfa 64)
+
+&gt; Şekilde Simulink&#39;te sıklıkla kullanılan kütüphane kategorisinden örnek bloklar gösterilmektedir. (Bus Creator, Constant, Delay, etc.) Bu bloklara ulaştığımız kategorinin adı aşağıdakilerden hangisidir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. Commonly Used Blocks
+* b. Popular Bus Blocks
+* c. Robotics System Toolbox
+* d. Simscape (Tahmin: `Sanscape`)
+* (Seçenek &#39;e&#39; eksik)
+
+-----
+
+### Soru 62 (Sayfa 65)
+
+&gt; Matlab&#39;de $p(x)=x^{3}+x$ polinomunun 1&#39;den 3&#39;e kadar x değerleri için çözümü aşağıdakilerden hangisi ile bulunabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `polyval(x,1:3); x=[1 0 1 0];`
+* **b. `polyval([1 0 1 0], 1:3);`**
+* c. `polyval([1 1 0], 1:3);`
+* d. `a=1-3; polyval([1 0 1 0], a);`
+* e. `x=1-3; polyval([1 0 1 0], x);`
+
+-----
+
+### Soru 63 (Sayfa 66)
+
+&gt; Matlab&#39;de A=[1 2; 2 5] ve B=[-1 3; 4 2] olarak tanımlanmıştır. $B.^{*}(A)$ işleminin sonucu aşağıdakilerden hangisi ile aynıdır? (Not: $A=[1 2; 2 5]$ ise sonuç `[-1 6; 8 10]` olur. $A=[1 -2; 2 5]$ ise sonuç `[-1 -6; 8 10]` (b şıkkı) olur.)
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `[-7 0; 13 18]`
+* b. `[-1 -6; 8 10]`
+* c. `[-1 8; -6 10]`
+* d. `[5 17; 8 2]`
+* e. `[-7 13; 0 18]`
+
+-----
+
+### Soru 64 (Sayfa 67)
+
+&gt; (Soru metni okunamıyor. Tahmin: Sayfa 32/60&#39;daki matris sorusu)
+&gt;
+&gt; (İşlemler: `A(2,2)=-7`, `A(3)=-3`...)
+&gt;
+&gt; (Seçenekler):
+
+* a. (Okunamıyor)
+* b. (Okunamıyor)
+* c. `[2 -7; 8 4; -5 -1; 7 0]`
+* **d. `[2 -7; 8 4; -3 -1; 7 0]`**
+* e. `[2 -7 7; 8 4 0; -3 -1 0]`
+
+-----
+
+### Soru 65 (Sayfa 68)
+
+&gt; Yukarıdaki grafikte x eksenine &quot;zaman&quot; e[tiketini eklemek için hangi komut kullanılır?]
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `ytitle(&#39;zaman&#39;)`
+* b. `xlabel(&#39;zaman&#39;)`
+* c. `xtitle(&#39;zaman&#39;)`
+* d. `ylabel(&#39;zaman&#39;)`
+* e. (Okunamıyor `ananie zaman)`)
+
+-----
+
+### Soru 66 (Sayfa 69)
+
+&gt; $x+y=1$
+&gt;
+&gt; $2x+3y=8$
+&gt;
+&gt; $A=[\begin{matrix}1&amp;4\\ 2&amp;3\end{matrix}]$ (Not: Matris denklemlerle uyumsuz)
+&gt;
+&gt; $B=[\begin{matrix}1\\ 8\end{matrix}]$
+&gt;
+&gt; Yukarıdaki denklem sisteminin çözümü için, yine yukarıda verilen A ve B matrisleri kullanılacaktır. Aşağıdaki işlemlerden hangisi bu çözümü sağlar?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `A*B`
+* b. `A*inv(B)`
+* c. `inv(A)*B`
+* **d. `A\B`**
+* e. `A&#39;/B` (Tahmin: `AVB`)
+
+-----
+
+### Soru 67 (Sayfa 70)
+
+&gt; Kökleri (-1.2+3.5i), (-1.2-3.5i) ve 6.75 olan polinomun kendisi aşağıdakilerden hangisi ile bulunabilir?
+&gt;
+&gt; Lütfen birini seçin:
+
+* a. `SPol = roots([-1.5+3.5i -1.5-3.5i 6.75])`
+* b. `SPol = polyder([-1.2+3.5i -1.2-3.5i 6.75])`
+* c. `SPol = polyval([-1.2+3.5i -1.2-3.5i 6.75])`
+* **d. `SPol = poly([-1.2+3.5i -1.2-3.5i 6.75])`**
+* e. `SPol = roots([-1.2+3.5i -1.2-3.5i 6.75])`
+
+# Yapay Zeka ile oluşturulmuş Cevap Anahtarı
+
+**LÜTFEN EMİN OLMADIĞINIZ CEVAPLARI TEKRAR KONTROL EDİNİZ!**
+
+1. **c.** Scope
+2. **c.** polyval([1 1 0], 1:3) (Polinom $x^2 + x$ olduğu için katsayılar `[1 1 0]` olmalıdır.)
+3. **e.** V = [&#39;5:10&#39;] (Bu bir karakter dizisi oluşturur, sayısal vektör değil.)
+4. **d.** 12 (Soru metni eksik, Sayfa 17&#39;deki `A(1,:) * A(:,2)` sorusu olduğu varsayılarak)
+5. **c.** p2=[2 0 -4 10 -3]; (Polinom $2x^4 + 0x^3 - 4x^2 + 10x - 3$ olarak yazılır.)
+6. **e.** conv(p1,p2)
+7. **c.** [-1 6; 8 10] (Soru `B.*(A&#39;)` olmalı ve `A = [1 2; 2 5]` olarak varsayılmıştır.)
+8. **a.** Simulink butonu tıklanmalıdır.
+9. **e.** 1003 (1e3 = 1000)
+10. **e.** hold on
+11. **d.** disp(&#39;Merhaba&#39;)
+12. **c.** -4 (`B(7)` matrisin 7. elemanıdır, bu da (1,3) pozisyonundaki -4&#39;tür.)
+13. **a.** 6-(-5)^2 (Bu işlem $6 - 25 = -19$ sonucunu verir, $6+5i$ değil.)
+14. **b.** B=A(2:3,1:2)&#39; (Bu komut `[7 4; 5 6]&#39;` yani `[7 5; 4 6]` sonucunu verir.)
+15. **c.** 12 (Soru 4&#39;ün tekrarı)
+16. **c.** Workspace
+17. **e.** interp1 (Diğer şıklar `interp1` için yöntem isimleridir, komutun kendisi değil.)
+18. **e.** polar(t,y)
+19. **a.** 302 (3e2 = 300)
+20. **b.** factor(33) (Soru 36&#39;daki işlem `(2+9-4.5)*4+4+3 = (6.5)*4+7 = 26+7 = 33` sonucunu verir.)
+21. **e.** ans=8
+22. **e.** deger1 (Değişken adları sayı ile başlayamaz veya boşluk içeremez.)
+23. **d.** log(x) + atan(x) (MATLAB&#39;de `ln(x)` için `log(x)` kullanılır.)
+24. **e.** log10(17)/log10(5) (Logaritma taban değiştirme kuralı.)
+25. **c.** fbar (Böyle bir komut standart MATLAB&#39;de yoktur. `bar` vardır.)
+26. **b.** Simulink butonu tıklanmalıdır. (Soru 8&#39;in tekrarı, ancak şıkların sırası farklı.)
+27. **c.** 4 (Bu blok, PS-Simulink sinyal dönüşümü yapar ve devrenin çalışması için zorunlu değildir.)
+28. **a.** Bitiş zamanına &quot;inf&quot; yazılmalıdır.
+29. **c.** Commonly Used Blocks
+30. **a.** [2 -7; 8 4; -3 -1; 7 0] (Matris indekslemesi, satır silme ve yeni eleman ekleme adımları takip edildiğinde.)
+31. **b.** conv(p1,p2) (Soru 6&#39;nın tekrarı)
+32. **d.** SPol = poly([-1.2+3.5i -1.2-3.5i 6.75]) (`poly` komutu köklerden polinom oluşturur.)
+33. **b.** dlmwrite (Dosyaya virgülle ayrılmış matris yazar. `dimwrite` tahmini.)
+34. **e.** log10(17)/log10(5) (Soru 24&#39;ün tekrarı)
+35. **c.** ans=6
+36. **a.** factor(33) (İşlem `(2+9-4.5)*4+4+3 = (6.5)*4+7 = 26+7 = 33` sonucunu verir.)
+37. **b.** p2=[2 0 -4 10 -3]; (Soru 5&#39;in tekrarı)
+38. **e.** 4 (Soru metni `3+2*3-2*1*2-3` (sonuç=2) olmasına rağmen, seçili cevap &#39;e&#39; (4). Bu cevap Sayfa 47&#39;deki `1+2^3-1^2*2-3` (sonuç=4) sorusuna aittir. Soru ve cevap uyumsuz.)
+39. **e.** İlgili bölüm işaretlenerek &quot;Expand&quot; butonu kullanılır. (Subsystem&#39;i &quot;genişletmek&quot; veya açmak için.)
+40. (Soru hatalıdır. `B.*(A)` işlemi 2x2 ve 1x4 matrisler arasında boyut uyumsuzluğu nedeniyle hata verir.)
+41. **a.** ARES (Bu, Proteus ISIS/ARES PCB tasarım programının arayüzüdür.)
+42. **a.** A\B (Denklem sistemini çözmek için `inv(A)*B` yerine `A\B` (sol bölme) tercih edilir. &#39;e&#39; şıkkı da doğrudur.)
+43. **d.** 1003 (Soru 9&#39;un tekrarı)
+44. **b.** 4 (İşlem `1+8-2-3 = 4`.)
+45. **d.** quad(&#39;exp(5*x)&#39;, 1, log(2)) (Sayısal integral alma komutu.)
+46. **d.** myfile.txt dosyasının tüm içeriğini önce okur sonra ekrana yazar. (`feof` dosya sonuna kadar okur.)
+47. **c.** x=1:3; polyval([1 0 1 0], x); (Polinom $x^3+x$ için katsayılar `[1 0 1 0]`. &#39;b&#39; şıkkı da aynı işi yapar.)
+48. **e.** 2 (2 numaralı &#39;L&#39; simgesi component/devices kütüphanesini açar.)
+49. **a.** Scope (Soru 1&#39;in tekrarı)
+50. **a.** Simulink butonu tıklanmalıdır. (Soru 8&#39;in tekrarı)
+51. **b.** eye(n)
+52. **d.** 1003 (Soru 9&#39;un tekrarı)
+53. **e.** Bitiş zamanına &quot;inf&quot; yazılmalıdır. (Soru 28&#39;in tekrarı)
+54. **b.** myfile.txt dosyasının tüm içeriğini önce okur sonra ekrana yazar. (Soru 46&#39;nın tekrarı)
+55. **e.** İlgili bölüm işaretlenerek &quot;Create Subsystem from Selection&quot; butonu kullanılır.
+56. **c.** Scope (Soru 1&#39;in tekrarı)
+57. **a.** [2 -7; 8 4; -3 -1; 7 0] (Soru 30&#39;un tekrarı)
+58. **a.** Commonly Used Blocks (Soru 29&#39;un tekrarı)
+59. **e.** dlmwrite (Soru 33&#39;ün tekrarı. `dimwrite` tahmini.)
+60. **b.** eye(n) (Soru 51&#39;in tekrarı)
+61. **a.** Commonly Used Blocks (Soru 29&#39;un tekrarı)
+62. **b.** polyval([1 0 1 0], 1:3); (Soru 47&#39;nin tekrarı)
+63. **b.** [-1 -6; 8 10] (Soru `B.*(A)` olarak yazılmış, ancak bu hata verir. `A = [1 -2; 2 5]` varsayılarak bu cevap bulunur.)
+64. **d.** [2 -7; 8 4; -3 -1; 7 0] (Soru 30&#39;un tekrarı)
+65. **b.** xlabel(&#39;zaman&#39;)
+66. **d.** A\B (Soru 42&#39;nin tekrarı. A matrisi `[1 1; 2 3]` olmalıdır, `[1 4; 2 3]` değil.)
+67. **d.** SPol = poly([-1.2+3.5i -1.2-3.5i 6.75]) (Soru 32&#39;nin tekrarı)
+</code></pre> </div> </div> </div> <!-- Comments --> <div class="mt-16 pt-12 border-t border-ef-bg2 dark:border-efd-bg2"> <div class="mb-6"> <h2 class="text-2xl font-bold font-heading text-ef-text dark:text-efd-text mb-2">Yorumlar</h2> <p class="text-sm text-ef-text2 dark:text-efd-text2">
+Yorum yapmak için GitHub hesabı gereklidir.
+</p> </div> <div class="giscus-container bg-white/50 dark:bg-efd-bg2/50 backdrop-blur-sm rounded-xl border border-ef-bg2 dark:border-efd-bg2 p-4 sm:p-6 shadow-sm"> <script src="https://giscus.app/client.js" data-repo="c4kar/ktunot" data-repo-id="R_kgDOQGpuyg" data-category="General" data-category-id="DIC_kwDOQGpuys4C009j" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="tr" data-loading="lazy" crossorigin="anonymous" async>
+    </script> </div> </div> </div>  </main> <footer class="mt-auto border-t border-ef-bg2 dark:border-efd-bg2 py-12 bg-white/30 dark:bg-transparent"> <div class="container mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex flex-col md:flex-row justify-between items-start gap-12"> <!-- Left: Logo and Tagline --> <div class="max-w-xs space-y-4"> <div class="text-2xl font-bold font-heading text-ef-text dark:text-efd-text"> <span class="text-ef-green dark:text-efd-green">ktü</span>not
+</div> <p class="text-ef-text2 dark:text-efd-text2 text-sm leading-relaxed">
+Öğrenciler için öğrenciyiz.
+</p> <p class="text-xs text-ef-gray dark:text-efd-gray pt-4">
+&copy; 2026 ktünot
+</p> </div> <!-- Right: Links --> <div class="flex flex-col sm:flex-row gap-8 sm:gap-16"> <div class="space-y-4"> <h3 class="font-semibold text-ef-text dark:text-efd-text text-sm uppercase tracking-wider">Topluluk</h3> <ul class="space-y-3"> <li> <a href="https://github.com/c4kar/ktunot" target="_blank" rel="noopener noreferrer" class="text-sm text-ef-text2 dark:text-efd-text2 hover:text-ef-green dark:hover:text-efd-green transition-colors inline-flex items-center gap-2 group"> <svg width="1em" height="1em" class="w-4 h-4 text-ef-gray dark:text-efd-gray group-hover:text-ef-green dark:group-hover:text-efd-green transition-colors" data-icon="lucide:github">   <symbol id="ai:lucide:github" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></g></symbol><use href="#ai:lucide:github"></use>  </svg>
+GitHub Reposu
+</a> </li> <li> <a href="https://forms.gle/EK7BruSNk6yYxL8A8" target="_blank" rel="noopener noreferrer" class="text-sm text-ef-text2 dark:text-efd-text2 hover:text-ef-green dark:hover:text-efd-green transition-colors inline-flex items-center gap-2 group"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="w-4 h-4 text-ef-gray dark:text-efd-gray group-hover:text-ef-green dark:group-hover:text-efd-green transition-colors" data-icon="lucide:upload">   <use href="#ai:lucide:upload"></use>  </svg>
+Not Yükleme Formu
+</a> </li> <li> <a href="https://forms.gle/uxnGWzAG3LaBUB1v5" target="_blank" rel="noopener noreferrer" class="text-sm text-ef-text2 dark:text-efd-text2 hover:text-ef-green dark:hover:text-efd-green transition-colors inline-flex items-center gap-2 group"> <svg width="1em" height="1em" class="w-4 h-4 text-ef-gray dark:text-efd-gray group-hover:text-ef-green dark:group-hover:text-efd-green transition-colors" data-icon="lucide:message-square">   <symbol id="ai:lucide:message-square" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></symbol><use href="#ai:lucide:message-square"></use>  </svg>
+Ders Görüş Formu
+</a> </li> <li> <a href="https://forms.gle/PgDyoo2j2odu1ZK96" target="_blank" rel="noopener noreferrer" class="text-sm text-ef-text2 dark:text-efd-text2 hover:text-ef-green dark:hover:text-efd-green transition-colors inline-flex items-center gap-2 group"> <svg width="1em" height="1em" class="w-4 h-4 text-ef-gray dark:text-efd-gray group-hover:text-ef-green dark:group-hover:text-efd-green transition-colors" data-icon="lucide:users">   <symbol id="ai:lucide:users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M16 3.128a4 4 0 0 1 0 7.744M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></g></symbol><use href="#ai:lucide:users"></use>  </svg>
+Öğretmen Görüş Formu
+</a> </li> </ul> </div> <div class="space-y-4"> <h3 class="font-semibold text-ef-text dark:text-efd-text text-sm uppercase tracking-wider">Araçlar</h3> <ul class="space-y-3"> <li> <a href="https://halilbozoglu.github.io/website/" target="_blank" rel="noopener noreferrer" class="text-sm text-ef-text2 dark:text-efd-text2 hover:text-ef-green dark:hover:text-efd-green transition-colors inline-flex items-center gap-2 group"> <svg width="1em" height="1em" class="w-4 h-4 text-ef-gray dark:text-efd-gray group-hover:text-ef-green dark:group-hover:text-efd-green transition-colors" data-icon="lucide:calculator">   <symbol id="ai:lucide:calculator" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M8 6h8m0 8v4m0-8h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/></g></symbol><use href="#ai:lucide:calculator"></use>  </svg>
+Not Hesaplama
+</a> </li> <li> <a href="https://www.ktun.edu.tr/" target="_blank" rel="noopener noreferrer" class="text-sm text-ef-text2 dark:text-efd-text2 hover:text-ef-green dark:hover:text-efd-green transition-colors inline-flex items-center gap-2 group"> <svg width="1em" height="1em" class="w-4 h-4 text-ef-gray dark:text-efd-gray group-hover:text-ef-green dark:group-hover:text-efd-green transition-colors" data-icon="lucide:external-link">   <symbol id="ai:lucide:external-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol><use href="#ai:lucide:external-link"></use>  </svg>
+Okul Websitesi
+</a> </li> </ul> </div> </div> </div> <!-- Bottom note --> <div class="mt-12 pt-8 border-t border-ef-bg2 dark:border-efd-bg2 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4"> <p class="text-xs text-ef-gray dark:text-efd-gray italic">
+Quartz v4'ten Astro v5'e geçirildi
+</p> </div> </div> </footer> </body></html> <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const copyBtn = document.getElementById('copy-link-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        const url = copyBtn.getAttribute('data-url');
+        try {
+          await navigator.clipboard.writeText(url);
+          const originalText = copyBtn.innerHTML;
+          copyBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-ef-green dark:text-efd-green"><polyline points="20 6 9 17 4 12"/></svg><span>Kopyalandı!</span>`;
+          setTimeout(() => {
+            copyBtn.innerHTML = originalText;
+          }, 2000);
+        } catch (err) {
+          console.error("Panoya kopyalanamadı:", err);
+        }
+      });
+    }
+  });
+</script>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr"><head><title>C Fonksiyonlarına Giriş | ktünot</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700&amp;family=Inter:ital,wght@0,400;0,600;1,400;1,600&amp;family=Geist Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="ktünot"/><meta property="og:title" content="C Fonksiyonlarına Giriş | ktünot"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="C Fonksiyonlarına Giriş | ktünot"/><meta name="twitter:description" content="BİLGİSAYAR PROGRAMLAMAYA GİRİŞ – DERS NOTU 3 C Fonksiyonlarına Giriş ve Değişkenler Konya Teknik Üniversitesi Elektrik - Elektronik Mühendisliği Bölümü 15.03.2024 | Konya İçindekiler C Dilinin Özellikleri C Programlarının Temel Yapısı Önişlemci Direktifleri Bazı Kütüphane Başlık Dosyaları Genel Giri..."/><meta property="og:description" content="BİLGİSAYAR PROGRAMLAMAYA GİRİŞ – DERS NOTU 3 C Fonksiyonlarına Giriş ve Değişkenler Konya Teknik Üniversitesi Elektrik - Elektronik Mühendisliği Bölümü 15.03.2024 | Konya İçindekiler C Dilinin Özellikleri C Programlarının Temel Yapısı Önişlemci Direktifleri Bazı Kütüphane Başlık Dosyaları Genel Giri..."/><meta property="og:image:alt" content="BİLGİSAYAR PROGRAMLAMAYA GİRİŞ – DERS NOTU 3 C Fonksiyonlarına Giriş ve Değişkenler Konya Teknik Üniversitesi Elektrik - Elektronik Mühendisliği Bölümü 15.03.2024 | Konya İçindekiler C Dilinin Özellikleri C Programlarının Temel Yapısı Önişlemci Direktifleri Bazı Kütüphane Başlık Dosyaları Genel Giri..."/><meta property="twitter:domain" content="ktunot.net.tr"/><meta property="og:url" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/1-1/not-3/C-Fonksiyonlarına-Giriş"/><meta property="twitter:url" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/1-1/not-3/C-Fonksiyonlarına-Giriş"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="BİLGİSAYAR PROGRAMLAMAYA GİRİŞ – DERS NOTU 3 C Fonksiyonlarına Giriş ve Değişkenler Konya Teknik Üniversitesi Elektrik - Elektronik Mühendisliği Bölümü 15.03.2024 | Konya İçindekiler C Dilinin Özellikleri C Programlarının Temel Yapısı Önişlemci Direktifleri Bazı Kütüphane Başlık Dosyaları Genel Giri..."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvYzRrYXIvQ29kZS9rdHVub3QvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://ktunot.net.tr/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/1-1/not-3/C-Fonksiyonlarına-Giriş-og-image.webp"/><meta property="og:image:url" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/1-1/not-3/C-Fonksiyonlarına-Giriş-og-image.webp"/><meta name="twitter:image" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/1-1/not-3/C-Fonksiyonlarına-Giriş-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="temp/Bilgisayar-Programlama/1-1/not-3/C-Fonksiyonlarına-Giriş"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../../..">ktünot</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Arama</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Bir şey arayın" placeholder="Bir şey arayın"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Koyu mod"><title>Koyu mod</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Açık mod"><title>Açık mod</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Okuma modu"><title>Okuma modu</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-46"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Gezgin</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-46" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../temp/">temp</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../temp/Bilgisayar-Programlama/">Bilgisayar Programlama</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../temp/Bilgisayar-Programlama/1-1/">1 1</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../temp/Bilgisayar-Programlama/1-1/not-3/">not 3</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>C Fonksiyonlarına Giriş</a></div></nav><h1 class="article-title">C Fonksiyonlarına Giriş</h1><p show-comma="true" class="content-meta"><time datetime="2026-03-15T23:05:05.900Z">16 Mar 2026</time><span>4 dakika okuma süresi</span></p></div></div><article class="popover-hint"><h1 id="bi̇lgi̇sayar-programlamaya-gi̇ri̇ş--ders-notu-3">BİLGİSAYAR PROGRAMLAMAYA GİRİŞ – DERS NOTU 3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bi̇lgi̇sayar-programlamaya-gi̇ri̇ş--ders-notu-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="c-fonksiyonlarına-giriş-ve-değişkenler">C Fonksiyonlarına Giriş ve Değişkenler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c-fonksiyonlarına-giriş-ve-değişkenler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Konya Teknik Üniversitesi</strong><br/>
+<strong>Elektrik - Elektronik Mühendisliği Bölümü</strong><br/>
+<strong>15.03.2024 | Konya</strong></p>
+</blockquote>
+<hr/>
+<h2 id="i̇çindekiler">İçindekiler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#i̇çindekiler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="#c-dilinin-%C3%B6zellikleri" class="internal alias">C Dilinin Özellikleri</a></li>
+<li><a href="#c-programlar%C4%B1n%C4%B1n-temel-yap%C4%B1s%C4%B1" class="internal alias">C Programlarının Temel Yapısı</a></li>
+<li><a href="#%C3%B6ni%C5%9Flemci-direktifleri" class="internal alias">Önişlemci Direktifleri</a></li>
+<li><a href="#baz%C4%B1-k%C3%BCt%C3%BCphane-ba%C5%9Fl%C4%B1k-dosyalar%C4%B1" class="internal alias">Bazı Kütüphane Başlık Dosyaları</a></li>
+<li><a href="#genel-giri%C5%9F-%C3%A7%C4%B1k%C4%B1%C5%9F-k%C3%BCt%C3%BCphanesi" class="internal alias">Genel Giriş-Çıkış Kütüphanesi</a></li>
+<li><a href="#main-fonksiyonu" class="internal alias">Main Fonksiyonu</a></li>
+<li><a href="#printf-fonksiyonu" class="internal alias">printf() Fonksiyonu</a></li>
+<li><a href="#format-karakterleri" class="internal alias">Format Karakterleri</a></li>
+<li><a href="#escape-karakterleri" class="internal alias">Escape Karakterleri</a></li>
+<li><a href="#c-dilinin-genel-yaz%C4%B1m-kurallar%C4%B1" class="internal alias">C Dilinin Genel Yazım Kuralları</a></li>
+<li><a href="#i%CC%87lk-c-program%C4%B1n%C4%B1z" class="internal alias">İlk C Programınız</a></li>
+<li><a href="#de%C4%9Fi%C5%9Fken-tan%C4%B1mlamalar%C4%B1-ve-veri-t%C3%BCrleri" class="internal alias">Değişken Tanımlamaları ve Veri Türleri</a></li>
+<li><a href="#de%C4%9Fi%C5%9Fken-i%CC%87simlendirme" class="internal alias">Değişken İsimlendirme</a></li>
+<li><a href="#veri-t%C3%BCrleri" class="internal alias">Veri Türleri</a></li>
+<li><a href="#de%C4%9Fi%C5%9Fken-tan%C4%B1mlama-ve-i%CC%87lk-de%C4%9Fer-atama" class="internal alias">Değişken Tanımlama ve İlk Değer Atama</a></li>
+<li><a href="#scanf-fonksiyonu" class="internal alias">scanf() Fonksiyonu</a></li>
+<li><a href="#program-hatalar%C4%B1" class="internal alias">Program Hataları</a></li>
+<li><a href="#%C3%B6rnek-k%C3%BC%C3%A7%C3%BCk-harfi-b%C3%BCy%C3%BCk-harfe-d%C3%B6n%C3%BC%C5%9Ft%C3%BCrme" class="internal alias">Örnek: Küçük Harfi Büyük Harfe Dönüştürme</a></li>
+<li><a href="#%C3%B6dev" class="internal alias">Ödev</a></li>
+</ul>
+<hr/>
+<h2 id="c-dilinin-özellikleri">C Dilinin Özellikleri<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c-dilinin-özellikleri" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>C dili <strong>donanımdan bağımsız</strong> (machine independent) ve <strong>taşınabilirdir</strong> (portable).</li>
+<li>Taşınabilirlik, aynı programın <strong>farklı donanımlarda ve işletim sistemlerinde</strong> çalışabilmesidir.</li>
+<li>C dili <strong>verimli</strong>, <strong>basit</strong> ve <strong>güçlü</strong> bir yapıya sahiptir.</li>
+<li>Bu özellikler sayesinde hem sistem programlamada hem de uygulama geliştirme süreçlerinde yaygın olarak kullanılır.</li>
+</ul>
+<hr/>
+<h2 id="c-programlarının-temel-yapısı">C Programlarının Temel Yapısı<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c-programlarının-temel-yapısı" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Bir C programı iki temel bölümden oluşur:</p>
+<ol>
+<li><strong>Önişlemci Direktifleri</strong> (<code>#include</code>, <code>#define</code> vb.)</li>
+<li><strong>Ana Fonksiyon</strong> (<code>main()</code>)</li>
+</ol>
+<hr/>
+<h2 id="önişlemci-direktifleri">Önişlemci Direktifleri<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#önişlemci-direktifleri" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><code>#</code> işareti ile başlar.</li>
+<li>Derleme öncesi <strong>C önişlemcisi</strong> tarafından işlenir.</li>
+<li>En yaygın kullanılanları:
+<ul>
+<li><code>#include &lt;dosya.h></code> → Belirtilen başlık dosyasını programa ekler.</li>
+<li><code>#define</code> → Sabit tanımlamaları yapar.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Örnek:</strong> <code>printf()</code> fonksiyonunu kullanmak için <code>&lt;stdio.h></code> başlık dosyası gerekir:</p>
+</blockquote>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &lt;stdio.h></span></span></code></pre></figure>
+<hr/>
+<h2 id="bazı-kütüphane-başlık-dosyaları">Bazı Kütüphane Başlık Dosyaları<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bazı-kütüphane-başlık-dosyaları" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Başlık Dosyası</th><th>Açıklama</th></tr></thead><tbody><tr><td><code>&lt;ctype.h></code></td><td>Karakter işlemleri (<code>isalpha</code>, <code>isdigit</code> vb.)</td></tr><tr><td><code>&lt;math.h></code></td><td>Matematiksel fonksiyonlar (<code>sin</code>, <code>sqrt</code>, <code>pow</code> vb.)</td></tr><tr><td><code>&lt;stdio.h></code></td><td>Giriş/çıkış (<code>printf</code>, <code>scanf</code>, <code>getchar</code>)</td></tr><tr><td><code>&lt;stdlib.h></code></td><td>Genel amaçlı (<code>exit</code>, <code>malloc</code>, <code>rand</code>)</td></tr><tr><td><code>&lt;string.h></code></td><td>String işlemleri (<code>strlen</code>, <code>strcpy</code>)</td></tr><tr><td><code>&lt;time.h></code></td><td>Zaman işlemleri (<code>time</code>, <code>clock</code>)</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>Örnek Fonksiyonlar:</strong></p>
+</blockquote>
+<ul>
+<li><code>exit()</code>: Programı sonlandırır.</li>
+<li><code>sqrt()</code>: Karekök alır.</li>
+<li><code>printf()</code>: Ekrana çıktı verir.</li>
+</ul>
+<hr/>
+<h2 id="genel-giriş-çıkış-kütüphanesi">Genel Giriş-Çıkış Kütüphanesi<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#genel-giriş-çıkış-kütüphanesi" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Kullanıcı ile etkileşim kurmak için <strong>giriş-çıkış fonksiyonları</strong> kullanılır.</li>
+<li>En temel fonksiyonlar:
+<ul>
+<li><code>printf()</code>: Ekrana veri yazdırır.</li>
+<li><code>scanf()</code>: Kullanıcıdan veri alır.</li>
+</ul>
+</li>
+<li>Bu fonksiyonlar <strong><code>&lt;stdio.h></code></strong> başlık dosyasında tanımlıdır.</li>
+</ul>
+<hr/>
+<h2 id="main-fonksiyonu">Main Fonksiyonu<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#main-fonksiyonu" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Her C programında <strong>tek bir <code>main()</code> fonksiyonu</strong> olmalıdır.</li>
+<li>Programın <strong>giriş noktasıdır</strong>; çalıştırıldığında buradan başlar.</li>
+<li>Fonksiyon gövdesi <code>{ }</code> içinde yazılır.</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() {</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // Kodlar buraya yazılır</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<blockquote>
+<p><strong>Not:</strong> <code>return 0;</code> → Programın başarıyla bittiğini belirtir.</p>
+</blockquote>
+<hr/>
+<h2 id="printf-fonksiyonu">printf() Fonksiyonu<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#printf-fonksiyonu" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Ekrana veri yazdırmak için kullanılır.</li>
+<li>Genel kullanım:</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;format_dizisi&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, değişken_listesi);</span></span></code></pre></figure>
+<p><strong>Örnekler:</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Merhaba Dünya!&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Yaşınız: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, yas);</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Pi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%.2f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3.14159</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span></code></pre></figure>
+<hr/>
+<h2 id="format-karakterleri">Format Karakterleri<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#format-karakterleri" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Format</th><th>Açıklama</th></tr></thead><tbody><tr><td><code>%d</code></td><td><code>int</code> tamsayı</td></tr><tr><td><code>%c</code></td><td>Karakter</td></tr><tr><td><code>%s</code></td><td>String</td></tr><tr><td><code>%f</code></td><td><code>float</code></td></tr><tr><td><code>%lf</code></td><td><code>double</code></td></tr><tr><td><code>%x</code></td><td>Hexadecimal (küçük harf)</td></tr><tr><td><code>%X</code></td><td>Hexadecimal (büyük harf)</td></tr><tr><td><code>%u</code></td><td>İşaretsiz tamsayı</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>Not:</strong> <code>%lf</code> → <code>double</code> türü için kullanılır.</p>
+</blockquote>
+<hr/>
+<h2 id="escape-karakterleri">Escape Karakterleri<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#escape-karakterleri" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Karakter</th><th>Açıklama</th></tr></thead><tbody><tr><td><code>\n</code></td><td>Yeni satır</td></tr><tr><td><code>\t</code></td><td>Sekme</td></tr><tr><td><code>\&quot;</code></td><td>Çift tırnak</td></tr><tr><td><code>\\</code></td><td>Ters bölü</td></tr><tr><td><code>\a</code></td><td>Bip sesi</td></tr></tbody></table></div>
+<p><strong>Örnek:</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;İsim:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">Ali</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">Yaş:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">25&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span></code></pre></figure>
+<hr/>
+<h2 id="c-dilinin-genel-yazım-kuralları">C Dilinin Genel Yazım Kuralları<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c-dilinin-genel-yazım-kuralları" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Yorum satırları: <code>/* ... */</code> veya <code>// ...</code> (C99+)</li>
+<li>Her ifade <code>;</code> ile biter.</li>
+<li><strong>Büyük-küçük harf duyarlıdır</strong>: <code>Toplam ≠ toplam</code></li>
+<li>Anahtar kelimeler <strong>küçük harfle</strong> yazılır (<code>int</code>, <code>if</code>, <code>while</code>).</li>
+<li><code>#define</code> ile yapılan tanımlamalarda genellikle <strong>büyük harf</strong> kullanılır.</li>
+</ul>
+<hr/>
+<h2 id="i̇lk-c-programınız">İlk C Programınız<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#i̇lk-c-programınız" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &lt;stdio.h></span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &lt;stdlib.h></span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Merhaba Dunya&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    getch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<blockquote>
+<p><strong>Not:</strong> <code>getch()</code> → <code>&lt;conio.h></code> gerektirir (Windows özelidir). Taşınabilirlik için <code>getchar()</code> tercih edilebilir.</p>
+</blockquote>
+<hr/>
+<h2 id="değişken-tanımlamaları-ve-veri-türleri">Değişken Tanımlamaları ve Veri Türleri<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#değişken-tanımlamaları-ve-veri-türleri" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Her değişken <strong>isim</strong>, <strong>veri türü</strong> ve <strong>değer</strong> içerir. Tanımlama örneği:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> yas;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">float</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ortalama;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">char</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> harf </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 'A'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span></code></pre></figure>
+<hr/>
+<h2 id="değişken-i̇simlendirme">Değişken İsimlendirme<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#değişken-i̇simlendirme" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Kurallar:</strong></p>
+<ul>
+<li>Sadece <strong>İngilizce harfler</strong>, <strong>rakamlar</strong> ve <strong>alt çizgi (<code>_</code>)</strong> kullanılabilir.</li>
+<li><strong>Rakamla başlanamaz</strong>: <code>1ogrenci</code> ❌, <code>ogrenci1</code> ✅</li>
+<li><strong>Türkçe karakter</strong> veya <strong>özel karakter</strong> (<code>+</code>, <code>-</code>, <code>!</code>) <strong>kullanılamaz</strong>.</li>
+<li><strong>Anahtar kelimeler</strong> (<code>int</code>, <code>return</code>, <code>if</code>) değişken ismi olamaz.</li>
+</ul>
+<hr/>
+<h2 id="veri-türleri">Veri Türleri<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#veri-türleri" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Tür</th><th>Açıklama</th><th>Bellek</th><th>Aralık</th></tr></thead><tbody><tr><td><code>char</code></td><td>Karakter</td><td>1 byte</td><td>-128 → +127</td></tr><tr><td><code>int</code></td><td>Tamsayı</td><td>2/4 byte</td><td>±32.767 / ±2.147.483.647</td></tr><tr><td><code>float</code></td><td>Ondalıklı</td><td>4 byte</td><td>±3.4E±38 (6 basamak)</td></tr><tr><td><code>double</code></td><td>Yüksek hassasiyet</td><td>8 byte</td><td>±1.7E±308 (15 basamak)</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>Not:</strong> <code>float</code> virgülden sonra <strong>en fazla 6</strong> basamak tutar.</p>
+</blockquote>
+<hr/>
+<h2 id="değişken-tanımlama-ve-i̇lk-değer-atama">Değişken Tanımlama ve İlk Değer Atama<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#değişken-tanımlama-ve-i̇lk-değer-atama" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Değişkenler <strong>fonksiyon dışında</strong> (global) tanımlanırsa <strong>otomatik sıfırlanır</strong>.</li>
+<li><strong>Fonksiyon içinde</strong> (local) tanımlanırsa <strong>rastgele değer</strong> alır (ilk değer atanmalı!).</li>
+</ul>
+<p><strong>Örnek:</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &lt;stdio.h></span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> global </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 10</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> // global → 0 atanır</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> local;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> // undefined!</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    float</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pi </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 3.1415926535</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%.6f\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, pi);</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> // 3.141593</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<hr/>
+<h2 id="scanf-fonksiyonu">scanf() Fonksiyonu<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scanf-fonksiyonu" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Kullanıcıdan veri alır.</li>
+<li>Değişkenin <strong>adresi</strong> (<code>&amp;</code>) ile kullanılır.</li>
+</ul>
+<p><strong>Örnek:</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> yas;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Yaşınızı girin: &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">scanf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">yas</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span></code></pre></figure>
+<blockquote>
+<p><strong>Önemli:</strong> String (<code>char[]</code>) okurken <code>&amp;</code> <strong>kullanılmaz</strong>.</p>
+</blockquote>
+<hr/>
+<h2 id="program-hataları">Program Hataları<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#program-hataları" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Hata Türü</th><th>Açıklama</th></tr></thead><tbody><tr><td><strong>Syntax</strong></td><td>Yazım kurallarına uyulmaması → Derleyici yakalar</td></tr><tr><td><strong>Run-time</strong></td><td>Çalışma esnasında oluşan hata (bölme sıfır, dosya bulunamadı)</td></tr><tr><td><strong>Logic</strong></td><td>Mantık hatası → Program çalışır ama yanlış sonuç verir</td></tr></tbody></table></div>
+<blockquote>
+<p>Mantık hataları en zor tespit edilenlerdir!</p>
+</blockquote>
+<hr/>
+<h2 id="örnek-küçük-harfi-büyük-harfe-dönüştürme">Örnek: Küçük Harfi Büyük Harfe Dönüştürme<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#örnek-küçük-harfi-büyük-harfe-dönüştürme" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ASCII’de küçük harfler büyük harflerden <strong>32 fazladır</strong>.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="c" data-theme="github-light github-dark"><code data-language="c" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &lt;stdio.h></span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    char</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> kucuk </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 'a'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    char</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> buyuk </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> kucuk </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 32</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    printf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Büyük harf: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%c\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, buyuk);</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> // A</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<blockquote>
+<p>Veya <code>toupper()</code> fonksiyonuyla: <code>&lt;ctype.h></code></p>
+</blockquote>
+<hr/>
+<h2 id="ödev">Ödev<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ödev" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Ödev 1:</strong><br/>
+Kullanıcıdan <strong>4 adet tam sayı</strong> alın.</p>
+<ul>
+<li>Bu sayıların <strong>toplamını</strong> hesaplayın.</li>
+<li>Her sayının <strong>toplama göre yüzdesini</strong> (<code>float</code>) hesaplayıp ekrana yazdırın.</li>
+<li><strong>Dikkat:</strong> 4 yüzdelik değerin toplamı <strong>100.00</strong> olmalıdır.</li>
+</ul>
+</blockquote>
+<p><strong>Örnek Çıktı:</strong></p>
+<pre><code>Sayıları girin: 10 20 30 40
+Toplam: 100
+Yüzde değerleri:
+10 → %10.00
+20 → %20.00
+30 → %30.00
+40 → %40.00
+Toplam Yüzde: %100.00
+</code></pre>
+<blockquote>
+<p><strong>İpucu:</strong> Yüzde = <code>(sayı * 100.0) / toplam</code></p>
+</blockquote>
+<hr/>
+<p><strong>Hazırlayan:</strong> [Konya Teknik Üniversitesi – EEM]<br/>
+<strong>Tarih:</strong> 15.03.2024<br/>
+<strong>Ders:</strong> Bilgisayar Programlamaya Giriş 1</p>
+<p>Kaynaklar:</p>
+<ul>
+<li>K.N. King, <em>C Programming: A Modern Approach</em></li>
+<li>ISO/IEC 9899:1999 (C99 Standard)</li>
+<li>Konya Teknik Üniversitesi Ders Notları</li>
+</ul></article><hr/><div class="page-footer"><div class="giscus" data-repo="c4kar/ktunot" data-repo-id="R_kgDOQGpuyg" data-category="General" data-category-id="DIC_kwDOQGpuys4C009j" data-mapping="url" data-strict="1" data-reactions-enabled="1" data-input-position="bottom" data-light-theme="light" data-dark-theme="dark" data-theme-url="https://ktunot.net.tr/static/giscus" data-lang="tr"></div></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-15" aria-expanded="true"><h3>İçindekiler</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#bi̇lgi̇sayar-programlamaya-gi̇ri̇ş--ders-notu-3" data-for="bi̇lgi̇sayar-programlamaya-gi̇ri̇ş--ders-notu-3">BİLGİSAYAR PROGRAMLAMAYA GİRİŞ – DERS NOTU 3</a></li><li class="depth-1"><a href="#c-fonksiyonlarına-giriş-ve-değişkenler" data-for="c-fonksiyonlarına-giriş-ve-değişkenler">C Fonksiyonlarına Giriş ve Değişkenler</a></li><li class="depth-1"><a href="#i̇çindekiler" data-for="i̇çindekiler">İçindekiler</a></li><li class="depth-1"><a href="#c-dilinin-özellikleri" data-for="c-dilinin-özellikleri">C Dilinin Özellikleri</a></li><li class="depth-1"><a href="#c-programlarının-temel-yapısı" data-for="c-programlarının-temel-yapısı">C Programlarının Temel Yapısı</a></li><li class="depth-1"><a href="#önişlemci-direktifleri" data-for="önişlemci-direktifleri">Önişlemci Direktifleri</a></li><li class="depth-1"><a href="#bazı-kütüphane-başlık-dosyaları" data-for="bazı-kütüphane-başlık-dosyaları">Bazı Kütüphane Başlık Dosyaları</a></li><li class="depth-1"><a href="#genel-giriş-çıkış-kütüphanesi" data-for="genel-giriş-çıkış-kütüphanesi">Genel Giriş-Çıkış Kütüphanesi</a></li><li class="depth-1"><a href="#main-fonksiyonu" data-for="main-fonksiyonu">Main Fonksiyonu</a></li><li class="depth-1"><a href="#printf-fonksiyonu" data-for="printf-fonksiyonu">printf() Fonksiyonu</a></li><li class="depth-1"><a href="#format-karakterleri" data-for="format-karakterleri">Format Karakterleri</a></li><li class="depth-1"><a href="#escape-karakterleri" data-for="escape-karakterleri">Escape Karakterleri</a></li><li class="depth-1"><a href="#c-dilinin-genel-yazım-kuralları" data-for="c-dilinin-genel-yazım-kuralları">C Dilinin Genel Yazım Kuralları</a></li><li class="depth-1"><a href="#i̇lk-c-programınız" data-for="i̇lk-c-programınız">İlk C Programınız</a></li><li class="depth-1"><a href="#değişken-tanımlamaları-ve-veri-türleri" data-for="değişken-tanımlamaları-ve-veri-türleri">Değişken Tanımlamaları ve Veri Türleri</a></li><li class="depth-1"><a href="#değişken-i̇simlendirme" data-for="değişken-i̇simlendirme">Değişken İsimlendirme</a></li><li class="depth-1"><a href="#veri-türleri" data-for="veri-türleri">Veri Türleri</a></li><li class="depth-1"><a href="#değişken-tanımlama-ve-i̇lk-değer-atama" data-for="değişken-tanımlama-ve-i̇lk-değer-atama">Değişken Tanımlama ve İlk Değer Atama</a></li><li class="depth-1"><a href="#scanf-fonksiyonu" data-for="scanf-fonksiyonu">scanf() Fonksiyonu</a></li><li class="depth-1"><a href="#program-hataları" data-for="program-hataları">Program Hataları</a></li><li class="depth-1"><a href="#örnek-küçük-harfi-büyük-harfe-dönüştürme" data-for="örnek-küçük-harfi-büyük-harfe-dönüştürme">Örnek: Küçük Harfi Büyük Harfe Dönüştürme</a></li><li class="depth-1"><a href="#ödev" data-for="ödev">Ödev</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Şununla oluşturuldu <a href="https://ktunot.net.tr/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/c4kar/ktunot">GitHub</a></li><li><a href="https://www.ktun.edu.tr/">Okul Websitesi</a></li><li><a href="https://halilbozoglu.github.io/website/">Not Hesaplama</a></li><li><a href="https://forms.gle/EK7BruSNk6yYxL8A8">Not yükleme formunu</a></li><li><a href="https://forms.gle/uxnGWzAG3LaBUB1v5">Ders görüş formu</a></li><li><a href="https://forms.gle/PgDyoo2j2odu1ZK96">Öğretmen görüş formu</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../../../../postscript.js" type="module"></script></html>

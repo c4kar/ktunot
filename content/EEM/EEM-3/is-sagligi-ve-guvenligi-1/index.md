@@ -146,4 +146,72 @@ tags:
     ↓ İndir
   </a>
 </div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/ISG-CALISMA%20SORULARI%202021.pdf" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <img src="./thumbs/sorular_ISG-CALISMA SORULARI 2021.png" alt="ISG-CALISMA SORULARI 2021" loading="lazy" />
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">ISG-CALISMA SORULARI 2021</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge pdf">PDF</span>
+      <span>325.4 KB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/ISG-CALISMA%20SORULARI%202021.pdf" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/%C3%87al%C4%B1%C5%9Fma%20Sorular%C4%B1-1.docx" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <span class="materyal-icon">📝</span>
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">Çalışma Soruları-1</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge doc">DOCX</span>
+      <span>73.6 KB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/%C3%87al%C4%B1%C5%9Fma%20Sorular%C4%B1-1.docx" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/%C3%87al%C4%B1%C5%9Fma%20Sorular%C4%B1-2.docx" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <span class="materyal-icon">📝</span>
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">Çalışma Soruları-2</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge doc">DOCX</span>
+      <span>80.8 KB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/%C3%87al%C4%B1%C5%9Fma%20Sorular%C4%B1-2.docx" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/%C4%B0SG%20Sorular.pdf" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <img src="./thumbs/sorular_İSG Sorular.png" alt="İSG Sorular" loading="lazy" />
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">İSG Sorular</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge pdf">PDF</span>
+      <span>87.3 KB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/is-sagligi-ve-guvenligi-1/sorular/%C4%B0SG%20Sorular.pdf" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
 </div>

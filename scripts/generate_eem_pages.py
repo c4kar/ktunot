@@ -117,22 +117,37 @@ def github_blob_url(relative_path: str) -> str:
 
 
 def collect_materials(ders_dir: Path, eem_relative: str) -> list[dict]:
-    """Bir ders klasöründeki materyalleri toplar."""
+    """Bir ders klasöründeki (ve alt klasörlerindeki) materyalleri toplar."""
     materials = []
-    for f in sorted(ders_dir.iterdir()):
-        if f.name.startswith(".") or f.name.startswith("_") or f.is_dir():
+    
+    # rglob ile ders_dir altındaki tüm dosyaları bulalım
+    for f in sorted(ders_dir.rglob("*")):
+        # Klasörleri atla
+        if f.is_dir():
+            continue
+            
+        # . veya _ ile başlayan dosya/klasörleri atla
+        if any(p.startswith(".") or p.startswith("_") for p in f.relative_to(ders_dir).parts):
+            continue
+            
+        # thumbs dizinlerinin içeriğini ana dosya gibi listeleme
+        if "thumbs" in f.parts:
             continue
 
         ext = f.suffix.lower()
         if ext == ".json":
-            continue  # METADATA.json vb. atla
+            continue
 
         icon, badge = FILE_TYPES.get(ext, ("📎", "other"))
-        rel_path = f"{eem_relative}/{f.name}"
+        
+        # Dosyanın ders klasörüne göre yolu (örn: lms/01GirisTR.pdf)
+        sub_rel_path = f.relative_to(ders_dir).as_posix()
+        rel_path = f"{eem_relative}/{sub_rel_path}"
 
-        # Thumbnail var mı? (webp veya png)
-        thumb_webp = ders_dir / "thumbs" / f"{f.stem}.webp"
-        thumb_png = ders_dir / "thumbs" / f"{f.stem}.png"
+        # Thumbnail var mı? (Dosyanın bulunduğu klasörün 'thumbs' alt klasörü içinde aranır)
+        thumb_webp = f.parent / "thumbs" / f"{f.stem}.webp"
+        thumb_png = f.parent / "thumbs" / f"{f.stem}.png"
+        
         if thumb_webp.exists():
             has_thumb = True
             thumb_path = thumb_webp
@@ -146,15 +161,18 @@ def collect_materials(ders_dir: Path, eem_relative: str) -> list[dict]:
         size_bytes = f.stat().st_size
 
         # jsDelivr, 20 MB'tan büyük dosyaları engelliyor.
-        # Bu yüzden 19 MB (19922944 bytes) sınırından büyükse önizleme olarak blob URL ver.
         is_large = size_bytes > (19 * 1024 * 1024)
         preview_url = github_blob_url(rel_path) if is_large else jsdelivr_url(rel_path)
         is_image = ext in (".jpg", ".jpeg", ".png", ".webp", ".gif")
+
+        # Benzersiz bir ad üretelim (dosya isimleri çakışmasın)
+        safe_stem = sub_rel_path.replace("/", "_").rsplit(".", 1)[0]
 
         materials.append(
             {
                 "name": f.name,
                 "stem": f.stem,
+                "safe_stem": safe_stem, # thumb isim çakışmasını önlemek için
                 "ext": ext,
                 "size": size_bytes,
                 "icon": icon,
@@ -217,7 +235,8 @@ def generate_ders_page(
     for mat in materials:
         thumb_rel = None
         if mat["has_thumb"] and mat["thumb_source"]:
-            thumb_filename = mat["thumb_source"].name  # preserves actual extension
+            thumb_ext = mat["thumb_source"].suffix
+            thumb_filename = f"{mat['safe_stem']}{thumb_ext}"
             dest = thumb_dest_dir / thumb_filename
             shutil.copy2(str(mat["thumb_source"]), str(dest))
             thumb_rel = f"./thumbs/{thumb_filename}"
