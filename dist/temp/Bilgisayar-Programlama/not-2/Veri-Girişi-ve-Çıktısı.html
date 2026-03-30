@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr"><head><title>Veri Girişi ve Çıktısı | ktünot</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700&amp;family=Inter:ital,wght@0,400;0,600;1,400;1,600&amp;family=Geist Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="ktünot"/><meta property="og:title" content="Veri Girişi ve Çıktısı | ktünot"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Veri Girişi ve Çıktısı | ktünot"/><meta name="twitter:description" content="İçindekiler Genel Özet Temel Terimler ve Kavramlar Ana Gövde: Kronolojik veya Tematik Kayıt MATLAB’e Klavyeden Veri Aktarımı input Komutu ile Klavyeden Metinsel Veri Temini fprintf Komutu ile Ekrana Bilgi Yazdırma disp Komutu ile Ekrana Sayısal Değer Yazdırma Vektörler Köşeli parantez yöntemi Sabit ..."/><meta property="og:description" content="İçindekiler Genel Özet Temel Terimler ve Kavramlar Ana Gövde: Kronolojik veya Tematik Kayıt MATLAB’e Klavyeden Veri Aktarımı input Komutu ile Klavyeden Metinsel Veri Temini fprintf Komutu ile Ekrana Bilgi Yazdırma disp Komutu ile Ekrana Sayısal Değer Yazdırma Vektörler Köşeli parantez yöntemi Sabit ..."/><meta property="og:image:alt" content="İçindekiler Genel Özet Temel Terimler ve Kavramlar Ana Gövde: Kronolojik veya Tematik Kayıt MATLAB’e Klavyeden Veri Aktarımı input Komutu ile Klavyeden Metinsel Veri Temini fprintf Komutu ile Ekrana Bilgi Yazdırma disp Komutu ile Ekrana Sayısal Değer Yazdırma Vektörler Köşeli parantez yöntemi Sabit ..."/><meta property="twitter:domain" content="ktunot.net.tr"/><meta property="og:url" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/not-2/Veri-Girişi-ve-Çıktısı"/><meta property="twitter:url" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/not-2/Veri-Girişi-ve-Çıktısı"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="İçindekiler Genel Özet Temel Terimler ve Kavramlar Ana Gövde: Kronolojik veya Tematik Kayıt MATLAB’e Klavyeden Veri Aktarımı input Komutu ile Klavyeden Metinsel Veri Temini fprintf Komutu ile Ekrana Bilgi Yazdırma disp Komutu ile Ekrana Sayısal Değer Yazdırma Vektörler Köşeli parantez yöntemi Sabit ..."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvYzRrYXIvQ29kZS9rdHVub3QvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://ktunot.net.tr/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/not-2/Veri-Girişi-ve-Çıktısı-og-image.webp"/><meta property="og:image:url" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/not-2/Veri-Girişi-ve-Çıktısı-og-image.webp"/><meta name="twitter:image" content="https://ktunot.net.tr/temp/Bilgisayar-Programlama/not-2/Veri-Girişi-ve-Çıktısı-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="temp/Bilgisayar-Programlama/not-2/Veri-Girişi-ve-Çıktısı"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">ktünot</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Arama</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Bir şey arayın" placeholder="Bir şey arayın"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Koyu mod"><title>Koyu mod</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Açık mod"><title>Açık mod</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Okuma modu"><title>Okuma modu</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-74"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Gezgin</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-74" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../temp/">temp</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../temp/Bilgisayar-Programlama/">Bilgisayar Programlama</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../temp/Bilgisayar-Programlama/not-2/">not 2</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Veri Girişi ve Çıktısı</a></div></nav><h1 class="article-title">Veri Girişi ve Çıktısı</h1><p show-comma="true" class="content-meta"><time datetime="2026-03-15T23:05:05.948Z">16 Mar 2026</time><span>13 dakika okuma süresi</span></p></div></div><article class="popover-hint"><h1 id="i̇çindekiler">İçindekiler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#i̇çindekiler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li><a href="#genel-%C3%B6zet" class="internal alias">Genel Özet</a></li>
+<li><a href="#temel-terimler-ve-kavramlar" class="internal alias">Temel Terimler ve Kavramlar</a></li>
+<li><a href="#ana-g%C3%B6vde-kronolojik-veya-tematik-kay%C4%B1t" class="internal alias">Ana Gövde: Kronolojik veya Tematik Kayıt</a>
+<ul>
+<li><a href="#matlabe-klavyeden-veri-aktar%C4%B1m%C4%B1" class="internal alias">MATLAB’e Klavyeden Veri Aktarımı</a></li>
+<li><a href="#input-komutu-ile-klavyeden-metinsel-veri-temini" class="internal alias">input Komutu ile Klavyeden Metinsel Veri Temini</a></li>
+<li><a href="#fprintf-komutu-ile-ekrana-bilgi-yazd%C4%B1rma" class="internal alias">fprintf Komutu ile Ekrana Bilgi Yazdırma</a></li>
+<li><a href="#disp-komutu-ile-ekrana-say%C4%B1sal-de%C4%9Fer-yazd%C4%B1rma" class="internal alias">disp Komutu ile Ekrana Sayısal Değer Yazdırma</a></li>
+<li><a href="#vekt%C3%B6rler" class="internal alias">Vektörler</a>
+<ul>
+<li><a href="#k%C3%B6%C5%9Feli-parantez-y%C3%B6ntemi" class="internal alias">Köşeli parantez yöntemi</a></li>
+<li><a href="#sabit-aral%C4%B1kl%C4%B1-vekt%C3%B6r-olu%C5%9Fturma" class="internal alias">Sabit Aralıklı Vektör Oluşturma</a></li>
+<li><a href="#fonksiyonlar-kullan%C4%B1larak-vekt%C3%B6r-olu%C5%9Fturma" class="internal alias">Fonksiyonlar kullanılarak vektör oluşturma</a></li>
+</ul>
+</li>
+<li><a href="#vekt%C3%B6rlerde-aritmetik-i%C5%9Flemler" class="internal alias">Vektörlerde Aritmetik İşlemler</a></li>
+<li><a href="#vekt%C3%B6rler-ile-kullan%C4%B1labilecek-baz%C4%B1-fonksiyonlar" class="internal alias">Vektörler ile Kullanılabilecek Bazı Fonksiyonlar</a></li>
+<li><a href="#diziler" class="internal alias">Diziler</a></li>
+<li><a href="#say%C4%B1-dizileri" class="internal alias">Sayı Dizileri</a></li>
+<li><a href="#h%C3%BCcre-dizileri-cell" class="internal alias">Hücre Dizileri (cell)</a></li>
+<li><a href="#yap%C4%B1-dizileri-struct" class="internal alias">Yapı Dizileri (struct)</a></li>
+<li><a href="#dizilerle-ilgili-baz%C4%B1-atama-komutlar%C4%B1" class="internal alias">Dizilerle İlgili Bazı Atama Komutları</a></li>
+<li><a href="#if-end-yap%C4%B1s%C4%B1" class="internal alias">If, End Yapısı</a></li>
+<li><a href="#switch-case-yap%C4%B1s%C4%B1" class="internal alias">Switch, Case Yapısı</a></li>
+<li><a href="#for-end-d%C3%B6ng%C3%BCs%C3%BC" class="internal alias">For, End Döngüsü</a></li>
+<li><a href="#while-end-d%C3%B6ng%C3%BCs%C3%BC" class="internal alias">While, End Döngüsü</a></li>
+</ul>
+</li>
+<li><a href="#temel-form%C3%BCller-ve-h%C4%B1zl%C4%B1-bilgiler" class="internal alias">Temel Formüller ve Hızlı Bilgiler</a></li>
+<li><a href="#kaynaklar" class="internal alias">Kaynaklar</a></li>
+</ul>
+<h1 id="genel-özet">Genel Özet<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#genel-özet" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Bu ders notu, MATLAB programlama ortamında <strong>veri girişi ve çıktısı</strong>, <strong>dizi (array) ve vektör oluşturma</strong>, <strong>aritmetik işlemler</strong> ve <strong>kontrol yapıları</strong> gibi temel konuları kapsamaktadır. Kullanıcıdan klavye aracılığıyla veri almayı (<code>input</code> komutu), alınan veya işlenen veriyi ekrana yazdırmayı (<code>fprintf</code>, <code>disp</code> komutları) ve bu veriler üzerinde temel manipülasyonları gerçekleştirmeyi öğrenmeyi hedefler. Ayrıca, MATLAB’in temel veri yapılarından olan vektörler, sayı dizileri, hücre dizileri ve yapı dizilerinin tanımlanması, kullanılması ve üzerinde yapılabilecek yaygın işlemler detaylandırılmıştır. <em>if-end</em>, <em>switch-case</em>, <em>for-end</em> ve <em>while-end</em> gibi algoritmik kontrol yapıları da örneklerle açıklanarak, programlama yeteneğini pekiştirmeyi amaçlamaktadır.</p>
+<h1 id="temel-terimler-ve-kavramlar">Temel Terimler ve Kavramlar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#temel-terimler-ve-kavramlar" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>input Komutu:</strong> Kullanıcıdan klavye aracılığıyla veri almak için kullanılan MATLAB komutudur.
+<strong>fprintf Komutu:</strong> Hem metin hem de sayısal veriyi formatlı bir şekilde ekrana yazdırmak için kullanılan bir MATLAB komutudur.
+<strong>disp Komutu:</strong> Genellikle sayısal değerleri veya basit metinleri ekrana yazdırmak için kullanılan, çıktıdan sonra otomatik olarak yeni satıra geçen bir MATLAB komutudur.
+<strong>Vektör:</strong> MATLAB’de tek boyutlu, ardışık sayı dizisi olarak tanımlanan bir veri yapısıdır. Satır veya sütun vektörü olabilir.
+<strong>Dizi (Array):</strong> Sayısal veya metinsel değerler topluluğunu ifade eden genel bir matematiksel tanımdır; MATLAB’de temel veri elemanı olup, her şey bir dizi olarak işlenir.
+<strong>Hücre Dizisi (Cell Array):</strong> Farklı türlerdeki ve boyutlardaki verileri (sayılar, metinler, matrisler vb.) aynı dizi içinde saklamaya yarayan MATLAB veri yapısıdır.
+<strong>Yapı Dizisi (Struct Array):</strong> Farklı veri alanlarını (isim, şehir, yıl gibi) bir araya getiren ve bu alanlara etiketlerle erişim sağlayan bir MATLAB veri yapısıdır.
+<strong>Kontrol Yapıları:</strong> Programın akışını (örneğin koşullu dallanma veya döngüsel işlemler) kontrol eden <code>if-end</code>, <code>switch-case</code>, <code>for-end</code>, <code>while-end</code> gibi programlama öğeleridir.</p>
+<h1 id="ana-gövde-kronolojik-veya-tematik-kayıt">Ana Gövde: Kronolojik veya Tematik Kayıt<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ana-gövde-kronolojik-veya-tematik-kayıt" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="matlabe-klavyeden-veri-aktarımı">MATLAB’e Klavyeden Veri Aktarımı<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#matlabe-klavyeden-veri-aktarımı" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>MATLAB programları çalışırken kullanıcıdan veri almak için <code>input</code> komutu kullanılır. Bu komut, kullanıcıdan alınan veriyi belirtilen bir değişkene atar.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">yas=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Lutfen Yasinizi Giriniz: '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Lutfen</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Yasinizi Giriniz: 27</span></span></code></pre></figure>
+<p>Yukarıdaki örnekte, kullanıcı “27” değerini girmiş ve bu değer <code>yas</code> değişkenine atanmıştır.</p>
+<pre><code>yas =
+    27
+</code></pre>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Example</p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Bardak örneği ile <code>input</code> kullanımı:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> Bardak=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Bardagın Ne Kadarı Dolsun? '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Bardagın</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Ne Kadarı Dolsun? 90</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Bardak =</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">   90</span></span></code></pre></figure>
+</div>
+</blockquote>
+<h2 id="input-komutu-ile-klavyeden-metinsel-veri-temini">input Komutu ile Klavyeden Metinsel Veri Temini<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#input-komutu-ile-klavyeden-metinsel-veri-temini" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>input</code> komutunu kullanarak metinsel veri almak için ikinci bir argüman olarak <code>'s'</code> (string) belirtilmelidir. Bu belirtilmediği takdirde MATLAB girilen metni değişken veya fonksiyon olarak algılamaya çalışacaktır.</p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Parametre Anlamları </p></div>
+                  
+                </div>
+<div class="callout-content">
+<ul>
+<li><code>%c</code>: Değerin tek bir karakter olduğunu gösterir.</li>
+<li><code>%s</code>: Değerin bir karakter dizisi (string) olduğunu gösterir.</li>
+<li><code>%d</code>: Değerin bir tamsayı olduğunu gösterir.</li>
+<li><code>%f</code>: Değerin bir ondalıklı sayı olduğunu gösterir.</li>
+<li><code>%e</code>: Ondalık sayıları üstel biçimde yazdırır.</li>
+<li><code>%g</code>: (<code>%f</code> ile <code>%e</code> arasında daha kompakt olanı seçip gösterir.)</li>
+<li><code>\n</code>: İmleci bir alt satırın başına götürür. (<em>newline</em>)</li>
+<li><code>\t</code>: İmleci bir TAB kadar sağa kaydırır.</li>
+</ul>
+</div>
+</blockquote>
+<p>Aşağıdaki örneklerde, <code>input</code> komutunun <code>'s'</code> parametresi olmadan kullanıldığında hata verdiği, ancak <code>'s'</code> parametresi ile kullanıldığında metinsel girdiyi doğru şekilde kabul ettiği gösterilmektedir.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Command</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Window</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> isim=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Lutfen Isminizi Giriniz: '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Lutfen</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Isminizi Giriniz: Bora</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Error</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> using input</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Undefined</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> function or variable 'Bora'.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Lutfen</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Isminizi Giriniz: 27</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">isim =</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    27</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> isim=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Lutfen Isminizi Giriniz: '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'s'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Lutfen</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Isminizi Giriniz: Bora</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">isim =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Bora</span></span></code></pre></figure>
+<h2 id="fprintf-komutu-ile-ekrana-bilgi-yazdırma">fprintf Komutu ile Ekrana Bilgi Yazdırma<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fprintf-komutu-ile-ekrana-bilgi-yazdırma" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>fprintf</code> komutu, ekrana formatlı açıklama ve veri yazdırmak için kullanılır. <code>%X</code> format belirleyicileri sayesinde değişkenlerin türüne göre çıktılar alınabilir. <code>\n</code> komutu ile yeni satıra geçilebilir.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">fprintf(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Ekrana Basılacak Açıklama </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%X</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> \n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, değer );</span></span></code></pre></figure>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p> <code>fprintf</code> Kullanım Örnekleri</p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Command</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Window</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> karakter=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'d'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> isim=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'deniz'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> tamsayi=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">25</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> ondalikliSayi=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3.1416</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> fprintf(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Tanimlanan Karakter = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,karakter);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tanimlanan</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Karakter = d>></span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> fprintf(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Tanimlanan Karakter Dizisi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%s</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> \n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, isim);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tanimlanan</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Karakter Dizisi = deniz</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> fprintf(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Tanimlanan Tamsayi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> \n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,tamsayi);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tanimlanan</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Tamsayi = 25</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> fprintf(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Tanimlanan Ondalikli Sayi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> \n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,ondalikliSayi);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tanimlanan</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Ondalikli Sayi = 3.141600</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> fprintf(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Tanimlanan Ondalikli Sayi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%g</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> \n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,ondalikliSayi);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tanimlanan</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Ondalikli Sayi = 3.1416</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> fprintf(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Tamsayi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> ve Ondalikli Sayi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">%f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> \n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,tamsayi,ondalikliSayi);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tamsayi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">25</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ve Ondalikli Sayi = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3.141600</span></span></code></pre></figure>
+</div>
+</blockquote>
+<h2 id="disp-komutu-ile-ekrana-sayısal-değer-yazdırma">disp Komutu ile Ekrana Sayısal Değer Yazdırma<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#disp-komutu-ile-ekrana-sayısal-değer-yazdırma" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>disp(display)</code> komutu, mesajları veya değişken içeriklerini ekrana yazdırmak için kullanılır. <code>fprintf</code>’den farklı olarak, <code>disp</code> otomatik olarak yeni bir satıra atlar ve genellikle daha az formatlama gerektiren durumlar için tercih edilir.</p>
+<ul>
+<li><code>disp('Üzgünüm! Sıfıra Bölüm Hatası Var.');</code></li>
+<li><code>fprintf('Üzgünüm! Sıfıra Bölüm Hatası Var.\n');</code></li>
+<li><code>disp</code> komutu ekrana çıktı verdikten sonra bir alt satıra <strong>otomatik olarak</strong> atlar.</li>
+<li><code>fprintf</code> komutunu bir alt satıra götürebilmek için ise <code>\n</code> kullanılmalıdır.</li>
+<li>Ayrıca <code>disp</code> komutu satır veya sütun vektörleri ile matrisleri ekrana kolayca yazdırabilirken aynı işlemi <code>fprintf</code> ile yapabilmek daha çok işlem gerektirmektedir.</li>
+</ul>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p> <code>disp</code> Kullanım Örneği</p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Command</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Window</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> skaler=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">16</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> satirVektoru=[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">12</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> -</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">4</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 36</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 25</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 47</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">];</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> matris=[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;3 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">];</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> skaler</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">skaler =</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">   16</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> disp(skaler);</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">16</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> disp(satirVektoru);</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">   12</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    -</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">4</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    36</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    25</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    47</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> disp(matris);</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">     2</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">     4</span></span></code></pre></figure>
+</div>
+</blockquote>
+<h2 id="vektörler">Vektörler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vektörler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>MATLAB’de vektör oluşturmanın üç temel yolu vardır:</p>
+<ol>
+<li>Köşeli parantez kullanarak.</li>
+<li>Eşit aralıklı elemanlar kullanarak (<code>:</code> işareti veya <code>linspace</code>, <code>logspace</code> komutları).</li>
+<li>Fonksiyonları kullanarak.</li>
+</ol>
+<h3 id="köşeli-parantez-yöntemi">Köşeli parantez yöntemi<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#köşeli-parantez-yöntemi" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Bu yöntem, standart özelliklere sahip olmayan, küçük boyutlu vektörlerin oluşturulmasında etkilidir.</p>
+<ul>
+<li><strong>Tek satırlık vektörler:</strong> <code>V=[e1, e2, e3]</code> veya <code>V=[e1 e2 e3]</code></li>
+<li><strong>Tek sütunluk vektörler:</strong> <code>V=[e1; e2; e3]</code></li>
+<li>Örnek: <code>V=[1 5 6 9]</code> vektörü <code>V=[1 5 6 9]</code> ya da <code>V=[1,5,6,9]</code> şeklinde oluşturulabilir.</li>
+</ul>
+<h3 id="sabit-aralıklı-vektör-oluşturma">Sabit Aralıklı Vektör Oluşturma<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sabit-aralıklı-vektör-oluşturma" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Elemanları sabit aralıklarla artan ya da azalan vektörler oluşturmak için <code>:</code> (iki nokta üst üste) yazım şekli kullanılır.
+<code>V = İlkDeğer : DeğişimMiktarı : SonDeğer</code></p>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Sabit aralıklı vektör örnekleri </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><code>V=1:2:10</code> komutu ile oluşan vektör <code>V=[1 3 5 7 9]</code></li>
+<li><code>V=0:4</code> komutu ile oluşan vektör <code>V=[0 1 2 3 4]</code>. <em>Değişim miktarı girilmediği için 1 kabul edilmiştir.</em></li>
+<li><code>V=0:-2:10</code> komutu yazıldığında hata mesajı alınır. <em>Çünkü <code>İlkDeğer</code> (0) <code>SonDeğer</code> (10)‘den küçükken azalan bir <code>DeğişimMiktarı</code> (-2) tanımlanmıştır.</em></li>
+</ul>
+</div>
+</blockquote>
+<p><code>linspace</code> ve <code>logspace</code> fonksiyonları da sabit aralıklı vektör oluşturmada kullanılır.</p>
+<ul>
+<li><code>linspace(x1, x2, n)</code>: <code>x1</code> ve <code>x2</code> arasında <code>n</code> adet eşit aralıklı nokta oluşturur (<em>lineer ölçekte</em>).</li>
+<li><code>logspace(x1, x2, n)</code>: <code>x1</code> ve <code>x2</code> arasında <code>n</code> adet logaritmik aralıklı nokta oluşturur (<em>logaritmik ölçekte</em>).</li>
+<li><code>x1</code>: İlk değer, <code>x2</code>: Son değer, <code>n</code>: Nokta sayısı.</li>
+</ul>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>linspace kullanımı </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>V=linspace(1,10,4)</code> komutu ile oluşan vektör <code>V=[1 4 7 10]</code></p>
+</div>
+</blockquote>
+<h3 id="fonksiyonlar-kullanılarak-vektör-oluşturma">Fonksiyonlar kullanılarak vektör oluşturma<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fonksiyonlar-kullanılarak-vektör-oluşturma" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>rand</code>, <code>ones</code>, <code>zeros</code> gibi fonksiyonlar vektör oluşturmak için kullanılabilir.</p>
+<ul>
+<li>
+<p><code>rand</code> fonksiyonu kullanarak rastgele değerler üretilebilir:
+<code>V = a + (b-a) * rand(m, n)</code>
+<em><code>V</code> vektörü <code>a</code> ile <code>b</code> arasında dağılmış rastgele sayılardan oluşur. <code>m</code> ve <code>n</code> vektörün boyutunu (sırasıyla satır ve sütun sayısını) gösterir.</em></p>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p> <code>a=1</code> ile <code>b=5</code> arasında rastgele 6 sayı üretmek için komutumuz:
+<code>V=1+(5-1)*rand(1,6)</code></p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+</blockquote>
+</li>
+<li>
+<p><code>ones</code> fonksiyonu ile sadece tek bir değerden oluşan vektörler oluşturulabilir:
+<code>V = x * ones(m, n)</code>
+<em><code>x</code> değerin ne olduğunu, <code>m, n</code> vektörün boyutunu gösterir.</em></p>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p> <code>altilar=6*ones(1,3)</code> komutu sonucu <code>altilar=[6 6 6]</code> vektörü oluşur.</p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+</blockquote>
+</li>
+<li>
+<p><code>zeros</code> fonksiyonu ile sadece <code>'0'</code>lardan oluşan vektörler oluşturulabilir:
+<code>V = zeros(m, n)</code></p>
+</li>
+</ul>
+<h2 id="vektörlerde-aritmetik-i̇şlemler">Vektörlerde Aritmetik İşlemler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vektörlerde-aritmetik-i̇şlemler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Vektörler üzerinde tüm aritmetik işlemler yapılabilir. Ancak, çarpma ve bölme işlemi yapılacak vektörlerin boyutlarının aynı olması gerekmektedir.</p>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Vektörlerde temel aritmetik işlemler </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>v1=[1 3 5]</code>, <code>v2=[9 7 5]</code></p>
+<ul>
+<li><code>toplam=v1+v2</code> <span>⇒</span> <code>toplam=[10 10 10]</code> (<em>Karşılıklı elemanlar toplanır.</em>)</li>
+<li><code>carpim=v1*v2'</code> <span>⇒</span> <code>carpim=[55]</code> (<em>Matris çarpımı, <code>v2'</code> <code>v2</code>’nin transpozesidir.</em>)</li>
+<li>İki vektörün karşılıklı elemanları arasında yapılacak işlemlerde <code>.</code> (nokta) kullanılır.
+<code>carpim=v1.*v2</code> <span>⇒</span> <code>carpim=[9 21 25]</code> (<em>Karşılıklı elemanlar çarpılır.</em>)</li>
+</ul>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Aritmetik İşlem Adı</th><th style="text-align:left;">MATLAB Gösterimi</th><th style="text-align:left;">Örnek Uygulama V1=[1 2 3], V2=[-1 2 6]</th><th style="text-align:left;">Açıklama</th></tr></thead><tbody><tr><td style="text-align:left;">Toplama</td><td style="text-align:left;"><code>v1+v2</code></td><td style="text-align:left;"><code>0 4 9</code></td><td style="text-align:left;">Karşılıklı elemanlar toplanır</td></tr><tr><td style="text-align:left;">Çıkarma</td><td style="text-align:left;"><code>v1-v2</code></td><td style="text-align:left;"><code>2 0 -3</code></td><td style="text-align:left;">Karşılıklı elemanlar çıkartılır</td></tr><tr><td style="text-align:left;">Çarpma</td><td style="text-align:left;"><code>v1.*v2</code></td><td style="text-align:left;"><code>-1 4 18</code></td><td style="text-align:left;">Karşılıklı elemanları çarpılır</td></tr><tr><td style="text-align:left;">Sağa bölme</td><td style="text-align:left;"><code>v1./v2</code></td><td style="text-align:left;"><code>-1.00 1.00 0.50</code></td><td style="text-align:left;"><code>v1</code> dizisinin her elemanı, sırasıyla <code>v2</code> dizisinin her elemanına bölünür</td></tr><tr><td style="text-align:left;">Sola bölme</td><td style="text-align:left;"><code>v1.\v2</code></td><td style="text-align:left;"><code>-1 1 2</code></td><td style="text-align:left;">Sağa bölmenin tersi</td></tr><tr><td style="text-align:left;">Üs alma</td><td style="text-align:left;"><code>v1.^v2</code></td><td style="text-align:left;"><code>1 4 729</code></td><td style="text-align:left;"><code>v1</code> dizisindeki her elemanın, sırasıyla <code>v2</code> deki elemanlarla üsleri alınır</td></tr><tr><td style="text-align:left;">Transpoze</td><td style="text-align:left;"><code>v1'</code></td><td style="text-align:left;"><code>1</code> <br/> <code>2</code> <br/> <code>3</code></td><td style="text-align:left;">Satır vektörünü sütun vektörüne çevirir veya tersini yapar</td></tr><tr><td style="text-align:left;">İndeksleme</td><td style="text-align:left;"><code>v1(n)</code></td><td style="text-align:left;"><code>v1(1)=1, v2(3)=6</code></td><td style="text-align:left;">Vektörün n. elemanını (indeksleme 1’den başlar) verir</td></tr></tbody></table></div>
+<h2 id="vektörler-ile-kullanılabilecek-bazı-fonksiyonlar">Vektörler ile Kullanılabilecek Bazı Fonksiyonlar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vektörler-ile-kullanılabilecek-bazı-fonksiyonlar" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>MATLAB, vektörler ve diziler üzerinde çeşitli matematiksel ve istatistiksel işlemler yapmak için birçok yerleşik fonksiyon sunar:</p>
+<ul>
+<li><code>max</code>: Verilerin en büyük değerini bulur.</li>
+<li><code>min</code>: Verilerin en küçük değerini bulur.</li>
+<li><code>length</code>: Veri uzunluğunu, kaç tane veri olduğunu bulur.</li>
+<li><code>sum</code>: Verilerin toplamını verir.</li>
+<li><code>prod</code>: Verilerin çarpımını verir.</li>
+<li><code>median</code>: Verilerin ortanca değerini bulur.</li>
+<li><code>std</code>: Verilerin standart sapmasını hesaplar.</li>
+<li><code>mean</code>: Verilerin ortalama değerini hesaplar.</li>
+<li><code>geomean</code>: Verilerin geometrik ortalamasını hesaplar.</li>
+<li><code>harmean</code>: Verilerin harmonik ortalamasını hesaplar.</li>
+<li><code>sort</code>: Verileri azalan sırada sıralar. (Varsayılan olarak artan sırada sıralar, azalan için ek parametre gerekir.)</li>
+</ul>
+<h2 id="diziler">Diziler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#diziler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Dizi, en genel matematiksel tanımı ile nümerik ve metinsel değerler topluluğudur. Sayı dizileri ve karakter dizileri olarak ikiye ayrılır.
+MATLAB’de her şey bir dizi olarak işleme konur ve en temel veri elemanıdır.
+<strong>Önemli:</strong> Sayısal ve karakter dizileri bir matriste bir arada bulunamaz! Yani, bir matris hem sayı hem de bir kelimeyi aynı anda içeremez!</p>
+<p>Diziler, içerdikleri bilgiye göre aşağıdaki gibi de tanımlanabilir:</p>
+<ul>
+<li><strong>Reel ile karmaşık sayıları ifade eden diziler:</strong> <code>double array</code></li>
+<li><strong>Sayısal diziler:</strong> <code>numeric array</code></li>
+<li><strong>Nesne ve Metin ifade eden diziler:</strong> <code>cell array</code></li>
+<li><strong>Genelleştirme ve çeşitli tipleri ifade edenler:</strong> <code>n-dimensional array</code></li>
+</ul>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Dizi Tanımlama Örnekleri </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><code>c=2017</code> (<code>numeric array</code> - skaler)</li>
+<li><code>d='İstanbul Universitesi'</code> (<code>character array</code>)</li>
+<li><code>f=[2017 2018]</code> (<code>numeric matrix</code> - satır vektörü)</li>
+<li><code>g=[d ' mühendislik Fakultesi']</code> (<code>character matrix</code>)</li>
+</ul>
+</div>
+</blockquote>
+<h2 id="sayı-dizileri">Sayı Dizileri<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sayı-dizileri" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Sayı dizileri 3 grupta tanımlanabilir:</p>
+<ul>
+<li><strong>Skalerler:</strong> 1 x 1 dizidir.
+<ul>
+<li>ÖRN: <code>a=3</code>, <code>b=12.65</code>, <code>c=1+2*i</code> vb…</li>
+</ul>
+</li>
+<li><strong>Vektörler:</strong> <code>m x 1</code> veya <code>1 x n</code> dizileri.
+<ul>
+<li>ÖRN: <code>vektor=[1 2 3]</code></li>
+</ul>
+</li>
+<li><strong>Matrisler:</strong> <code>m x n</code> dizisi (<code>m</code> satır, <code>n</code> sütun sayısını gösterir).
+<ul>
+<li><code>1 x 1</code>: sabit matris, <code>n x 1</code>: sütun matrisi, <code>1 x m</code>: satır matrisi olarak da adlandırılabilir.</li>
+<li>ÖRN: <code>matris=[1 2 3;4 5 6]</code></li>
+</ul>
+</li>
+</ul>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Sayı ve Karakter Dizisi Örnekleri </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> a=[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">7</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 9</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a =</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    7</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">     8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">     9</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> b=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Konya'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">b =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Konya</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> c=[b, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Teknik Üniversitesi'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">];</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> c</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">c =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">KonyaTeknik</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Üniversitesi</span></span></code></pre></figure>
+</div>
+</blockquote>
+<h2 id="hücre-dizileri-cell">Hücre Dizileri (cell)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hücre-dizileri-cell" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Hücre dizileri, farklı matrisleri veya farklı veri tiplerini aynı isim altında saklamak için kullanılır. Bir hücrenin içine istenen sayıda yeni hücreler eklemek mümkündür.</p>
+<ul>
+<li><code>C=cell(n)</code>: <code>n x n</code> boyutlarında boş bir hücre dizisi oluşturur ve <code>C</code>’ye atar.</li>
+<li>Hücre oluşturmak için süslü parantez <code>{ }</code> kullanılır.</li>
+</ul>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hücre Dizisi Oluşturma </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> C=cell(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">C =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   []    []</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   []    []</span></span></code></pre></figure>
+<p>Bu, 2x2 boyutunda boş bir hücre dizisi oluşturur.</p>
+</div>
+</blockquote>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hücre Dizilerine Veri Atama </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> d{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}=[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 2</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;4 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">5</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 6</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">d =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 1x1 cell array</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   {[2x3 double]}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> d{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}=[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">];</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> d{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}=[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;4 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">];</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> d</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">d =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 1x3 cell array</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   {[2x3 double]}    {[1x2 double]}    {[2x2 double]}</span></span></code></pre></figure>
+</div>
+</blockquote>
+<p>Aşağıdaki tablo, önceki hücre dizisi örneğindeki <code>d</code> dizisinin içeriğini göstermektedir:
+<img src="https://i.imgur.com/example-image.png" alt="d-hücre-dizisi.png|400"/></p>
+<p><code>d</code> hücre dizisinin Command Window çıktısı:</p>
+<pre><code>Command Window
+New to MATLAB? See resources for Getting Started.
+>> d
+d =
+  1x3 cell array
+    {[2x3 double]}    {[1x2 double]}    {[2x2 double]}
+</code></pre>
+<h2 id="yapı-dizileri-struct">Yapı Dizileri (struct)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#yapı-dizileri-struct" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Yapı dizileri (Structure arrays), birçok farklı diziyi bir arada tutmaya yarayan, veri tabanları için kullanışlı bir dizi türüdür. Her alan (field) farklı bir veri tipini veya değeri tutabilir.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> A.name=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Kemal'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">A.sname=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Erdogan'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">A.city=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Konya'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">A.email=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'kerdogan@ktun.edu.tr'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">A.year=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2020</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span></code></pre></figure>
+<p><code>A</code> yapı dizisi çağrıldığında:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> A</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">A =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  struct</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> with fields:</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Kemal'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   sname: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Erdogan'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    city: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Konya'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   email: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'kerdogan@ktun.edu.tr'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    year: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2020</span></span></code></pre></figure>
+<p>Belirli bir alana erişim:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>> A.sname</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ans =</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Erdogan</span></span></code></pre></figure>
+<blockquote class="callout infobox" data-callout="infobox">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Infobox</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><img src="./img-0.jpeg" alt="Yapı Dizileri Görseli"/>
+Hücre ve yapı dizileri, <code>.mat</code> uzantılı dosyalar olarak <code>save</code> komutuyla kaydedilip, <code>load</code> komutuyla geri çağrılabilir.</p>
+</div>
+</blockquote>
+<h2 id="dizilerle-i̇lgili-bazı-atama-komutları">Dizilerle İlgili Bazı Atama Komutları<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dizilerle-i̇lgili-bazı-atama-komutları" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Çeşitli veri tipleri arasında dönüşüm yapmak için kullanılan komutlar:</p>
+<ul>
+<li><code>num2str(a)</code>: Bir <code>a</code> sayısını bir karakter dizisine atama (sayıdan string’e).</li>
+<li><code>str2num(a)</code>: Karakter olan bir <code>a</code> sayısını sayı değerine atama (string’den sayıya).</li>
+<li><code>mat2str(a)</code>: Bir <code>a</code> matrisini bir karakter dizisine atama.</li>
+<li><code>int2str(a)</code>: Bir <code>a</code> tam sayısını bir karakter dizisine atama.</li>
+<li><code>char(a)</code>: Bir <code>a</code> hücresini bir karakter dizisine atama (veya sayısal ASCII değerlerini karaktere dönüştürme).</li>
+<li><code>cellstr(a)</code>: Bir <code>a</code> karakter dizisini bir hücre dizisine atama.</li>
+<li><code>num2cell(a)</code>: Bir <code>a</code> sayısını bir hücre dizisine atama.</li>
+</ul>
+<h2 id="if-end-yapısı">If, End Yapısı<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#if-end-yapısı" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>if</code> yapısı, bir koşulun gerçekleşmesi durumunda belirli bir işlemin yapılmasını sağlamak için kullanılır.
+Genel biçimi:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> koşul</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    işlem</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span></code></pre></figure>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p> <code>if-else</code> yapısı ile bir sayının doğal logaritması</p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Girilen bir sayının negatif olması durumunda, sayıyı doğal logaritmasıyla değiştiren bir kod:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'bir sayi giriniz='</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> a&lt;0</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   a=log(a);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">else</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   a=a; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">% Diğer durumda&quot; anlamındadır: Burada, a>=0 koşulunu temsil eder.</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a</span></span></code></pre></figure>
+<p>Else kullanılmasaydı:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'bir sayi giriniz='</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> a&lt;0</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   a=log(a);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> a>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> % Normalde burada a>0 şeklinde ikinci bir koşul kullanmak daha doğru olurdu (örneğin a=0 için log tanimsizdir).</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   a=a;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a</span></span></code></pre></figure>
+</div>
+</blockquote>
+<h2 id="switch-case-yapısı">Switch, Case Yapısı<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#switch-case-yapısı" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>switch</code> yapısı, <code>if</code> yapısına benzer ancak daha çok sözel veya belirli durumlara göre yönlendirme işlemi yapar.
+Genel kullanım biçimi:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">switch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> durum</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    case</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> durum1</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        işlem1</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    case</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> durum2</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        işlem2</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    otherwise</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        işlem3</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span></code></pre></figure>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Gün kontrolü için <code>switch-case</code></p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Bir gün değişkeninin, iş günü olup olmadığına karar vermek için aşağıdaki kodlar:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">clear,clc</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">gun=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'hangi gun='</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'s'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">switch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> lower(gun)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">   case</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'pazartesi'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> , </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'sali'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'carsamba'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'persembe'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'cuma'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">       disp(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'işgünü'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">   case</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'cumartesi'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'pazar'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">       disp(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'TATİL!'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">   otherwise</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">       disp(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'Geçersiz gün girişi!'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span></code></pre></figure>
+</div>
+</blockquote>
+<h2 id="for-end-döngüsü">For, End Döngüsü<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#for-end-döngüsü" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>for, end</code> döngüsü, bir işlemin belirli bir sayıda tekrar ettirilmesi için kullanılır. Kök bulma gibi iterasyon gerektiren problemler için idealdir.
+Kullanım biçimi:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i = başlangıç_değeri </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> adım_miktarı </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> bitiş_değeri</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    işlem</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span></code></pre></figure>
+<p><em>(<code>i</code> bir tam sayı (integer) döngü değişkenidir.)</em></p>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p> <code>for</code> döngüsü ile sayıların toplamı</p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>1’den N’ye kadar olan sayıların toplamını yapan bir program:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">clear, clc</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">N=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'bir sayi giriniz='</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">say = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">% sayac</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:N</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   say = say </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">% birikimli (kümülatif toplam)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">disp(say)</span></span></code></pre></figure>
+</div>
+</blockquote>
+<h2 id="while-end-döngüsü">While, End Döngüsü<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#while-end-döngüsü" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>while, end</code> döngüsü, belirli bir koşul doğru olduğu sürece bir işlemin tekrar ettirilmesi için kullanılır.
+Kullanım biçimi:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">done = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">% Başlangıç koşulu</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">while</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> done </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    işlem</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    % done değişkenini değiştirerek döngünün sonlandırılmasını sağlayın</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span></code></pre></figure>
+<p><em>Buradaki <code>while-end</code> döngüsü, <code>done</code> değişkeni ancak <code>0</code> olduğu zaman çalışacaktır. Bir önceki satırda, <code>done</code> değişkeni <code>0</code> olarak atanmış olduğu için <code>while-end</code> döngüsü çalışır. (<code>while-end</code> döngüsünü çalıştıran farklı algoritmalara burada değinilmeyecektir.)</em></p>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p> <code>while</code> döngüsü ile sayıların toplamı</p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>1’den N’ye kadar olan sayıların toplamını <code>while-end</code> döngüsü ile yapan program:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="matlab" data-theme="github-light github-dark"><code data-language="matlab" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">clear,clc</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">N=input(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">'bir sayi giriniz='</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">say = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; i = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; done = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">while</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> done </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   i = i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">% bir önceki örnekte for,end döngüsündeki &quot;i&quot; ye karşılık gelir.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   say = say </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">   if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">==</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> N</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">       done = </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">   end</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">end</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">disp(say)</span></span></code></pre></figure>
+<p><em><code>i</code>, son sayıya (<code>N</code>’ye) ulaştığında, <code>done</code> değişkenine <code>0</code>’dan farklı (<code>1</code>) bir sayı atanır. Böylece, <code>while</code>’ın olduğu satıra gelindiğinde, <code>done</code> “0” olmadığı için <code>while, end</code> döngüsü çalışmaz (döngü sonlanır). Program, bu döngünün <code>end</code> satırının hemen altındaki satırdan işleme devam eder (burada, <code>say</code> değişkeni command window’da yazdırılır.).</em></p>
+</div>
+</blockquote>
+<h1 id="temel-formüller-ve-hızlı-bilgiler">Temel Formüller ve Hızlı Bilgiler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#temel-formüller-ve-hızlı-bilgiler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<hr/>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Format Belirleyiciler (fprintf ve input için) </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><code>%c</code>: <em>Tek karakter</em></li>
+<li><code>%s</code>: <em>Karakter dizisi (string)</em></li>
+<li><code>%d</code>: <em>Tamsayı</em></li>
+<li><code>%f</code>: <em>Ondalıklı sayı</em></li>
+<li><code>%e</code>: <em>Üstel biçimde ondalıklı sayı</em></li>
+<li><code>%g</code>: <em>Compact ondalıklı sayı (<code>%f</code> veya <code>%e</code>)</em></li>
+<li><code>\n</code>: <em>Yeni satır</em></li>
+<li><code>\t</code>: <em>Tab boşluğu</em></li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Vektör Oluşturma Yöntemleri </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><strong>Köşeli Parantez:</strong> <code>V = [1 2 3]</code></li>
+<li><strong>Sabit Aralık (<code>:</code>):</strong> <code>V = Baş:Adım:Son</code>, <em>(Varsayılan adım <code>1</code>’dir)</em> <code>V = 1:5</code></li>
+<li><strong><code>linspace</code>:</strong> <code>V = linspace(İlkDeğer, SonDeğer, NoktaSayısı)</code></li>
+<li><strong><code>logspace</code>:</strong> <code>V = logspace(İlkDeğer, SonDeğer, NoktaSayısı)</code></li>
+<li><strong><code>rand</code>:</strong> <code>V = a + (b-a) * rand(m,n)</code> <em>(a ile b arasında rastgele sayılar)</em></li>
+<li><strong><code>ones</code>:</strong> <code>V = x * ones(m,n)</code> <em>(<code>x</code> değerinden oluşan matris)</em></li>
+<li><strong><code>zeros</code>:</strong> <code>V = zeros(m,n)</code> <em>(Sıfırlardan oluşan matris)</em></li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Vektörlerde Nokta Operatörü (. ) </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><code>v1.*v2</code>: Element-wise çarpma</li>
+<li><code>v1./v2</code>: Element-wise sağa bölme</li>
+<li><code>v1.\v2</code>: Element-wise sola bölme</li>
+<li><code>v1.^v2</code>: Element-wise üs alma</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Yaygın Dizi Fonksiyonları </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><code>max(v)</code>: Vektördeki en büyük değer</li>
+<li><code>min(v)</code>: Vektördeki en küçük değer</li>
+<li><code>length(v)</code>: Vektörün eleman sayısı</li>
+<li><code>sum(v)</code>: Vektör elemanlarının toplamı</li>
+<li><code>mean(v)</code>: Vektör elemanlarının ortalaması</li>
+<li><code>sort(v)</code>: Vektörü sıralar</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout example is-collapsible" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Veri Tipi Dönüşüm Komutları </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><code>num2str(sayı)</code>: Sayıyı string’e dönüştürür.</li>
+<li><code>str2num(string)</code>: String’i sayıya dönüştürür.</li>
+<li><code>char(hücre/ASCII)</code>: Hücreyi veya ASCII’yi karaktere dönüştürür.</li>
+<li><code>cellstr(string)</code>: String’i hücre dizisine dönüştürür.</li>
+</ul>
+</div>
+</blockquote>
+<h1 id="kaynaklar">Kaynaklar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kaynaklar" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Doğan, U., (2009), Temel Bilgisayar Bilimleri Ders Notları, YTÜ, Lisans Ders Notları, İstanbul.</li>
+<li>Demirel, H., (2005), Dengeleme Hesabı, YTÜ, Lisans Ders Notları, İstanbul.</li>
+<li>Uzunoğlu M., vd. (2002), MATLAB, Türkmen Kitabevi, İstanbul.</li>
+<li><a href="http://www.mathworks.com/matlabcentral/" class="external">http://www.mathworks.com/matlabcentral/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/" class="external">http://www.mathworks.com/matlabcentral/fileexchange/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>MATLAB İle Programlama (Dr. Deniz DAL)</li>
+<li><a href="http://cdn.istanbul.edu.tr/FileHandler2.ashx?f=int2mlab_nummeth.pdf" class="external">http://cdn.istanbul.edu.tr/FileHandler2.ashx?f=int2mlab_nummeth.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://www.youtube.com/watch?v=dJwbGC6pe3w&amp;ab_channel=M%C3%BChendisAkademi" class="external">https://www.youtube.com/watch?v=dJwbGC6pe3w&amp;ab_channel=M%C3%BChendisAkademi<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://slideplayer.biz.tr/slide/2292209/" class="external">https://slideplayer.biz.tr/slide/2292209/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul></article><hr/><div class="page-footer"><div class="giscus" data-repo="c4kar/ktunot" data-repo-id="R_kgDOQGpuyg" data-category="General" data-category-id="DIC_kwDOQGpuys4C009j" data-mapping="url" data-strict="1" data-reactions-enabled="1" data-input-position="bottom" data-light-theme="light" data-dark-theme="dark" data-theme-url="https://ktunot.net.tr/static/giscus" data-lang="tr"></div></div></div><div class="right sidebar"><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-28" aria-expanded="true"><h3>İçindekiler</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#i̇çindekiler" data-for="i̇çindekiler">İçindekiler</a></li><li class="depth-0"><a href="#genel-özet" data-for="genel-özet">Genel Özet</a></li><li class="depth-0"><a href="#temel-terimler-ve-kavramlar" data-for="temel-terimler-ve-kavramlar">Temel Terimler ve Kavramlar</a></li><li class="depth-0"><a href="#ana-gövde-kronolojik-veya-tematik-kayıt" data-for="ana-gövde-kronolojik-veya-tematik-kayıt">Ana Gövde: Kronolojik veya Tematik Kayıt</a></li><li class="depth-1"><a href="#matlabe-klavyeden-veri-aktarımı" data-for="matlabe-klavyeden-veri-aktarımı">MATLAB’e Klavyeden Veri Aktarımı</a></li><li class="depth-1"><a href="#input-komutu-ile-klavyeden-metinsel-veri-temini" data-for="input-komutu-ile-klavyeden-metinsel-veri-temini">input Komutu ile Klavyeden Metinsel Veri Temini</a></li><li class="depth-1"><a href="#fprintf-komutu-ile-ekrana-bilgi-yazdırma" data-for="fprintf-komutu-ile-ekrana-bilgi-yazdırma">fprintf Komutu ile Ekrana Bilgi Yazdırma</a></li><li class="depth-1"><a href="#disp-komutu-ile-ekrana-sayısal-değer-yazdırma" data-for="disp-komutu-ile-ekrana-sayısal-değer-yazdırma">disp Komutu ile Ekrana Sayısal Değer Yazdırma</a></li><li class="depth-1"><a href="#vektörler" data-for="vektörler">Vektörler</a></li><li class="depth-2"><a href="#köşeli-parantez-yöntemi" data-for="köşeli-parantez-yöntemi">Köşeli parantez yöntemi</a></li><li class="depth-2"><a href="#sabit-aralıklı-vektör-oluşturma" data-for="sabit-aralıklı-vektör-oluşturma">Sabit Aralıklı Vektör Oluşturma</a></li><li class="depth-2"><a href="#fonksiyonlar-kullanılarak-vektör-oluşturma" data-for="fonksiyonlar-kullanılarak-vektör-oluşturma">Fonksiyonlar kullanılarak vektör oluşturma</a></li><li class="depth-1"><a href="#vektörlerde-aritmetik-i̇şlemler" data-for="vektörlerde-aritmetik-i̇şlemler">Vektörlerde Aritmetik İşlemler</a></li><li class="depth-1"><a href="#vektörler-ile-kullanılabilecek-bazı-fonksiyonlar" data-for="vektörler-ile-kullanılabilecek-bazı-fonksiyonlar">Vektörler ile Kullanılabilecek Bazı Fonksiyonlar</a></li><li class="depth-1"><a href="#diziler" data-for="diziler">Diziler</a></li><li class="depth-1"><a href="#sayı-dizileri" data-for="sayı-dizileri">Sayı Dizileri</a></li><li class="depth-1"><a href="#hücre-dizileri-cell" data-for="hücre-dizileri-cell">Hücre Dizileri (cell)</a></li><li class="depth-1"><a href="#yapı-dizileri-struct" data-for="yapı-dizileri-struct">Yapı Dizileri (struct)</a></li><li class="depth-1"><a href="#dizilerle-i̇lgili-bazı-atama-komutları" data-for="dizilerle-i̇lgili-bazı-atama-komutları">Dizilerle İlgili Bazı Atama Komutları</a></li><li class="depth-1"><a href="#if-end-yapısı" data-for="if-end-yapısı">If, End Yapısı</a></li><li class="depth-1"><a href="#switch-case-yapısı" data-for="switch-case-yapısı">Switch, Case Yapısı</a></li><li class="depth-1"><a href="#for-end-döngüsü" data-for="for-end-döngüsü">For, End Döngüsü</a></li><li class="depth-1"><a href="#while-end-döngüsü" data-for="while-end-döngüsü">While, End Döngüsü</a></li><li class="depth-0"><a href="#temel-formüller-ve-hızlı-bilgiler" data-for="temel-formüller-ve-hızlı-bilgiler">Temel Formüller ve Hızlı Bilgiler</a></li><li class="depth-0"><a href="#kaynaklar" data-for="kaynaklar">Kaynaklar</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Şununla oluşturuldu <a href="https://ktunot.net.tr/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/c4kar/ktunot">GitHub</a></li><li><a href="https://www.ktun.edu.tr/">Okul Websitesi</a></li><li><a href="https://halilbozoglu.github.io/website/">Not Hesaplama</a></li><li><a href="https://forms.gle/EK7BruSNk6yYxL8A8">Not yükleme formunu</a></li><li><a href="https://forms.gle/uxnGWzAG3LaBUB1v5">Ders görüş formu</a></li><li><a href="https://forms.gle/PgDyoo2j2odu1ZK96">Öğretmen görüş formu</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../../../postscript.js" type="module"></script></html>

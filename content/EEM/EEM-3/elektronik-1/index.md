@@ -129,4 +129,89 @@ tags:
     ↓ İndir
   </a>
 </div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/elektronik-1/cikmis-sorular/2018-2019%20F%C4%B0NAL.pdf" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <img src="./thumbs/cikmis-sorular_2018-2019 FİNAL.png" alt="2018-2019 FİNAL" loading="lazy" />
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">2018-2019 FİNAL</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge pdf">PDF</span>
+      <span>821.7 KB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/elektronik-1/cikmis-sorular/2018-2019%20F%C4%B0NAL.pdf" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/elektronik-1/cikmis-sorular/2018-2019_V%C4%B0ZE.pdf" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <img src="./thumbs/cikmis-sorular_2018-2019_VİZE.png" alt="2018-2019_VİZE" loading="lazy" />
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">2018-2019_VİZE</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge pdf">PDF</span>
+      <span>2.9 MB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/elektronik-1/cikmis-sorular/2018-2019_V%C4%B0ZE.pdf" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/elektronik-1/cikmis-sorular/2020-2021_VI%CC%87ZE.pdf" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <img src="./thumbs/cikmis-sorular_2020-2021_VİZE.png" alt="2020-2021_VİZE" loading="lazy" />
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">2020-2021_VİZE</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge pdf">PDF</span>
+      <span>399.5 KB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/elektronik-1/cikmis-sorular/2020-2021_VI%CC%87ZE.pdf" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
+<div class="materyal-card">
+  <a href="https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-3/elektronik-1/cikmis-sorular/2023_2024_VI%CC%87ZE.pdf" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <img src="./thumbs/cikmis-sorular_2023_2024_VİZE.png" alt="2023_2024_VİZE" loading="lazy" />
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">2023_2024_VİZE</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge pdf">PDF</span>
+      <span>1.3 MB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/elektronik-1/cikmis-sorular/2023_2024_VI%CC%87ZE.pdf" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
+<div class="materyal-card">
+  <a href="https://github.com/c4kar/ktunDepo/blob/main/EEM/EEM-3/elektronik-1/cikmis-sorular/2024-2025%20V%C4%B0ZE.pdf" target="_blank" rel="noopener" class="materyal-thumb-link">
+    <div class="materyal-thumb">
+      <img src="./thumbs/cikmis-sorular_2024-2025 VİZE.png" alt="2024-2025 VİZE" loading="lazy" />
+    </div>
+  </a>
+  <div class="materyal-body">
+    <p class="materyal-title">2024-2025 VİZE</p>
+    <div class="materyal-meta">
+      <span class="materyal-badge pdf">PDF</span>
+      <span>23.6 MB</span>
+    </div>
+  </div>
+  <a href="https://github.com/c4kar/ktunDepo/raw/main/EEM/EEM-3/elektronik-1/cikmis-sorular/2024-2025%20V%C4%B0ZE.pdf" class="materyal-download" target="_blank" rel="noopener">
+    ↓ İndir
+  </a>
+</div>
 </div>
