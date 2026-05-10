@@ -2,8 +2,16 @@
 title: Hoş Geldiniz
 subtitles: okumadan geçmeyin
 date created: 2025-10-05T19:30
-comments: true
+comments: false
 ---
+
+
+---
+
+20 Ekim 2026 itibariyle websitemiz hizmetine son verecektir. Yeni dönemde eğitim hayatımızı daha zahmetsiz hale getirmek için çalışmalara devam edeceğiz. Finallerde kolaylıklar dileriz. Kendinize iyi bakın 💚
+
+---
+
 
 **ktünot**, üniversitemizdeki **öğrencilerin** ve **öğretim üyelerinin** ders materyallerine, kaynaklara ve akademik bilgilere kolayca erişebilmesi amacıyla tasarlanmıştır. Amacımız, eğitim sürecimizi her beraber çalışarak desteklemek ve bilgiye erişimi sorunsuz hale getirmektir.
 
