@@ -172,11 +172,103 @@ export default (() => {
 
     if (matchingFiles.length === 0) {
       return (
-        <section class="material-catalog">
-          <div class="catalog-header">
-            <h2>Ders Materyalleri</h2>
+        <section class="material-catalog empty-catalog">
+          {/* Top Notice / Explanation Banner */}
+          <div class="catalog-empty-notice">
+            <div class="notice-icon">📂</div>
+            <div class="notice-content">
+              <h3 class="notice-title">Bu Ders İçin Henüz Arşivlenmiş Materyal Bulunmamaktadır</h3>
+              <p class="notice-text">
+                Bu derse ait ders notları, çıkmış sınav soruları veya laboratuvar dokümanları henüz arşivimize eklenmemiştir.
+                Elinizdeki dokümanları toplulukla paylaşarak arşivin gelişmesine katkıda bulunabilirsiniz.
+              </p>
+            </div>
+            <a
+              href="https://forms.gle/EK7BruSNk6yYxL8A8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="notice-action-btn"
+            >
+              Not Yükle / Katkı Sağla ↗
+            </a>
           </div>
-          <p class="font-mono text-xs text-stone-400">Bu ders için henüz arşivlenmiş materyal bulunmamaktadır.</p>
+
+          {/* Header with Title & Filter Controls */}
+          <div class="catalog-header">
+            <div>
+              <h2>
+                Ders Materyalleri
+                <span class="catalog-count">(0 adet • 0 klasör)</span>
+              </h2>
+            </div>
+            <div class="catalog-controls">
+              <input
+                type="text"
+                placeholder="belgelerde ara..."
+                class="search-input"
+                disabled
+              />
+              <div class="toggle-chips">
+                <button class="chip-btn" type="button" disabled>tümünü aç</button>
+                <span>/</span>
+                <button class="chip-btn" type="button" disabled>kapat</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Two-Column Split Pane matching populated layout */}
+          <div class="catalog-grid">
+            {/* Left Column: Empty Accordion Pane */}
+            <div class="accordion-pane empty-pane">
+              <div class="empty-state-box">
+                <span class="empty-state-icon">📑</span>
+                <span class="empty-state-title">Henüz Doküman Yüklenmedi</span>
+                <p class="empty-state-desc">
+                  Bu ders için materyaller sisteme yüklendiğinde klasörler ve belgeler burada listelenecektir.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column: Sticky Inspector Pane */}
+            <div class="inspector-pane empty-inspector">
+              <div class="inspector-header">
+                <span class="inspector-label">Canlı Önizleme</span>
+                <span class="inspector-index">0 / 0</span>
+              </div>
+
+              <div class="thumb-wrapper empty-thumb-wrapper">
+                <div class="empty-thumb-placeholder">
+                  <span class="placeholder-icon">📄</span>
+                  <span class="placeholder-text">Önizleme Yok</span>
+                </div>
+              </div>
+
+              <div class="inspector-details">
+                <div class="inspector-title empty-title">Belge Seçilmedi</div>
+                <div class="inspector-meta">
+                  <span class="meta-format">—</span>
+                  <span>•</span>
+                  <span>0 KB</span>
+                </div>
+                <div class="inspector-folder">📁 Henüz kategori yok</div>
+              </div>
+
+              <div class="inspector-action">
+                <a
+                  href="https://forms.gle/EK7BruSNk6yYxL8A8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="download-btn contribution-btn"
+                >
+                  Not Yükle / Katkı Sağla ↗
+                </a>
+              </div>
+
+              <div class="inspector-hint">
+                Ders notlarınızı Not Yükleme Formu ile arşivimize kazandırabilirsiniz.
+              </div>
+            </div>
+          </div>
         </section>
       )
     }
