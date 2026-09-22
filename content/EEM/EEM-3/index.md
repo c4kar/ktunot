@@ -28,7 +28,7 @@ tags:
 </a>
 <a href="./is-sagligi-ve-guvenligi-1/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">IS Sagligi VE Guvenligi 1</span>
+  <span class="donem-title">İş Sağlığı ve Güvenliği 1</span>
 </a>
 <a href="./lojik-devreler/" class="donem-card">
   <span class="donem-icon">📖</span>
@@ -36,10 +36,10 @@ tags:
 </a>
 <a href="./muhendislik-mekanigi/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Muhendislik Mekanigi</span>
+  <span class="donem-title">Mühendislik Mekaniği</span>
 </a>
 <a href="./temel-elektrik-ve-olcme-lab/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Temel Elektrik VE Olcme Lab</span>
+  <span class="donem-title">Temel Elektrik ve Ölçme Laboratuvarı</span>
 </a>
 </div>

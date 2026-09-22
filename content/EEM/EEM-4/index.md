@@ -36,10 +36,10 @@ tags:
 </a>
 <a href="./lojik-devre-tasarimi/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Lojik Devre Tasarimi</span>
+  <span class="donem-title">Lojik Devre Tasarımı</span>
 </a>
 <a href="./olasilik-ve-istatistik/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Olasilik VE Istatistik</span>
+  <span class="donem-title">Olasılık ve İstatistik</span>
 </a>
 </div>

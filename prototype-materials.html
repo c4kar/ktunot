@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizik 1 (EEM-101) — ktünot (Klasör Tabanlı Akordeon)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            heading: ['Geist', 'sans-serif'],
+            mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            ktun: {
+              bordo: '#b52525',
+              bordoHover: '#8f1d1d',
+              darkBordo: '#e05a5a',
+              darkBordoHover: '#f07575',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #fdf6e3;
+      --card-bg: #fcf9f2;
+      --border: #e6dfcb;
+      --text: #3a413c;
+      --muted: #738075;
+      --accent: #b52525;
+      --accent-hover: #8f1d1d;
+      --active-row: rgba(181, 37, 37, 0.05);
+    }
+    [data-theme="dark"] {
+      --bg: #1a1d20;
+      --card-bg: #22262a;
+      --border: #333940;
+      --text: #e3e7eb;
+      --muted: #9099a2;
+      --accent: #e05a5a;
+      --accent-hover: #f07575;
+      --active-row: rgba(224, 90, 90, 0.1);
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      transition: background-color 0.15s, color 0.15s;
+    }
+    .active-material-row {
+      background-color: var(--active-row) !important;
+      border-left: 2px solid var(--accent);
+    }
+    .active-material-row .mat-title {
+      color: var(--accent) !important;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-stone-800 dark:text-[#e3e7eb]">
+
+  <!-- Shell Container with Sidebar Layout (Quartz Simulation) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 lg:py-10 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-8">
+
+    <!-- LEFT SIDEBAR: GEZGİN (QUARTZ SIMULATION) -->
+    <aside class="hidden lg:block space-y-6 border-r border-[#e6dfcb] dark:border-[#333940] pr-6">
+      <div>
+        <a href="#" class="font-heading font-bold text-2xl tracking-tight text-stone-900 dark:text-[#e3e7eb] flex items-baseline gap-1">
+          <span>ktünot</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#b52525] dark:bg-[#e05a5a] inline-block"></span>
+        </a>
+        <p class="text-xs font-mono text-stone-400 dark:text-[#9099a2] mt-0.5">konya teknik üniversitesi</p>
+      </div>
+
+      <!-- Quick Search Simulation -->
+      <div class="relative">
+        <input type="text" placeholder="Arama yap..." class="w-full px-2.5 py-1.5 text-xs font-mono bg-black/[0.03] dark:bg-white/[0.05] border border-[#e6dfcb] dark:border-[#333940] rounded-xs text-stone-800 dark:text-[#e3e7eb] outline-none" readonly />
+      </div>
+
+      <!-- GEZGİN (Explorer) Tree -->
+      <div class="space-y-2 pt-2">
+        <div class="flex items-center justify-between text-xs font-semibold text-stone-800 dark:text-[#e3e7eb] border-b border-[#e6dfcb] dark:border-[#333940] pb-1">
+          <span>Gezgin</span>
+          <span class="text-[10px] font-mono text-stone-400">klasör ağacı</span>
+        </div>
+
+        <ul class="space-y-1 text-xs font-mono text-stone-600 dark:text-[#9099a2]">
+          <li>
+            <span class="cursor-pointer hover:text-stone-900 dark:hover:text-white flex items-center gap-1.5 font-semibold text-stone-800 dark:text-[#e3e7eb]">
+              <span>▾</span> <span>📁 EEM</span>
+            </span>
+            <ul class="pl-3.5 space-y-1 mt-1 border-l border-stone-300 dark:border-stone-700">
+              <li>
+                <span class="cursor-pointer hover:text-stone-900 dark:hover:text-white flex items-center gap-1.5 font-semibold text-[#b52525] dark:text-[#e05a5a]">
+                  <span>▾</span> <span>📁 EEM-1</span>
+                </span>
+                <ul class="pl-3.5 space-y-0.5 mt-0.5 border-l border-stone-300 dark:border-stone-700">
+                  <li class="text-[#b52525] dark:text-[#e05a5a] font-semibold flex items-center gap-1 bg-black/[0.03] dark:bg-white/[0.04] px-1 py-0.5 rounded-xs">
+                    <span>•</span> <span>Fizik 1</span>
+                  </li>
+                  <li class="hover:text-stone-900 dark:hover:text-white px-1 py-0.5 cursor-pointer">
+                    <a href="#">• Kimya</a>
+                  </li>
+                  <li class="hover:text-stone-900 dark:hover:text-white px-1 py-0.5 cursor-pointer">
+                    <a href="#">• Matematik 1</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hover:text-stone-900 dark:hover:text-white cursor-pointer">
+                <span>▸ 📁 EEM-2</span>
+              </li>
+              <li class="hover:text-stone-900 dark:hover:text-white cursor-pointer">
+                <span>▸ 📁 EEM-3</span>
+              </li>
+            </ul>
+          </li>
+          <li class="hover:text-stone-900 dark:hover:text-white cursor-pointer">
+            <span>▸ 📁 Kavramlar</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Theme Switch -->
+      <div class="pt-4 border-t border-[#e6dfcb] dark:border-[#333940]">
+        <button id="theme-toggle" class="text-xs font-mono text-stone-500 hover:text-stone-900 dark:text-[#9099a2] dark:hover:text-[#e3e7eb] flex items-center gap-2">
+          <span>🌗</span>
+          <span>Açık / Koyu Tema Değiştir</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN COLUMN: COURSE ARTICLE & MATERIAL CATALOG -->
+    <main class="space-y-8 min-w-0">
+
+      <!-- Breadcrumbs -->
+      <nav class="text-xs font-mono text-stone-400 dark:text-[#9099a2] flex items-center gap-1.5">
+        <a href="#" class="hover:underline">home</a>
+        <span>/</span>
+        <a href="#" class="hover:underline">eem</a>
+        <span>/</span>
+        <a href="#" class="hover:underline">eem-1</a>
+        <span>/</span>
+        <span class="text-stone-800 dark:text-[#e3e7eb] font-semibold">fizik-1</span>
+      </nav>
+
+      <!-- Course Header -->
+      <div class="space-y-2">
+        <h1 class="font-heading font-bold text-3xl sm:text-4xl tracking-tight text-stone-900 dark:text-[#e3e7eb]">
+          Fizik 1
+        </h1>
+        <div class="text-xs font-mono text-stone-500 dark:text-[#9099a2] flex items-center gap-3">
+          <span class="font-semibold text-[#b52525] dark:text-[#e05a5a]">EEM-101</span>
+          <span>&bull;</span>
+          <span>23 adet materyal &bull; 5 alt klasör</span>
+          <span>&bull;</span>
+          <span>Arşivleme: Mart 2026</span>
+        </div>
+      </div>
+
+      <!-- Editorial Prose -->
+      <div class="prose prose-stone dark:prose-invert text-sm leading-relaxed text-stone-700 dark:text-[#e3e7eb] space-y-3">
+        <p>
+          Elektrik-Elektronik Mühendisliği 1. sınıf güz dönemi temel fizik dersidir. Vektör analizi, tek ve iki boyutta hareket, Newton kanunları, iş-enerji teoremi ve dönme dinamiği konularını içerir.
+        </p>
+        <div class="border-l-2 border-[#b52525] dark:border-[#e05a5a] pl-3.5 py-1 text-xs text-stone-600 dark:text-[#9099a2] bg-black/[0.02] dark:bg-white/[0.02]">
+          <strong>Hoca & Çalışma Tavsiyeleri:</strong> Vize sınavı hazırlığında vektör bileşenleri ve eğik atış soruları ağırlıktadır; çıkmış sınav arşivi ve LMS ders slaytları taranmalıdır.
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-[#e6dfcb] dark:border-[#333940]" />
+
+      <!-- ======================================================= -->
+      <!-- DERS MATERYALLERİ: KLASÖR TABANLI AKORDEON + SPLIT INSPECTOR -->
+      <!-- ======================================================= -->
+      <section class="space-y-4">
+        
+        <!-- Controls Header -->
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 border-b border-[#e6dfcb] dark:border-[#333940] pb-3">
+          <div>
+            <h2 class="font-heading font-semibold text-xl text-stone-900 dark:text-[#e3e7eb] flex items-baseline gap-2">
+              <span>Ders Materyalleri</span>
+              <span class="text-xs font-mono text-stone-400 dark:text-[#9099a2]">(23 adet &bull; 5 klasör)</span>
+            </h2>
+          </div>
+
+          <div class="flex items-center gap-4 text-xs font-mono">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="belgelerde ara..."
+              class="bg-transparent border-b border-stone-400 dark:border-stone-600 text-stone-800 dark:text-[#e3e7eb] px-1 py-0.5 outline-none focus:border-[#b52525] dark:focus:border-[#e05a5a] w-36 transition-colors"
+            />
+            <div class="flex items-center gap-2 text-stone-500 dark:text-[#9099a2]">
+              <button id="btn-expand-all" class="hover:text-stone-900 dark:hover:text-white transition-colors">tümünü aç</button>
+              <span>/</span>
+              <button id="btn-collapse-all" class="hover:text-stone-900 dark:hover:text-white transition-colors">kapat</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Column Layout: Left Folder Accordion, Right Split Inspector -->
+        <div class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 items-start pt-2">
+          
+          <!-- Left Column: Folder Accordion -->
+          <div id="accordion-container" class="space-y-4">
+            <!-- Generated dynamically by JS -->
+          </div>
+
+          <!-- Right Column: Sticky Inspector Pane -->
+          <div class="sticky top-6 border border-[#e6dfcb] dark:border-[#333940] bg-black/[0.015] dark:bg-[#22262a] p-4 rounded-xs font-mono text-xs space-y-3.5">
+            <div class="flex items-center justify-between border-b border-[#e6dfcb] dark:border-[#333940] pb-2">
+              <span class="text-[10px] uppercase font-semibold tracking-wider text-[#b52525] dark:text-[#e05a5a]">Canlı Önizleme</span>
+              <span id="split-index" class="text-stone-400 dark:text-[#9099a2]">1 / 23</span>
+            </div>
+
+            <!-- Thumbnail Container -->
+            <div class="relative aspect-[4/3] bg-white dark:bg-[#1a1d20] border border-[#e6dfcb] dark:border-[#333940] overflow-hidden rounded-xs flex items-center justify-center">
+              <img id="split-img" src="" alt="" class="w-full h-full object-cover transition-opacity duration-150" />
+              <div id="split-loader" class="absolute inset-0 flex items-center justify-center bg-black/10 dark:bg-black/30 text-[11px] text-stone-400">
+                yükleniyor...
+              </div>
+            </div>
+
+            <!-- Meta Details -->
+            <div class="space-y-1">
+              <div id="split-title" class="font-sans font-semibold text-sm text-stone-900 dark:text-[#e3e7eb] leading-snug line-clamp-2"></div>
+              <div class="flex items-center gap-2 text-stone-500 dark:text-[#9099a2] text-[11px]">
+                <span id="split-format" class="uppercase font-semibold text-[#b52525] dark:text-[#e05a5a]"></span>
+                <span>&bull;</span>
+                <span id="split-size"></span>
+              </div>
+              <div id="split-folder" class="text-[11px] text-stone-500 dark:text-[#9099a2] break-all pt-0.5"></div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="pt-1">
+              <a id="split-download" href="#" target="_blank" class="block w-full py-2.5 text-center border border-[#b52525] dark:border-[#e05a5a] text-[#b52525] dark:text-[#e05a5a] font-sans font-medium text-xs hover:bg-[#b52525] hover:text-white dark:hover:bg-[#e05a5a] dark:hover:text-[#1a1d20] transition-colors rounded-xs">
+                Belgeyi İndir
+              </a>
+            </div>
+            <div class="text-[10px] text-stone-400 dark:text-[#9099a2] text-center">
+              İncelemek için sol listedeki belgelere tıklayın veya üzerine gelin.
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Footer -->
+      <footer class="pt-8 border-t border-[#e6dfcb] dark:border-[#333940] text-xs font-mono text-stone-400 dark:text-[#9099a2] flex justify-between">
+        <span>ktünot &copy; 2026 / Quartz v4.5.2</span>
+        <a href="https://github.com/c4kar/ktunot" target="_blank" class="hover:underline hover:text-[#b52525] dark:hover:text-[#e05a5a]">GitHub</a>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script>
+    const materials = [{"name": "fizik document", "folder": "", "folder_label": "Genel & Temel Kaynaklar", "size": "46.4 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/thumbs/fizik document.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik document.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik document.pdf", "date": "2026-03-14"}, {"name": "Ders  2 Vektorler", "folder": "fizik-1/LMS", "folder_label": "Fizik 1 / LMS Ders Notları", "size": "1.8 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-1/LMS/thumbs/Ders  2-Vektorler.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-1/LMS/Ders  2-Vektorler.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-1/LMS/Ders  2-Vektorler.pdf", "date": "2026-03-14"}, {"name": "Ders 1   FİZİK 1 MEKANİK", "folder": "fizik-1/LMS", "folder_label": "Fizik 1 / LMS Ders Notları", "size": "2.5 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-1/LMS/thumbs/Ders 1 - FİZİK 1 MEKANİK.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-1/LMS/Ders 1 - FİZİK 1 MEKANİK.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-1/LMS/Ders 1 - FİZİK 1 MEKANİK.pdf", "date": "2026-03-14"}, {"name": "1.5  1. ve 2. bolumle ilgili sorular", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "229.0 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/1.5- 1. ve 2. bolumle ilgili sorular.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/1.5- 1. ve 2. bolumle ilgili sorular.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/1.5- 1. ve 2. bolumle ilgili sorular.pdf", "date": "2026-03-14"}, {"name": "1.hafta FizikII v1", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "1.6 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/1.hafta-FizikII-v1.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/1.hafta-FizikII-v1.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/1.hafta-FizikII-v1.pdf", "date": "2026-03-14"}, {"name": "11.hafta FizikII", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "314.3 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/11.hafta-FizikII.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/11.hafta-FizikII.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/11.hafta-FizikII.pdf", "date": "2026-03-14"}, {"name": "12.hafta FizikII", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "618.3 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/12.hafta-FizikII.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/12.hafta-FizikII.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/12.hafta-FizikII.pdf", "date": "2026-03-14"}, {"name": "14 Devre sorular", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "675.9 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/14 Devre-sorular.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/14 Devre-sorular.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/14 Devre-sorular.pdf", "date": "2026-03-14"}, {"name": "14 Manyetik Alanla ilgili sorular 2", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "178.7 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/14 Manyetik Alanla ilgili sorular 2.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/14 Manyetik Alanla ilgili sorular 2.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/14 Manyetik Alanla ilgili sorular 2.pdf", "date": "2026-03-14"}, {"name": "2.hafta FizikII", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "519.3 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/2.hafta-FizikII.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/2.hafta-FizikII.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/2.hafta-FizikII.pdf", "date": "2026-03-14"}, {"name": "3.bolumle ilgili sorular v1", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "191.8 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/3.bolumle ilgili sorular-v1.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/3.bolumle ilgili sorular-v1.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/3.bolumle ilgili sorular-v1.pdf", "date": "2026-03-14"}, {"name": "4 hafta", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "1.8 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/4-hafta.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/4-hafta.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/4-hafta.pdf", "date": "2026-03-14"}, {"name": "4. bolumle ilgili sorular", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "322.2 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/4. bolumle ilgili sorular.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/4. bolumle ilgili sorular.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/4. bolumle ilgili sorular.pdf", "date": "2026-03-14"}, {"name": "5.hafta FizikII", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "1.5 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/5.hafta-FizikII.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/5.hafta-FizikII.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/5.hafta-FizikII.pdf", "date": "2026-03-14"}, {"name": "6.hafta FizikII", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "3.2 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/6.hafta-FizikII.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/6.hafta-FizikII.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/6.hafta-FizikII.pdf", "date": "2026-03-14"}, {"name": "7.hafta FizikII", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "1.2 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/7.hafta-FizikII.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/7.hafta-FizikII.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/7.hafta-FizikII.pdf", "date": "2026-03-14"}, {"name": "8. hafta MAnyetik alana giris", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "4.0 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/8. hafta MAnyetik alana giris.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/8. hafta MAnyetik alana giris.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/8. hafta MAnyetik alana giris.pdf", "date": "2026-03-14"}, {"name": "Devre sorular", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "675.9 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/Devre-sorular.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/Devre-sorular.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/Devre-sorular.pdf", "date": "2026-03-14"}, {"name": "Manyetik Alanla ilgili sorular 2", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "178.7 KB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/Manyetik Alanla ilgili sorular 2.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/Manyetik Alanla ilgili sorular 2.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/Manyetik Alanla ilgili sorular 2.pdf", "date": "2026-03-14"}, {"name": "UYGULAMA 2", "folder": "fizik-2/LMS", "folder_label": "Fizik 2 / LMS Ders Notları", "size": "3.6 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/thumbs/UYGULAMA-2.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/LMS/UYGULAMA-2.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/LMS/UYGULAMA-2.pdf", "date": "2026-03-14"}, {"name": "Serway Fizik 1 Türkçe ", "folder": "fizik-2/Serway", "folder_label": "Fizik 2 / Serway Kitaplığı", "size": "80.3 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/Serway/thumbs/Serway Fizik 1 Türkçe .png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/Serway/Serway Fizik 1 Türkçe .pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/Serway/Serway Fizik 1 Türkçe .pdf", "date": "2026-03-14"}, {"name": "Serway Fizik 2 Türkçe", "folder": "fizik-2/Serway", "folder_label": "Fizik 2 / Serway Kitaplığı", "size": "33.4 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/Serway/thumbs/Serway Fizik 2 Türkçe.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/Serway/Serway Fizik 2 Türkçe.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/Serway/Serway Fizik 2 Türkçe.pdf", "date": "2026-03-14"}, {"name": "MMF F İ Z İ K II ÖZET 1", "folder": "fizik-2/kaynakca", "folder_label": "Fizik 2 / Kaynakça & Ek Notlar", "size": "1.4 MB", "ext": "PDF", "thumb_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/kaynakca/thumbs/MMF_F İ Z İ K_II_ÖZET_1.png", "download_url": "https://raw.githubusercontent.com/c4kar/ktunDepo/main/EEM/EEM-1/fizik-1/fizik-2/kaynakca/MMF_F İ Z İ K_II_ÖZET_1.pdf", "preview_url": "https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/EEM/EEM-1/fizik-1/fizik-2/kaynakca/MMF_F İ Z İ K_II_ÖZET_1.pdf", "date": "2026-03-14"}];
+
+    let searchQuery = '';
+    let selectedIdx = 0;
+
+    // Build Folder Groups
+    const folderGroupsMap = new Map();
+    materials.forEach((m, idx) => {
+      const key = m.folder;
+      if (!folderGroupsMap.has(key)) {
+        folderGroupsMap.set(key, {
+          key: key,
+          label: m.folder_label,
+          items: []
+        });
+      }
+      folderGroupsMap.get(key).items.push({ ...m, globalIndex: idx });
+    });
+
+    const groups = Array.from(folderGroupsMap.values()).sort((a, b) => {
+      if (a.key === '') return -1;
+      if (b.key === '') return 1;
+      return a.label.localeCompare(b.label, 'tr');
+    });
+
+    function renderAccordion() {
+      const container = document.getElementById('accordion-container');
+      const query = searchQuery.trim().toLowerCase();
+
+      container.innerHTML = groups.map(g => {
+        const matchingItems = g.items.filter(m => {
+          return !query || m.name.toLowerCase().includes(query) || m.folder.toLowerCase().includes(query);
+        });
+
+        if (query && matchingItems.length === 0) return '';
+
+        return `
+          <div class="accordion-group border-b border-[#e6dfcb] dark:border-[#333940] pb-2" data-group="${g.key}">
+            <button class="group-header w-full flex items-baseline justify-between py-1 text-left group" type="button">
+              <span class="font-heading font-medium text-sm text-stone-900 dark:text-[#e3e7eb] group-hover:text-[#b52525] dark:group-hover:text-[#e05a5a] flex items-center gap-1.5 transition-colors">
+                <span class="chevron font-mono text-xs text-stone-400 w-3 inline-block">▾</span>
+                <span class="text-xs">📁</span>
+                <span>${g.label}</span>
+              </span>
+              <span class="font-mono text-xs text-stone-400 dark:text-[#9099a2]">${matchingItems.length} belge</span>
+            </button>
+
+            <ul class="group-list space-y-1 pl-4 pt-1">
+              ${matchingItems.map(m => {
+                const isSelected = m.globalIndex === selectedIdx;
+                return `
+                  <li class="mat-row flex items-baseline justify-between py-1.5 px-2.5 rounded-xs cursor-pointer text-xs transition-colors hover:bg-black/[0.02] dark:hover:bg-white/[0.03] ${isSelected ? 'active-material-row' : ''}" data-index="${m.globalIndex}">
+                    <div class="flex items-baseline gap-2 min-w-0 pr-2">
+                      <span class="font-mono text-[10px] text-stone-400 dark:text-[#9099a2] shrink-0">[${m.ext.toLowerCase()}]</span>
+                      <span class="mat-title text-stone-800 dark:text-[#e3e7eb] truncate">${m.name}</span>
+                    </div>
+                    <div class="flex items-baseline gap-2 font-mono text-[11px] text-stone-400 dark:text-[#9099a2] shrink-0">
+                      <span>${m.size}</span>
+                      <span class="arrow opacity-50">&rarr;</span>
+                    </div>
+                  </li>
+                `;
+              }).join('')}
+            </ul>
+          </div>
+        `;
+      }).join('');
+
+      // Bind row clicks / hovers
+      container.querySelectorAll('.mat-row').forEach(row => {
+        const idx = parseInt(row.dataset.index, 10);
+        const handleSelect = () => {
+          selectedIdx = idx;
+          container.querySelectorAll('.mat-row').forEach(r => r.classList.remove('active-material-row'));
+          row.classList.add('active-material-row');
+          updateInspector(materials[idx], idx);
+        };
+        row.addEventListener('mouseenter', handleSelect);
+        row.addEventListener('click', handleSelect);
+      });
+
+      // Bind group toggles
+      container.querySelectorAll('.group-header').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const groupEl = btn.closest('.accordion-group');
+          const list = groupEl.querySelector('.group-list');
+          const chevron = groupEl.querySelector('.chevron');
+          const isHidden = list.classList.toggle('hidden');
+          chevron.textContent = isHidden ? '▸' : '▾';
+        });
+      });
+    }
+
+    function updateInspector(mat, idx) {
+      if (!mat) return;
+      document.getElementById('split-title').textContent = mat.name;
+      document.getElementById('split-size').textContent = mat.size;
+      document.getElementById('split-format').textContent = mat.ext.toLowerCase();
+      document.getElementById('split-folder').textContent = '📁 ' + (mat.folder_label || 'Genel');
+      document.getElementById('split-download').href = mat.download_url;
+      document.getElementById('split-index').textContent = `${idx + 1} / ${materials.length}`;
+
+      const img = document.getElementById('split-img');
+      const loader = document.getElementById('split-loader');
+      loader.style.display = 'flex';
+      img.style.opacity = '0.5';
+      img.src = mat.thumb_url;
+      img.onload = () => {
+        loader.style.display = 'none';
+        img.style.opacity = '1';
+      };
+      img.onerror = () => {
+        loader.style.display = 'none';
+        img.style.opacity = '1';
+      };
+    }
+
+    // Search
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderAccordion();
+    });
+
+    // Expand / Collapse all
+    document.getElementById('btn-expand-all').addEventListener('click', () => {
+      document.querySelectorAll('.group-list').forEach(l => l.classList.remove('hidden'));
+      document.querySelectorAll('.chevron').forEach(c => c.textContent = '▾');
+    });
+
+    document.getElementById('btn-collapse-all').addEventListener('click', () => {
+      document.querySelectorAll('.group-list').forEach(l => l.classList.add('hidden'));
+      document.querySelectorAll('.chevron').forEach(c => c.textContent = '▸');
+    });
+
+    // Theme Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Initial render
+    renderAccordion();
+    updateInspector(materials[0], 0);
+  </script>
+
+</body>
+</html>

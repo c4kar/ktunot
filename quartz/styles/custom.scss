@@ -1,5 +1,6 @@
     @use "./base.scss";
     @use "./variables.scss" as *;
+    @use "../components/styles/materialCatalog.scss";
 
     // ──────────────────────────────────────────────
     // PDF Grid — Card layout for EEM course materials

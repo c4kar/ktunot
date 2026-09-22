@@ -12,7 +12,7 @@ tags:
 <div class="donem-grid">
 <a href="./elektrik-elektronik-muhendisligine-giris/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Elektrik Elektronik Muhendisligine Giris</span>
+  <span class="donem-title">Elektrik-Elektronik Mühendisliğine Giriş</span>
 </a>
 <a href="./fizik-1/" class="donem-card">
   <span class="donem-icon">📖</span>
@@ -24,7 +24,7 @@ tags:
 </a>
 <a href="./kimya-lab/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Kimya Lab</span>
+  <span class="donem-title">Kimya Laboratuvarı</span>
 </a>
 <a href="./matematik-1/" class="donem-card">
   <span class="donem-icon">📖</span>
@@ -32,6 +32,6 @@ tags:
 </a>
 <a href="./yabanci-dil-1/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Yabanci Dil 1</span>
+  <span class="donem-title">Yabancı Dil 1</span>
 </a>
 </div>

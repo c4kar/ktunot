@@ -12,7 +12,7 @@ tags:
 <div class="donem-grid">
 <a href="./ataturk-ilkeleri-ve-inkilap-tarihi/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Ataturk Ilkeleri VE Inkilap Tarihi</span>
+  <span class="donem-title">Atatürk İlkeleri ve İnkılap Tarihi</span>
 </a>
 <a href="./bilgisayar-destekli-teknik-resim/" class="donem-card">
   <span class="donem-icon">📖</span>
@@ -36,6 +36,6 @@ tags:
 </a>
 <a href="./yabanci-dil-2/" class="donem-card">
   <span class="donem-icon">📖</span>
-  <span class="donem-title">Yabanci Dil 2</span>
+  <span class="donem-title">Yabancı Dil 2</span>
 </a>
 </div>

@@ -34,22 +34,22 @@ const config: QuartzConfig = {
           lightgray: "#f0ead2",   // Kenar çubukları ve hafif vurgular için krem
           gray: "#939f91",        // Pasif metinler ve yorum satırları için soluk yeşil-gri
           darkgray: "#5c6a72",    // İkincil metinler
-          dark: "#3a413c",        // Ana metinler için çok koyu orman yeşili/füme
-          secondary: "#8da101",   // Everforest ana vurgu yeşili
-          tertiary: "#3a94c5",    // Alternatif vurgu için Everforest mavisi
-          highlight: "rgba(141, 161, 1, 0.15)", // Seçim arka planı (Yeşilin şeffaf hali)
+          dark: "#3a413c",        // Ana metinler
+          secondary: "#b52525",   // KTÜN Bordo ana vurgu rengi
+          tertiary: "#8f1d1d",    // İkincil Bordo vurgusu
+          highlight: "rgba(181, 37, 37, 0.12)", // Seçim arka planı (Bordo şeffaf)
           textHighlight: "#dfa00088",           // Metin arama/işaretleme için sıcak sarı
         },
         darkMode: {
-          light: "#1e2326",       // Derin çam yeşili arka plan (Hard Dark)
-          lightgray: "#272e33",   // Kartlar ve kenar çubukları için bir ton açığı
-          gray: "#859289",        // Pasif metinler ve yorum satırları
-          darkgray: "#9da9a0",    // İkincil metinler
-          dark: "#d3c6aa",        // Ana metinler için sıcak fildişi
-          secondary: "#a7c080",   // Everforest koyu tema vurgu yeşili
-          tertiary: "#7fbbb3",    // Alternatif vurgu için Everforest su yeşili/mavisi
-          highlight: "rgba(167, 192, 128, 0.15)", // Seçim arka planı (Yeşilin şeffaf hali)
-          textHighlight: "#dbbc7f88",             // Metin arama/işaretleme için sıcak sarı
+          light: "#1a1d20",       // Koyu Gri arka plan
+          lightgray: "#22262a",   // Kartlar ve paneller için bir ton açığı
+          gray: "#9099a2",        // Pasif metinler ve yorum satırları
+          darkgray: "#b0bac4",    // İkincil metinler
+          dark: "#e3e7eb",        // Ana okuma metinleri
+          secondary: "#e05a5a",   // KTÜN Bordo koyu tema vurgusu
+          tertiary: "#f07575",    // Alternatif açık bordo
+          highlight: "rgba(224, 90, 90, 0.15)", // Seçim arka planı (Bordo şeffaf)
+          textHighlight: "#dbbc7f88",           // Metin arama/işaretleme için sıcak sarı
         },
       }
     },

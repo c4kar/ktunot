@@ -6,6 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    Component.MaterialCatalog(),
     Component.Comments({
       provider: 'giscus',
       options: {
