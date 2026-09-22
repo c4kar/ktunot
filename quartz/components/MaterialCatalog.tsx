@@ -4,6 +4,7 @@ import style from "./styles/materialCatalog.scss"
 import script from "./scripts/materialcatalog.inline"
 import fs from "fs"
 import path from "path"
+import { execSync } from "child_process"
 
 interface ManifestFile {
   id?: string
@@ -45,8 +46,8 @@ function loadManifest(): Manifest {
   if (cachedManifest) return cachedManifest
 
   const candidatePaths = [
-    path.resolve(process.cwd(), "../ktunDepo/manifest.json"),
     path.resolve(process.cwd(), "./manifest.json"),
+    path.resolve(process.cwd(), "../ktunDepo/manifest.json"),
   ]
 
   for (const p of candidatePaths) {
@@ -54,6 +55,7 @@ function loadManifest(): Manifest {
       if (fs.existsSync(p)) {
         const content = fs.readFileSync(p, "utf-8")
         cachedManifest = JSON.parse(content) as Manifest
+        console.log(`[MaterialCatalog] Loaded manifest (${cachedManifest.files.length} files) from ${p}`)
         return cachedManifest
       }
     } catch {
@@ -61,6 +63,24 @@ function loadManifest(): Manifest {
     }
   }
 
+  // Fallback: If manifest.json does not exist locally (e.g. CI without bundle), try fetching it via curl
+  try {
+    const targetPath = path.resolve(process.cwd(), "./manifest.json")
+    console.log(`[MaterialCatalog] manifest.json not found locally. Attempting remote fallback download...`)
+    execSync(`curl -sL https://raw.githubusercontent.com/c4kar/ktunDepo/main/manifest.json -o "${targetPath}"`, {
+      timeout: 15000,
+    })
+    if (fs.existsSync(targetPath)) {
+      const content = fs.readFileSync(targetPath, "utf-8")
+      cachedManifest = JSON.parse(content) as Manifest
+      console.log(`[MaterialCatalog] Successfully downloaded and loaded remote manifest (${cachedManifest.files.length} files)`)
+      return cachedManifest
+    }
+  } catch (err) {
+    console.error(`[MaterialCatalog] Remote fallback failed:`, err)
+  }
+
+  console.warn(`[MaterialCatalog] Warning: manifest.json could not be loaded. Catalog will be empty!`)
   return { files: [] }
 }
 
