@@ -282,8 +282,8 @@ export default (() => {
       const thumbUrl = thumbPath
         ? `https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/${encodeURI(thumbPath)}`
         : `https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/${encodeURI(f.path)}`
-      const downloadUrl = `https://raw.githubusercontent.com/c4kar/ktunDepo/main/${encodeURI(f.path)}`
-      const previewUrl = `https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/${encodeURI(f.path)}`
+      const downloadUrl = f.download_url || `https://raw.githubusercontent.com/c4kar/ktunDepo/main/${encodeURI(f.path)}`
+      const previewUrl = f.download_url || `https://cdn.jsdelivr.net/gh/c4kar/ktunDepo@main/${encodeURI(f.path)}`
       const dateStr = f.added_at ? f.added_at.slice(0, 10) : "Mart 2026"
 
       return {
@@ -410,7 +410,7 @@ export default (() => {
             <div class="inspector-header">
               <span class="inspector-label">Canlı Önizleme</span>
               <span id="catalog-split-index" class="inspector-index">
-                1 / {items.length}
+                Belge 1 / {items.length}
               </span>
             </div>
 

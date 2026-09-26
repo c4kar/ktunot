@@ -52,7 +52,7 @@ document.addEventListener("nav", () => {
     if (splitFormat) splitFormat.textContent = mat.ext.toLowerCase()
     if (splitFolder) splitFolder.textContent = `📁 ${mat.folder_label || "Genel"}`
     if (splitDownload) splitDownload.href = mat.download_url
-    if (splitIndex) splitIndex.textContent = `${idx + 1} / ${materials.length}`
+    if (splitIndex) splitIndex.textContent = `Belge ${idx + 1} / ${materials.length}`
 
     if (splitImg) {
       if (splitLoader) splitLoader.style.display = "flex"
